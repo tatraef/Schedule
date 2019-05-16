@@ -11,10 +11,14 @@
 
   <ItemGroup>
     <None Remove="data.json" />
+    <None Remove="math_b.json" />
+    <None Remove="math_m.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="data.json" />
+    <EmbeddedResource Include="math_b.json" />
+    <EmbeddedResource Include="math_m.json" />
   </ItemGroup>
 
   <ItemGroup>

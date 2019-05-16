@@ -13,6 +13,7 @@ namespace Schedule
 {
     public partial class App : Application
     {
+        public static List<Faculty> facultiesJSON;
         public static Dictionary<string, Group> sched;
 
         
@@ -20,6 +21,20 @@ namespace Schedule
 
         public App()
         {
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
+            Stream stream = assembly.GetManifestResourceStream("Schedule.math_m.json");
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
+            }
+            Stream stream1 = assembly.GetManifestResourceStream("Schedule.math_b.json");
+            using (var reader = new System.IO.StreamReader(stream1))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
+            }
+            /*
             #region LoadData
             //GetManifestResourceStream используется для доступа к внедренному файлу, 
             //путь определяется через Assembly
@@ -31,7 +46,7 @@ namespace Schedule
                     string json = reader.ReadToEnd();
                     sched = JsonConvert.DeserializeObject<Dictionary<string, Group>>(json);
                 }
-            #endregion
+            #endregion*/
 
             InitializeComponent();
 

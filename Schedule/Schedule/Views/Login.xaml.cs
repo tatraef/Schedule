@@ -18,60 +18,94 @@ namespace Schedule.Views
 		public Login ()
 		{
 			InitializeComponent ();
-            loadGroups();
+            loadFaculties();
             loadTeachers();
         }
 
         //переменные хранения выбранных значений
+        string selectedFaculty = "";
         string selectedGroup = "";
         string selectedGroupName = "";
         string selectedSubgroup = "";
         string selectedTeacher = "";
+        bool isTeacher = false;
 
+        //Загрузка факультетов, для отображения в списке факультетов
+        List<string> faculties = new List<string>();
+        void loadFaculties()
+        {
+            foreach (var faculty in App.facultiesJSON)
+            {
+                if (!groups.Contains(faculty.FacultyName))
+                {
+                    groups.Add(faculty.FacultyName);
+                }
+            }
+        }
         //Загрузка групп, для отображения в списке групп
         List<string> groups = new List<string>();
         void loadGroups()
         {
-            foreach (KeyValuePair<string, Group> group in App.sched)
+            foreach (var f in App.facultiesJSON)
             {
-                groups.Add(group.Value.groupId);
+                if (f.FacultyName == selectedFaculty)
+                {
+                    foreach (var item in f.Groups)
+                    {
+                        groups.Add(item.GroupId);
+                    }
+                    break;
+                }
+            }
+        }
+        //Загрузка подгрупп, для отображения в списке групп
+        List<string> subgroups = new List<string>();
+        void loadSubgroups()
+        {
+            foreach (var f in App.facultiesJSON)
+            {
+                if (f.FacultyName == selectedFaculty)
+                {
+                    foreach (var g in f.Groups)
+                    {
+                        if (g.GroupId == selectedGroup)
+                        {
+                            foreach (var s in g.Couples)
+                            {
+                                if (s.SubgroupName == "null")
+                                    break;
+                                if (!subgroups.Contains(s.SubgroupName))
+                                {
+                                    subgroups.Add(s.SubgroupName);
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
             }
         }
         //Загрузка преподавателей, для отображения в списке преподавателей
         List<string> teachers = new List<string>();
         void loadTeachers()
         {
-            //GetManifestResourceStream используется для доступа к внедренному файлу, 
-            //путь определяется через Assembly
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
-            Stream stream = assembly.GetManifestResourceStream("Schedule.data.json");
-
-            using (var reader = new System.IO.StreamReader(stream))
+            foreach (var f in App.facultiesJSON)
             {
-                string[] json = reader.ReadToEnd().Split('"'); //разделение файла json на кавычку, чтобы найти поле coupleTeacher
-                for (int i = 0; i < json.Length; i++)
+                if (f.FacultyName == selectedFaculty)
                 {
-                    if (json[i] == "coupleTeacher")
+                    foreach (var g in f.Groups)
                     {
-                        string teacher = json[i + 2];
-                        if (teacher.Contains(',')) //Если в строке преподавателя есть запятая, то это английский, то есть три преподавателя
+                        foreach (var s in g.Couples)
                         {
-                            //поэтому их нужно разделить
-                            string[] someTeachers = teacher.Split(',');
-                            foreach (var item in someTeachers)
+                            if (!teachers.Contains(s.CoupleTeacher))
                             {
-                                if (!teachers.Contains(item.Trim()))
-                                {
-                                    teachers.Add(item.Trim());
-                                }
+                                subgroups.Add(s.CoupleTeacher);
                             }
                         }
-                        else
-                        if (!teachers.Contains(teacher))
-                        {
-                            teachers.Add(teacher);
-                        }
+
                     }
+                    break;
                 }
             }
 
@@ -89,6 +123,48 @@ namespace Schedule.Views
             selectedTeacher = "";
             Picker workPicker = (Picker)sender;
             if (workPicker.SelectedIndex == 0) //Если выбран студент
+            {
+                isTeacher = false;
+            }
+            else isTeacher = true;
+
+            headerForPicker = new Label
+            {
+                Text = "Выберите факультет:",
+                TextColor = Color.FromRgb(38, 38, 38),
+                Margin = new Thickness(10, 0, 0, 0),
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+            };
+
+            picker = new Picker
+            {
+                Title = ""
+
+            };
+            foreach (var item in groups)
+            {
+                picker.Items.Add(item);
+            }
+
+            picker.SelectedIndexChanged += pickerFaculty_SelectedIndexChanged;
+
+            SelectFacultyStackLoyaout.Children.Clear();
+            SelectGroupStackLoyaout.Children.Clear();
+            SelectSubgroupStackLoyaout.Children.Clear();
+
+            SelectFacultyStackLoyaout.Children.Add(headerForPicker);
+            SelectFacultyStackLoyaout.Children.Add(picker);
+
+        }
+        //изменение поля с выбором факультета
+        void pickerFaculty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Picker pic = (Picker)sender;
+            selectedFaculty = pic.SelectedItem.ToString(); //сохранение группы
+
+            loadGroups();
+
+            if (!isTeacher) //Если выбран студент
             {
                 headerForPicker = new Label
                 {
@@ -112,7 +188,7 @@ namespace Schedule.Views
 
 
             }
-            else if (workPicker.SelectedIndex == 1) //Если выбран преподаватель
+            else //Если выбран преподаватель
             {
                 headerForPicker = new Label
                 {
@@ -150,46 +226,44 @@ namespace Schedule.Views
             selectedGroup = pic.SelectedItem.ToString(); //сохранение группы
             string selectedGroupId = pic.SelectedItem.ToString();
 
-            foreach (KeyValuePair<string, Group> group in App.sched)
+            loadSubgroups();
+
+            if (subgroups.Count > 0)
             {
-                if (group.Value.groupId == selectedGroupId)
+                headerForPicker = new Label
                 {
-                    if (group.Value.secondSubgroup != null)
-                    {
-                        headerForPicker = new Label
-                        {
-                            Text = "Выберите подгруппу:",
-                            TextColor = Color.FromRgb(38, 38, 38),
-                            Margin = new Thickness(10, 0, 0, 0),
-                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
-                        };
+                    Text = "Выберите подгруппу:",
+                    TextColor = Color.FromRgb(38, 38, 38),
+                    Margin = new Thickness(10, 0, 0, 0),
+                    FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                };
 
-                        picker = new Picker
-                        {
-                            Title = "Подгруппа"
+                picker = new Picker
+                {
+                    Title = "Подгруппа"
 
-                        };
+                };
 
-                        picker.Items.Add(group.Value.firstSubgroup.subgroupName);
-                        picker.Items.Add(group.Value.secondSubgroup.subgroupName);
-
-                        picker.SelectedIndexChanged += pickerSubgroup_SelectedIndexChanged;
-
-                        SelectSubgroupStackLoyaout.Children.Clear();
-                        SelectSubgroupStackLoyaout.Children.Add(headerForPicker);
-                        SelectSubgroupStackLoyaout.Children.Add(picker);
-                    }
-                    else
-                    {
-                        SelectSubgroupStackLoyaout.Children.Clear();
-                        //Если нет подгруппы показываем кнопку сохранения
-                        saveButton.Clicked += onSavebuttonClick;
-                        StackLoyaoutForSavebutton.Children.Add(saveButton);
-                    }
-
-                    break;
+                foreach (var item in subgroups)
+                {
+                    picker.Items.Add(item);
                 }
+
+                picker.SelectedIndexChanged += pickerSubgroup_SelectedIndexChanged;
+
+                SelectSubgroupStackLoyaout.Children.Clear();
+                SelectSubgroupStackLoyaout.Children.Add(headerForPicker);
+                SelectSubgroupStackLoyaout.Children.Add(picker);
             }
+            else
+            {
+                SelectSubgroupStackLoyaout.Children.Clear();
+                //Если нет подгруппы показываем кнопку сохранения
+                saveButton.Clicked += onSavebuttonClick;
+                StackLoyaoutForSavebutton.Children.Add(saveButton);
+            }
+
+
         }
 
         //Кнопка Сохранить
@@ -215,8 +289,7 @@ namespace Schedule.Views
         void pickerSubgroup_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
-            if (pic.SelectedIndex == 0) selectedSubgroup = "firstSubgroup";
-            else selectedSubgroup = "secondSubgroup";
+            selectedSubgroup = pic.SelectedItem.ToString();
             saveButton.Clicked += onSavebuttonClick;
             StackLoyaoutForSavebutton.Children.Add(saveButton);
         }
@@ -225,31 +298,41 @@ namespace Schedule.Views
         //Нажатие на кнопку Сохранить
         void onSavebuttonClick(object sender, EventArgs e)
         {
-            if (selectedGroup != "")
+            if (selectedFaculty != "")
             {
-                //Сохранение данных в словарь App.Current.Properties
-                App.Current.Properties.Add("groupId", selectedGroup);
-                //получение наименования группы (специальность) (нужна для вывода в меню)
-                foreach (KeyValuePair<string, Group> group in App.sched)
+                App.Current.Properties.Add("facultyName", selectedFaculty);
+
+                if (selectedGroup != "")
                 {
-                    if (group.Value.groupId == selectedGroup)
+                    //Сохранение данных в словарь App.Current.Properties
+                    App.Current.Properties.Add("groupId", selectedGroup);
+                    //получение наименования группы (специальность) (нужна для вывода в меню)
+                    foreach (var f in App.facultiesJSON)
                     {
-                        App.Current.Properties.Add("groupName", selectedGroup + " | " + group.Value.groupName);
+                        if (f.FacultyName == selectedFaculty)
+                        {
+                            foreach (var g in f.Groups)
+                            {
+                                if (g.GroupId == selectedGroup)
+                                {
+                                    App.Current.Properties.Add("groupName", selectedGroup + " | " + g.GroupName);
+                                }
+                            }
+                        }
                     }
-                }
 
-                if (selectedSubgroup != "")
+                    if (selectedSubgroup != "")
+                    {
+                        App.Current.Properties.Add("subgroup", selectedSubgroup);
+                    }
+
+                    App.Current.Properties.Add("isTeacher", false);
+                }
+                else
                 {
-                    App.Current.Properties.Add("subgroup", selectedSubgroup);
+                    App.Current.Properties.Add("isTeacher", true);
+                    App.Current.Properties.Add("teacherName", selectedTeacher);
                 }
-                else App.Current.Properties.Add("subgroup", "firstSubgroup");
-
-                App.Current.Properties.Add("isTeacher", false);
-            }
-            else
-            {
-                App.Current.Properties.Add("isTeacher", true);
-                App.Current.Properties.Add("teacherName", selectedTeacher);
             }
 
             App.Current.Properties.Add("numOfWeek", "1");

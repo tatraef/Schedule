@@ -1,0 +1,4985 @@
+﻿{
+  "FacultyName": "Факультет Математики и информационных технологий",
+  "Groups": [
+    {
+      "GroupName": "Направление   01.03.02 Прикладная математика и информатика   ",
+      "GroupId": "11",
+      "Couples": [
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Языки и методы программирования (лекция)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Языки и методы программирования (лекция)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Языки и методы программирования (лекция)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Языки и методы программирования (лекция)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы информатики (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (практ.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Языки и методы программирования (лаб.)",
+          "CoupleTeacher": "Гутнова А.К.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Языки и методы программирования (лаб.)",
+          "CoupleTeacher": "Гутнова А.К.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лекция)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лекция)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Языки и методы программирования (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Языки и методы программирования (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "История (практ.)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "История (практ.)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Койбаев В.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Койбаев В.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Койбаев В.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Койбаев В.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Безопасность жизнедеятельности (практ.)",
+          "CoupleTeacher": "Туриев А.М.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Безопасность жизнедеятельности (практ.)",
+          "CoupleTeacher": "Туриев А.М.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (практ.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы информатики (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "История (лекция)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "История (лекция)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Социология (лекция)",
+          "CoupleTeacher": "Корнаев А.Т.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Социология (лекция)",
+          "CoupleTeacher": "Корнаев А.Т.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Физическая культура и спорт (лекция)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "ауд.301"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Физическая культура и спорт (лекция)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "ауд.301"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы информатики (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы информатики (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Математический анализ (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическая экономика\"",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Безопасность жизнедеятельности (лекция)",
+          "CoupleTeacher": "Гацоев К.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Профиль \"Математическое моделирование и вычислительная математика\"",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Безопасность жизнедеятельности (лекция)",
+          "CoupleTeacher": "Гацоев К.А.",
+          "CoupleAud": "ауд.501"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.02 Прикладная математика и информатика   ",
+      "GroupId": "21",
+      "Couples": [
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика (лекция)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика (лекция)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика (лекция)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика (лекция)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Алгебра и геометрия (лаб.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "История математики (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "История математики (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Информатика (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
+          "CoupleTeacher": "Тотиева Ж.Д.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Макаренко М.Д.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
+          "CoupleTeacher": "Котец А.Ф.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Дискретная математика (лаб.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Дифференциальные уравнения (лаб.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Дискретная математика (лаб.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Дискретная математика (лаб.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Дискретная математика (лаб.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Философия (лекция)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Философия (лекция)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Информатика (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Информатика (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Философия (практ.)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Философия (практ.)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Системы искусственного интеллекта (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Системы искусственного интеллекта (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Системы искусственного интеллекта (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Системы искусственного интеллекта (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Информатика (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.609"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.02 Прикладная математика и информатика   ",
+      "GroupId": "31",
+      "Couples": [
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория графов (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория графов (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Уравнения математической физики (лекция)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Уравнения математической физики (лекция)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Финансовая математика (лекция)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Финансовая математика (лекция)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Финансовая математика (практ.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Финансовая математика (практ.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК 2 (лаб.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК 2 (лаб.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Финансовая математика (практ.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Финансовая математика (практ.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Финансовая математика (практ.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Финансовая математика (практ.)",
+          "CoupleTeacher": "Плиева Л.Ю.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Уравнения математической физики (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Практикум на ПК 2 (лаб.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Уравнения математической физики (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Практикум на ПК 2 (лаб.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Выпуклый анализ (лекция)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Выпуклый анализ (лекция)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Выпуклый анализ (лекция)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Выпуклый анализ (лекция)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Выпуклый анализ (практ.)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Выпуклый анализ (практ.)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Выпуклый анализ (практ.)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Выпуклый анализ (практ.)",
+          "CoupleTeacher": "Кусраев А.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Базы данных (лаб.)",
+          "CoupleTeacher": "Гамаонов В.Г.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Базы данных (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Базы данных (лаб.)",
+          "CoupleTeacher": "Гамаонов В.Г.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Базы данных (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Базы данных (лаб.)",
+          "CoupleTeacher": "Гамаонов В.Г.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Базы данных (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Базы данных (лекция)",
+          "CoupleTeacher": "Гамаонов В.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Базы данных (лекция)",
+          "CoupleTeacher": "Гамаонов В.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория графов (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория графов (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория графов (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория графов (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Уравнения математической физики (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Уравнения математической физики (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Зембатов Х.Б.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.02 Прикладная математика и информатика   ",
+      "GroupId": "41",
+      "Couples": [
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лекция)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лекция)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лекция)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лекция)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория аппроксимации (лекция)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория аппроксимации (лекция)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Математическая экономика (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Математическая экономика (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (лекция)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (лекция)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (лекция)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (лекция)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математическая экономика (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математическая экономика (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математическая экономика (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математическая экономика (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы сетевых технологий (лаб.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы сетевых технологий (лаб.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы сетевых технологий (лаб.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Основы сетевых технологий (лаб.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лаб.)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лаб.)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лаб.)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лаб.)",
+          "CoupleTeacher": "Худалов М.З.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Проекционно-сеточные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
+          "CoupleTeacher": "Басаева Е.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
+          "CoupleTeacher": "Басаева Е.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
+          "CoupleTeacher": "Басаева Е.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
+          "CoupleTeacher": "Басаева Е.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Математические методы многомерного статистического анализа (лекция)",
+          "CoupleTeacher": "Басаева Е.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Математические методы многомерного статистического анализа (лекция)",
+          "CoupleTeacher": "Басаева Е.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Современные проблемы международных отношений и внешней политики РФ (лекция)",
+          "CoupleTeacher": "Рубаева Э.М.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Современные проблемы международных отношений и внешней политики РФ (лекция)",
+          "CoupleTeacher": "Рубаева Э.М.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория аппроксимации (практ.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория аппроксимации (практ.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория аппроксимации (практ.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория аппроксимации (практ.)",
+          "CoupleTeacher": "Баззаев А.К.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы сетевых технологий (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы сетевых технологий (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы сетевых технологий (лаб.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы сетевых технологий (лаб.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Подгруппа 1",
+          "SubgroupId": 1,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "SubgroupName": "Подгруппа 2",
+          "SubgroupId": 2,
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Численные методы решения задач математической физики (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.509"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.01 Математика   ",
+      "GroupId": "12",
+      "Couples": [
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра (практ.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра (практ.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Монако Т.П.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дополнительные главы математики (лаб.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дополнительные главы математики (лаб.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Аналитическая геометрия (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Аналитическая геометрия (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Аналитическая геометрия (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Аналитическая геометрия (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "История (лекция)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "История (практ.)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Дополнительные главы математики (лаб.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Компьютерные науки (Языки программирования) (лекция)",
+          "CoupleTeacher": "Воронцова И.А .",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Физическая культура и спорт (лекция)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "ауд.301"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Компьютерные науки (Языки программирования) (лаб.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Компьютерные науки (Информатика) (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Компьютерные науки (Информатика) (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Безопасность жизнедеятельности (лекция)",
+          "CoupleTeacher": "Гацоев К.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Безопасность жизнедеятельности (практ.)",
+          "CoupleTeacher": "Гацоев К.А.",
+          "CoupleAud": "ауд.501"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.01 Математика   ",
+      "GroupId": "22",
+      "Couples": [
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Компьютерные науки (Практикум на ПК) (даб.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Компьютерные науки (Практикум на ПК) (даб.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика и математическая логика (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика и математическая логика (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Линейная алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Линейная алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Компьютерные науки (Языки программирования) (лаб.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Компьютерные науки (Языки программирования) (лекция)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика и математическая логика (практ.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Дискретная математика и математическая логика (практ.)",
+          "CoupleTeacher": "Воронцова И.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Компьютерные науки (Информатика) (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Компьютерные науки (Информатика) (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Линейная алгебра и геометрия (практ.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Линейная алгебра и геометрия (практ.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хугаева Л.Т.",
+          "CoupleAud": "ауд.513"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальная геометрия и топология (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Философия (лекция)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Дифференциальная геометрия и топология (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальная геометрия и топология (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Философия (практ.)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Дифференциальные уравнения (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.01 Математика   ",
+      "GroupId": "32",
+      "Couples": [
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Функциональный анализ (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Функциональный анализ (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Функциональный анализ (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Функциональный анализ (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (лекция)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (лекция)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Компьютерные науки (Информатика) (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.504"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Компьютерные науки (Информатика) (лаб.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.504"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Уравнения с частными производными (лекция)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Уравнения с частными производными (лекция)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Компьютерные науки (Практикум на ПК) (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Компьютерные науки (Практикум на ПК) (лаб.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лекция)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Численные методы (лекция)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Численные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Численные методы (практ.)",
+          "CoupleTeacher": "Цахоева А.Ф.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Защита компьютерной информации (лекция)",
+          "CoupleTeacher": "Гутнова А.К.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Защита компьютерной информации (лекция)",
+          "CoupleTeacher": "Гутнова А.К.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Защита компьютерной информации (практ.)",
+          "CoupleTeacher": "Гутнова А.К.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Уравнения с частными производными (практ.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Уравнения с частными производными (практ.)",
+          "CoupleTeacher": "Олисаев Э.Г.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
+          "CoupleTeacher": "Доев Ф.Х.",
+          "CoupleAud": "ауд.609"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   01.03.01 Математика   ",
+      "GroupId": "42",
+      "Couples": [
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Математические основы анализа алгоритмов (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Вариационное исчисление и методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Вариационное исчисление и методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Математические основы анализа алгоритмов (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория операторов (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория операторов (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Группы, кольца, алгоритмы и математическое обоснование RSA (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Группы, кольца, алгоритмы и математическое обоснование RSA (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Психология (лекция)",
+          "CoupleTeacher": "Малиева З.К.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Психология (практ.)",
+          "CoupleTeacher": "Малиева З.К.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория операторов (лаб.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория операторов (лаб.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Вариационное исчисление и методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Вариационное исчисление и методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Теоретическая механика (лекция)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Теоретическая механика (лекция)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Теоретическая механика (практ.)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Теоретическая механика (практ.)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория операторов (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Теория операторов (лаб.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Методика, история и перспективы развития прикладной математики (лекция)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Методика, история и перспективы развития прикладной математики (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Методика преподавания математики (лекция)",
+          "CoupleTeacher": "Тетермазова И.Э.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Методика преподавания математики (лекция)",
+          "CoupleTeacher": "Тетермазова И.Э.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Методика преподавания математики (практ.)",
+          "CoupleTeacher": "Тетермазова И.Э.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Методика преподавания математики (практ.)",
+          "CoupleTeacher": "Тетермазова И.Э.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Коды, исправляющие ошибки (лекция)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математические основы анализа алгоритмов (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Коды, исправляющие ошибки (практ.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.603"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Коды, исправляющие ошибки (практ.)",
+          "CoupleTeacher": "Джусоева Н.А.",
+          "CoupleAud": "ауд.603"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   09.03.01 Информатика и вычислительная техника   ",
+      "GroupId": "13",
+      "Couples": [
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Алгебра и геометрия (лекция)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Алгебра и геометрия (практ.)",
+          "CoupleTeacher": "Дряева Р.Ю.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лекция)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (практ.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Информатика (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Информатика (лекция)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Информатика (практ.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Информатика (практ.)",
+          "CoupleTeacher": "Алборова В.Э.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Программирование (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Программирование (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Программирование (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Программирование (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
+          "CoupleAud": "ауд.512, 606,611"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "История России (лекция)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "История России (практ.)",
+          "CoupleTeacher": "Батагова Л.Х.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Физическая культура и спорт (лекция)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "ауд.301"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Практикум на ПК (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Безопасность жизнедеятельности (лекция)",
+          "CoupleTeacher": "Гацоев К.А.",
+          "CoupleAud": "ауд.501"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Безопасность жизнедеятельности (практ.)",
+          "CoupleTeacher": "Гацоев К.А.",
+          "CoupleAud": "ауд.501"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   09.03.01 Информатика и вычислительная техника   ",
+      "GroupId": "23",
+      "Couples": [
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Программирование (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Программирование (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Цибирова И.М.",
+          "CoupleAud": "(физ.мат. Ул. Маркуса)"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Цибирова И.М.",
+          "CoupleAud": "(физ.мат. Ул. Маркуса)"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Физика (лекция)",
+          "CoupleTeacher": "Цибирова И.М.",
+          "CoupleAud": "(физ.мат. Ул. Маркуса)"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Цибирова И.М.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Цибирова И.М.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Физика (лаб.)",
+          "CoupleTeacher": "Цибирова И.М.",
+          "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Программирование (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Программирование (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Дифференциальные и интегральные уравнения (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Дифференциальные и интегральные уравнения (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные и интегральные уравнения (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Дифференциальные и интегральные уравнения (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Вычислительная математика (лекция)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Вычислительная математика (лекция)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Электротехника, электроника и схемотехника (лекция)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Электротехника, электроника и схемотехника (лекция)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Электротехника, электроника и схемотехника (практ.)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Электротехника, электроника и схемотехника (практ.)",
+          "CoupleTeacher": "Галимов Н.Б.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Математический анализ (лекция)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Математический анализ (практ.)",
+          "CoupleTeacher": "Хубежты Ш.С.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Технология численного решения инженерных задач (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Технология численного решения инженерных задач (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Иностранный язык (практ.)",
+          "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
+          "CoupleAud": "ауд.602, 606,611"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Вычислительная математика (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Вычислительная математика (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Практикум на ПК (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Практикум на ПК (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.506"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   09.03.01 Информатика и вычислительная техника   ",
+      "GroupId": "33",
+      "Couples": [
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Системы управления базами данных (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Инженерная и компьютерная графика (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Инженерная и компьютерная графика (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Инженерная и компьютерная графика (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Инженерная и компьютерная графика (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Системы управления базами данных (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "4",
+          "CoupleName": "Системы управления базами данных (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Базы данных (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Базы данных (лекция)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Технология численного решения инженерных задач (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Технология численного решения инженерных задач (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Операционные системы (лекция)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Операционные системы (лекция)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Основы теории управления (практ.)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Основы теории управления (практ.)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Методы оптимизации (лекция)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Функциональный анализ и вычислительная математика (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Функциональный анализ и вычислительная математика (лекция)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Методы оптимизации (практ.)",
+          "CoupleTeacher": "Кулаев Р.Ч.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Функциональный анализ и вычислительная математика (практ.)",
+          "CoupleTeacher": "Бичегкуев М.С.",
+          "CoupleAud": "ауд.511"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Базы данных (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "Базы данных (практ.)",
+          "CoupleTeacher": "Биткина В.В.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Операционные системы (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "Операционные системы (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.505"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Сети и телекоммуникации (практ.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Сети и телекоммуникации (практ.)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Сети и телекоммуникации (лекция)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Сети и телекоммуникации (лекция)",
+          "CoupleTeacher": "Цуцаев А.О.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы теории управления (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.512"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Основы теории управления (лекция)",
+          "CoupleTeacher": "Тедеев А.Ф.",
+          "CoupleAud": "ауд.512"
+        }
+      ]
+    },
+    {
+      "GroupName": "Направление   09.03.01 Информатика и вычислительная техника   ",
+      "GroupId": "43",
+      "Couples": [
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Проектирование информационных систем (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "1",
+          "CoupleName": "Проектирование информационных систем (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Администрирование WEB-серверов (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "2",
+          "CoupleName": "Администрирование WEB-серверов (практ.)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Проектирование информационных систем (лекция)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "monday",
+          "CoupleNum": "3",
+          "CoupleName": "Администрирование WEB-серверов (лекция)",
+          "CoupleTeacher": "Толоконников И.Г.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Системное программное обеспечение (лекция)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "1",
+          "CoupleName": "Системное программное обеспечение (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Системное программное обеспечение (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "2",
+          "CoupleName": "Системное программное обеспечение (практ.)",
+          "CoupleTeacher": "Уруцкаева М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математическая логика и теория алгоритмов (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "3",
+          "CoupleName": "Математическая логика и теория алгоритмов (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.606"
+        },
+        {
+          "Week": 1,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 2,
+          "Day": "tuesday",
+          "CoupleNum": "4",
+          "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
+          "CoupleTeacher": "Калустьянц К.А.",
+          "CoupleAud": "Дворец спорта"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Защита информации (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "1",
+          "CoupleName": "Защита информации (лекция)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Защита информации (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "2",
+          "CoupleName": "Защита информации (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Основы сетевых технологий (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "3",
+          "CoupleName": "Основы сетевых технологий (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.509"
+        },
+        {
+          "Week": 1,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Основы сетевых технологий (практ.)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.506"
+        },
+        {
+          "Week": 2,
+          "Day": "wednesday",
+          "CoupleNum": "4",
+          "CoupleName": "Метрология, стандартизация и сертификация (практ.)",
+          "CoupleTeacher": "Нартикоева А.О.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "WEB-программирование (лекция)",
+          "CoupleTeacher": "Хасиева Р.В.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "1",
+          "CoupleName": "WEB-программирование (лекция)",
+          "CoupleTeacher": "Хасиева Р.В.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "WEB-программирование (практ.)",
+          "CoupleTeacher": "Хасиева Р.В.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "thursday",
+          "CoupleNum": "2",
+          "CoupleName": "WEB-программирование (практ.)",
+          "CoupleTeacher": "Хасиева Р.В.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 1,
+          "Day": "thursday",
+          "CoupleNum": "3",
+          "CoupleName": "Математическая логика и теория алгоритмов (практ.)",
+          "CoupleTeacher": "Секинаева Б.Ш.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "1",
+          "CoupleName": "Философия (лекция)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.602"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Метрология, стандартизация и сертификация (лекция)",
+          "CoupleTeacher": "Нартикоева А.О.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "2",
+          "CoupleName": "Метрология, стандартизация и сертификация (лекция)",
+          "CoupleTeacher": "Нартикоева А.О.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Основы сетевых технологий (лекция)",
+          "CoupleTeacher": "Мансуров Ш.М.",
+          "CoupleAud": "ауд.600"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "3",
+          "CoupleName": "Философия (практ.)",
+          "CoupleTeacher": "Бязрова Д.Б.",
+          "CoupleAud": "ауд.611"
+        },
+        {
+          "Week": 1,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Экология (лекция)",
+          "CoupleTeacher": "Оказова З.П.",
+          "CoupleAud": "ауд.604"
+        },
+        {
+          "Week": 2,
+          "Day": "friday",
+          "CoupleNum": "4",
+          "CoupleName": "Экология (лекция)",
+          "CoupleTeacher": "Оказова З.П.",
+          "CoupleAud": "ауд.604"
+        }
+      ]
+    }
+  ]
+}

@@ -19,6 +19,9 @@
                     </Picker.Items>
                 </Picker>
                 <!-- контейнеры для будущего добавления пикеров-->
+                <StackLayout x:Name="SelectFacultyStackLoyaout">
+
+                </StackLayout>
                 <StackLayout x:Name="SelectGroupStackLoyaout">
 
                 </StackLayout>

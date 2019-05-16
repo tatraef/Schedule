@@ -16,7 +16,7 @@ namespace Schedule.Views
 		public DayMonday()
 		{
 			InitializeComponent();
-            FillMonday bind = new FillMonday();
+            /*FillMonday bind = new FillMonday();
             BindingContext = bind;
 
             object isTeacher = ""; //проверяется студент или преподаватель
@@ -24,7 +24,7 @@ namespace Schedule.Views
             if ((bool)isTeacher)
             {
                     couplesList.ItemsSource = bind.teacherCoupleList;
-            }
+            }*/
         }
 	}
 }

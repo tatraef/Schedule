@@ -16,7 +16,7 @@ namespace Schedule.Views
 		public DayTuesday()
 		{
 			InitializeComponent ();
-            BindingContext = new FillTuesday();
+            //BindingContext = new FillTuesday();
 
         }
 	}

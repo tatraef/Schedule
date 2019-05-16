@@ -1,81 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Schedule.Models
 {
+    public class Faculty
+    {
+        public string FacultyName { get; set; }
+        public List<Group> Groups { get; set; }
+    }
+
     public class Group
     {
-        public string groupName { get; set; }
-        public string groupId { get; set; }
-        public Subgroup firstSubgroup { get; set; }
-        public Subgroup secondSubgroup { get; set; }
-    }
-
-    public class Subgroup
-    {
-        public string subgroupName { get; set; }
-        public Weeks weeks { get; set; }
-    }
-
-    public class Weeks
-    {
-        public Week firstWeek { get; set; }
-        public Week secondWeek { get; set; }
-    }
-
-    public class Week
-    {
-        public Day monday { get; set; }
-        public Day tuesday { get; set; }
-        public Day wednesday { get; set; }
-        public Day thursday { get; set; }
-        public Day friday { get; set; }
-        public Day saturday { get; set; }
-    }
-
-    public class Day
-    {
-        public Couple couple1 = new Couple("9:00", "10:30", "1 пара");
-        public Couple couple2 = new Couple("10:40", "12:10", "2 пара");
-        public Couple couple3 = new Couple("12:50", "14:20", "3 пара");
-        public Couple couple4 = new Couple("14:30", "16:00", "4 пара");
+        public string GroupName { get; set; }
+        public string GroupId { get; set; }
+        public List<Couple> Couples { get; set; }
     }
 
     public class Couple
     {
-        public string coupleName { get; set; }
-        public string coupleTeacher { get; set; }
-        public string coupleAud { get; set; }
-        public string timeBegin { get; set; }
-        public string timeEnd { get; set; }
-        public string numOfCouple { get; set; }
-
-        public Couple (string begin, string end, string num)
+        public string SubgroupName { get; set; }
+        public string SubgroupId { get; set; }
+        public string Week { get; set; }
+        public string Day { get; set; }
+        private string coupleNum;
+        public string СoupleNum
         {
-            timeBegin = begin;
-            timeEnd = end;
-            numOfCouple = num;
+            set
+            {
+                if (value == "1")
+                {
+                    TimeBegin = "9:00";
+                    TimeEnd = "10:30";
+                }
+                else if (value == "2")
+                {
+                    TimeBegin = "10:40";
+                    TimeEnd = "12:10";
+                }
+                else if (value == "3")
+                {
+                    TimeBegin = "12:50";
+                    TimeEnd = "14:20";
+                }
+                else if (value == "4")
+                {
+                    TimeBegin = "14:30";
+                    TimeEnd = "16:00";
+                }
+                else if (value == "5")
+                {
+                    TimeBegin = "16:10";
+                    TimeEnd = "17:40";
+                }
+                coupleNum = value;
+
+            }
+            get { return coupleNum; }
         }
+        public string CoupleName { get; set; }
+        public string CoupleTeacher { get; set; }
+        public string CoupleAud { get; set; }
+        public string TimeBegin { get; set; }
+        public string TimeEnd { get; set; }
     }
 
     public class TeacherCouple
     {
-        public string coupleName { get; set; }
-        public string coupleTeacher { get; set; }
-        public string coupleAud { get; set; }
-        public string timeBegin { get; set; }
-        public string timeEnd { get; set; }
-        public string numOfCouple { get; set; }
+        public string CoupleName { get; set; }
+        public string CoupleTeacher { get; set; }
+        public string CoupleAud { get; set; }
+        public string TimeBegin { get; set; }
+        public string TimeEnd { get; set; }
+        public string CoupleNum { get; set; }
 
         public TeacherCouple(Couple couple, string groupId)
         {
-            coupleName = couple.coupleName;
-            coupleTeacher = groupId;
-            coupleAud = couple.coupleAud;
-            timeBegin = couple.timeBegin;
-            timeEnd = couple.timeEnd;
-            numOfCouple = couple.numOfCouple;
+            CoupleName = couple.CoupleName;
+            CoupleTeacher = groupId;
+            CoupleAud = couple.CoupleAud;
+            TimeBegin = couple.TimeBegin;
+            TimeEnd = couple.TimeEnd;
+            CoupleNum = couple.СoupleNum;
         }
     }
+
 }
