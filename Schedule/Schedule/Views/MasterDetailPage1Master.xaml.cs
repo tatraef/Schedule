@@ -63,7 +63,7 @@ namespace Schedule.Views
         public void changeUserName()
         {
             object name = "";
-            if (App.Current.Properties.TryGetValue("groupName", out name))
+            if (App.Current.Properties.TryGetValue("groupIdName", out name))
             {
                 userName.Text = (string)name;
             }

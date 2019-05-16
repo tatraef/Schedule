@@ -21,14 +21,15 @@ namespace Schedule
 
         public App()
         {
+            facultiesJSON = new List<Faculty>();
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
-            Stream stream = assembly.GetManifestResourceStream("Schedule.math_m.json");
+            Stream stream = assembly.GetManifestResourceStream("Schedule.math_b.json");
             using (var reader = new System.IO.StreamReader(stream))
             {
                 string json = reader.ReadToEnd();
                 facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
             }
-            Stream stream1 = assembly.GetManifestResourceStream("Schedule.math_b.json");
+            Stream stream1 = assembly.GetManifestResourceStream("Schedule.math_m.json");
             using (var reader = new System.IO.StreamReader(stream1))
             {
                 string json = reader.ReadToEnd();

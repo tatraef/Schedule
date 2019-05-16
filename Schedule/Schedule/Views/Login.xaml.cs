@@ -19,12 +19,11 @@ namespace Schedule.Views
 		{
 			InitializeComponent ();
             loadFaculties();
-            loadTeachers();
         }
 
         //переменные хранения выбранных значений
         string selectedFaculty = "";
-        string selectedGroup = "";
+        string selectedGroupId = "";
         string selectedGroupName = "";
         string selectedSubgroup = "";
         string selectedTeacher = "";
@@ -38,7 +37,7 @@ namespace Schedule.Views
             {
                 if (!groups.Contains(faculty.FacultyName))
                 {
-                    groups.Add(faculty.FacultyName);
+                    faculties.Add(faculty.FacultyName);
                 }
             }
         }
@@ -46,15 +45,15 @@ namespace Schedule.Views
         List<string> groups = new List<string>();
         void loadGroups()
         {
+            groups.Clear();
             foreach (var f in App.facultiesJSON)
             {
                 if (f.FacultyName == selectedFaculty)
                 {
                     foreach (var item in f.Groups)
                     {
-                        groups.Add(item.GroupId);
+                        groups.Add(item.GroupId + " | " + item.GroupName);
                     }
-                    break;
                 }
             }
         }
@@ -62,17 +61,18 @@ namespace Schedule.Views
         List<string> subgroups = new List<string>();
         void loadSubgroups()
         {
+            subgroups.Clear();
             foreach (var f in App.facultiesJSON)
             {
                 if (f.FacultyName == selectedFaculty)
                 {
                     foreach (var g in f.Groups)
                     {
-                        if (g.GroupId == selectedGroup)
+                        if (g.GroupId == selectedGroupId && g.GroupName == selectedGroupName)
                         {
                             foreach (var s in g.Couples)
                             {
-                                if (s.SubgroupName == "null")
+                                if (s.SubgroupName == null)
                                     break;
                                 if (!subgroups.Contains(s.SubgroupName))
                                 {
@@ -100,7 +100,7 @@ namespace Schedule.Views
                         {
                             if (!teachers.Contains(s.CoupleTeacher))
                             {
-                                subgroups.Add(s.CoupleTeacher);
+                                teachers.Add(s.CoupleTeacher);
                             }
                         }
 
@@ -119,8 +119,10 @@ namespace Schedule.Views
         //изменение поля с выбором типа пользователя
         void pickerUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedGroup = ""; //обнуляем переменные хранения значений
+            selectedGroupName = ""; //обнуляем переменные хранения значений
+            selectedGroupId = ""; //обнуляем переменные хранения значений
             selectedTeacher = "";
+            selectedSubgroup = "";
             Picker workPicker = (Picker)sender;
             if (workPicker.SelectedIndex == 0) //Если выбран студент
             {
@@ -141,7 +143,7 @@ namespace Schedule.Views
                 Title = ""
 
             };
-            foreach (var item in groups)
+            foreach (var item in faculties)
             {
                 picker.Items.Add(item);
             }
@@ -190,6 +192,8 @@ namespace Schedule.Views
             }
             else //Если выбран преподаватель
             {
+                loadTeachers();
+
                 headerForPicker = new Label
                 {
                     Text = "Выберите преподавателя:",
@@ -223,8 +227,9 @@ namespace Schedule.Views
         void pickerGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
-            selectedGroup = pic.SelectedItem.ToString(); //сохранение группы
-            string selectedGroupId = pic.SelectedItem.ToString();
+            string[] gr = pic.SelectedItem.ToString().Split('|');
+            selectedGroupId = gr[0].TrimEnd(); //сохранение номера группы
+            selectedGroupName = gr[1].TrimStart(); //сохранение имени группы
 
             loadSubgroups();
 
@@ -302,10 +307,11 @@ namespace Schedule.Views
             {
                 App.Current.Properties.Add("facultyName", selectedFaculty);
 
-                if (selectedGroup != "")
+                if (selectedGroupId != "")
                 {
                     //Сохранение данных в словарь App.Current.Properties
-                    App.Current.Properties.Add("groupId", selectedGroup);
+                    App.Current.Properties.Add("groupId", selectedGroupId);
+                    App.Current.Properties.Add("groupName", selectedGroupName);
                     //получение наименования группы (специальность) (нужна для вывода в меню)
                     foreach (var f in App.facultiesJSON)
                     {
@@ -313,9 +319,9 @@ namespace Schedule.Views
                         {
                             foreach (var g in f.Groups)
                             {
-                                if (g.GroupId == selectedGroup)
+                                if (g.GroupId == selectedGroupId && g.GroupName == selectedGroupName)
                                 {
-                                    App.Current.Properties.Add("groupName", selectedGroup + " | " + g.GroupName);
+                                    App.Current.Properties.Add("groupIdName", selectedGroupId + " | " + selectedGroupName);
                                 }
                             }
                         }
