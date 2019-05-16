@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Schedule.Views"
+            x:Class="Schedule.Views.ScheduleTabbedPage"
+            BarBackgroundColor="#262626"
+            BarTextColor="#EBB30D">
+  <!--Pages can be added as references or inline-->
+    <local:DayMonday />
+    <local:DayTuesday />
+    <local:DayWednesday />
+    <local:DayThursday />
+    <local:DayFriday />
+    <local:DaySaturday />
+</TabbedPage>

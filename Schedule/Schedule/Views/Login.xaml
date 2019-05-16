@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Schedule.Views.Login">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" BackgroundColor="White">
+                <Image
+                    HorizontalOptions="CenterAndExpand"
+                    Source="logoLogin.png" 
+                    Margin="30, 30"
+                    />
+                <Label Text="Выберите тип пользователя:"
+                    Margin="10, 0, 0, 0" TextColor="#262626" FontSize="Medium"/>
+                <Picker x:Name="pickerUserType" SelectedIndexChanged="pickerUserType_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Студент</x:String>
+                        <x:String>Преподаватель</x:String>
+                    </Picker.Items>
+                </Picker>
+                <!-- контейнеры для будущего добавления пикеров-->
+                <StackLayout x:Name="SelectGroupStackLoyaout">
+
+                </StackLayout>
+                <StackLayout x:Name="SelectSubgroupStackLoyaout">
+
+                </StackLayout>
+                <StackLayout x:Name="StackLoyaoutForSavebutton">
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
