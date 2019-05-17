@@ -11,6 +11,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Языки и методы программирования (лекция)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.509"
@@ -21,6 +23,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Языки и методы программирования (лекция)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.509"
@@ -31,6 +35,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Языки и методы программирования (лекция)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.509"
@@ -41,6 +47,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Языки и методы программирования (лекция)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.509"
@@ -51,6 +59,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.600"
@@ -61,6 +71,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.505"
@@ -71,6 +83,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.600"
@@ -81,6 +95,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.505"
@@ -91,6 +107,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -101,6 +119,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -111,6 +131,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -121,6 +143,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -131,6 +155,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.501"
@@ -141,6 +167,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.501"
@@ -151,6 +179,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы информатики (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.501"
@@ -161,6 +191,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (практ.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.604"
@@ -171,6 +203,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Языки и методы программирования (лаб.)",
           "CoupleTeacher": "Гутнова А.К.",
           "CoupleAud": "ауд.600"
@@ -181,6 +215,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -191,6 +227,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Языки и методы программирования (лаб.)",
           "CoupleTeacher": "Гутнова А.К.",
           "CoupleAud": "ауд.600"
@@ -201,6 +239,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -211,6 +251,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.501"
@@ -221,6 +263,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -231,6 +275,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.501"
@@ -241,6 +287,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -251,6 +299,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лекция)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.501"
@@ -261,6 +311,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.609"
@@ -271,6 +323,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.609"
@@ -281,6 +335,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лекция)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.501"
@@ -291,6 +347,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.505"
@@ -301,6 +359,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Языки и методы программирования (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -311,6 +371,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.505"
@@ -321,6 +383,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Языки и методы программирования (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -331,6 +395,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.501"
@@ -341,6 +407,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -351,6 +419,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.501"
@@ -361,6 +431,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -371,6 +443,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История (практ.)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.501"
@@ -381,6 +455,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История (практ.)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.501"
@@ -391,6 +467,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Койбаев В.А.",
           "CoupleAud": "ауд.501"
@@ -401,6 +479,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Койбаев В.А.",
           "CoupleAud": "ауд.501"
@@ -411,6 +491,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Койбаев В.А.",
           "CoupleAud": "ауд.501"
@@ -421,6 +503,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Койбаев В.А.",
           "CoupleAud": "ауд.501"
@@ -431,6 +515,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Безопасность жизнедеятельности (практ.)",
           "CoupleTeacher": "Туриев А.М.",
           "CoupleAud": "ауд.501"
@@ -441,6 +527,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Безопасность жизнедеятельности (практ.)",
           "CoupleTeacher": "Туриев А.М.",
           "CoupleAud": "ауд.501"
@@ -451,6 +539,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (практ.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.501"
@@ -461,6 +551,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы информатики (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.512"
@@ -471,6 +563,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -481,6 +575,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -491,6 +587,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -501,6 +599,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -511,6 +611,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История (лекция)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.602"
@@ -521,6 +623,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История (лекция)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.602"
@@ -531,6 +635,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Социология (лекция)",
           "CoupleTeacher": "Корнаев А.Т.",
           "CoupleAud": "ауд.501"
@@ -541,6 +647,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Социология (лекция)",
           "CoupleTeacher": "Корнаев А.Т.",
           "CoupleAud": "ауд.501"
@@ -551,6 +659,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.501"
@@ -561,6 +671,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.501"
@@ -571,6 +683,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.501"
@@ -581,6 +695,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.501"
@@ -591,6 +707,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Физическая культура и спорт (лекция)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "ауд.301"
@@ -601,6 +719,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Физическая культура и спорт (лекция)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "ауд.301"
@@ -611,6 +731,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы информатики (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.501"
@@ -621,6 +743,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы информатики (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.501"
@@ -631,6 +755,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -641,6 +767,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -651,6 +779,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -661,6 +791,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математический анализ (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -671,6 +803,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Безопасность жизнедеятельности (лекция)",
           "CoupleTeacher": "Гацоев К.А.",
           "CoupleAud": "ауд.501"
@@ -681,6 +815,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Безопасность жизнедеятельности (лекция)",
           "CoupleTeacher": "Гацоев К.А.",
           "CoupleAud": "ауд.501"
@@ -697,6 +833,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.611"
@@ -707,6 +845,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -717,6 +857,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.611"
@@ -727,6 +869,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -737,6 +881,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика (лекция)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.611"
@@ -747,6 +893,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика (лекция)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.611"
@@ -757,6 +905,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика (лекция)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.611"
@@ -767,6 +917,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика (лекция)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.611"
@@ -777,6 +929,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.600"
@@ -787,6 +941,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -797,6 +953,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.600"
@@ -807,6 +965,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -817,6 +977,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -827,6 +989,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -837,6 +1001,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Алгебра и геометрия (лаб.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.501"
@@ -847,6 +1013,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -857,6 +1025,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -867,6 +1037,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -877,6 +1049,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -887,6 +1061,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -897,6 +1073,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.611"
@@ -907,6 +1085,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -917,6 +1097,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.611"
@@ -927,6 +1109,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -937,6 +1121,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -947,6 +1133,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -957,6 +1145,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -967,6 +1157,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -977,6 +1169,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История математики (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.611"
@@ -987,6 +1181,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История математики (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.611"
@@ -997,6 +1193,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Информатика (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.611"
@@ -1007,6 +1205,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.505"
@@ -1017,6 +1217,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -1027,6 +1229,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.505"
@@ -1037,6 +1241,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -1047,6 +1253,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -1057,6 +1265,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -1067,6 +1277,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -1077,6 +1289,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (Дополнительные главы) (лекция)",
           "CoupleTeacher": "Тотиева Ж.Д.",
           "CoupleAud": "ауд.611"
@@ -1087,6 +1301,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1097,6 +1313,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1107,6 +1325,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1117,6 +1337,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1127,6 +1349,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -1137,6 +1361,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.611"
@@ -1147,6 +1373,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Макаренко М.Д.",
           "CoupleAud": "ауд.600"
@@ -1157,6 +1385,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Практикум на ПК (Delphi, C) (лаб.)",
           "CoupleTeacher": "Котец А.Ф.",
           "CoupleAud": "ауд.506"
@@ -1167,6 +1397,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.611"
@@ -1177,6 +1409,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дискретная математика (лаб.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.512"
@@ -1187,6 +1421,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дифференциальные уравнения (лаб.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.611"
@@ -1197,6 +1433,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дискретная математика (лаб.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.512"
@@ -1207,6 +1445,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.611"
@@ -1217,6 +1457,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.611"
@@ -1227,6 +1469,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.611"
@@ -1237,6 +1481,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.611"
@@ -1247,6 +1493,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1257,6 +1505,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1267,6 +1517,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1277,6 +1529,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1287,6 +1541,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дискретная математика (лаб.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.512"
@@ -1297,6 +1553,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.611"
@@ -1307,6 +1565,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дискретная математика (лаб.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.512"
@@ -1317,6 +1577,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Математический анализ (Дополнительные главы) (лаб.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.611"
@@ -1327,6 +1589,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Философия (лекция)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.602"
@@ -1337,6 +1601,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Философия (лекция)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.602"
@@ -1347,6 +1613,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Информатика (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.611"
@@ -1357,6 +1625,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Информатика (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.611"
@@ -1367,6 +1637,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -1377,6 +1649,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -1387,6 +1661,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -1397,6 +1673,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -1407,6 +1685,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Философия (практ.)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.611"
@@ -1417,6 +1697,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Философия (практ.)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.611"
@@ -1427,6 +1709,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Системы искусственного интеллекта (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.609"
@@ -1437,6 +1721,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Системы искусственного интеллекта (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.609"
@@ -1447,6 +1733,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Системы искусственного интеллекта (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.609"
@@ -1457,6 +1745,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Системы искусственного интеллекта (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.609"
@@ -1467,6 +1757,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Информатика (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.609"
@@ -1483,6 +1775,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория графов (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.602"
@@ -1493,6 +1787,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория графов (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.602"
@@ -1503,6 +1799,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Уравнения математической физики (лекция)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -1513,6 +1811,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Уравнения математической физики (лекция)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -1523,6 +1823,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Финансовая математика (лекция)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1533,6 +1835,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Финансовая математика (лекция)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1543,6 +1847,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Финансовая математика (практ.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1553,6 +1859,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Финансовая математика (практ.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1563,6 +1871,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК 2 (лаб.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -1573,6 +1883,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК 2 (лаб.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -1583,6 +1895,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Финансовая математика (практ.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1593,6 +1907,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Финансовая математика (практ.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1603,6 +1919,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Финансовая математика (практ.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1613,6 +1931,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Финансовая математика (практ.)",
           "CoupleTeacher": "Плиева Л.Ю.",
           "CoupleAud": "ауд.602"
@@ -1623,6 +1943,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Уравнения математической физики (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -1633,6 +1955,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Практикум на ПК 2 (лаб.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -1643,6 +1967,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Уравнения математической физики (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -1653,6 +1979,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Практикум на ПК 2 (лаб.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -1663,6 +1991,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Выпуклый анализ (лекция)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1673,6 +2003,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Выпуклый анализ (лекция)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1683,6 +2015,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Выпуклый анализ (лекция)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1693,6 +2027,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Выпуклый анализ (лекция)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1703,6 +2039,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Выпуклый анализ (практ.)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1713,6 +2051,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Выпуклый анализ (практ.)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1723,6 +2063,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Выпуклый анализ (практ.)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1733,6 +2075,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Выпуклый анализ (практ.)",
           "CoupleTeacher": "Кусраев А.Г.",
           "CoupleAud": "ауд.602"
@@ -1743,6 +2087,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Базы данных (лаб.)",
           "CoupleTeacher": "Гамаонов В.Г.",
           "CoupleAud": "ауд.600"
@@ -1753,6 +2099,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Базы данных (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.505"
@@ -1763,6 +2111,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Базы данных (лаб.)",
           "CoupleTeacher": "Гамаонов В.Г.",
           "CoupleAud": "ауд.600"
@@ -1773,6 +2123,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Базы данных (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.505"
@@ -1783,6 +2135,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Базы данных (лаб.)",
           "CoupleTeacher": "Гамаонов В.Г.",
           "CoupleAud": "ауд.600"
@@ -1793,6 +2147,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Базы данных (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.505"
@@ -1803,6 +2159,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Базы данных (лекция)",
           "CoupleTeacher": "Гамаонов В.Г.",
           "CoupleAud": "ауд.602"
@@ -1813,6 +2171,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Базы данных (лекция)",
           "CoupleTeacher": "Гамаонов В.Г.",
           "CoupleAud": "ауд.602"
@@ -1823,6 +2183,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "ауд.602"
@@ -1833,6 +2195,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "ауд.602"
@@ -1843,6 +2207,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "ауд.602"
@@ -1853,6 +2219,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "ауд.602"
@@ -1863,6 +2231,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория графов (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.602"
@@ -1873,6 +2243,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория графов (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.602"
@@ -1883,6 +2255,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория графов (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.602"
@@ -1893,6 +2267,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория графов (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.602"
@@ -1903,6 +2279,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -1913,6 +2291,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -1923,6 +2303,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -1933,6 +2315,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -1943,6 +2327,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1953,6 +2339,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1963,6 +2351,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1973,6 +2363,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -1983,6 +2375,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -1993,6 +2387,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2003,6 +2399,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2013,6 +2411,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2023,6 +2423,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2033,6 +2435,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2043,6 +2447,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2053,6 +2459,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -2063,6 +2471,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -2073,6 +2483,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Уравнения математической физики (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -2083,6 +2495,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -2093,6 +2507,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Уравнения математической физики (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -2103,6 +2519,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -2113,6 +2531,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Зембатов Х.Б.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -2129,6 +2549,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лекция)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2139,6 +2561,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лекция)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2149,6 +2573,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лекция)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2159,6 +2585,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лекция)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2169,6 +2597,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория аппроксимации (лекция)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.609"
@@ -2179,6 +2609,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория аппроксимации (лекция)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.609"
@@ -2189,6 +2621,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математическая экономика (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.609"
@@ -2199,6 +2633,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математическая экономика (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.609"
@@ -2209,6 +2645,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (лекция)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2219,6 +2657,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (лекция)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2229,6 +2669,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (лекция)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2239,6 +2681,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (лекция)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2249,6 +2693,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математическая экономика (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.609"
@@ -2259,6 +2705,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математическая экономика (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.609"
@@ -2269,6 +2717,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математическая экономика (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.609"
@@ -2279,6 +2729,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математическая экономика (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.609"
@@ -2289,6 +2741,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2299,6 +2753,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2309,6 +2765,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2319,6 +2777,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2329,6 +2789,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2339,6 +2801,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2349,6 +2813,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2359,6 +2825,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.609"
@@ -2369,6 +2837,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -2379,6 +2849,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -2389,6 +2861,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -2399,6 +2873,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -2409,6 +2885,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы сетевых технологий (лаб.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2419,6 +2897,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы сетевых технологий (лаб.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2429,6 +2909,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы сетевых технологий (лаб.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2439,6 +2921,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Основы сетевых технологий (лаб.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2449,6 +2933,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2459,6 +2945,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2469,6 +2957,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2479,6 +2969,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2489,6 +2981,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лаб.)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2499,6 +2993,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лаб.)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2509,6 +3005,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лаб.)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2519,6 +3017,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лаб.)",
           "CoupleTeacher": "Худалов М.З.",
           "CoupleAud": "ауд.609"
@@ -2529,6 +3029,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2539,6 +3041,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2549,6 +3053,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2559,6 +3065,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Проекционно-сеточные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.609"
@@ -2569,6 +3077,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
           "CoupleTeacher": "Басаева Е.К.",
           "CoupleAud": "ауд.506"
@@ -2579,6 +3089,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
           "CoupleTeacher": "Басаева Е.К.",
           "CoupleAud": "ауд.506"
@@ -2589,6 +3101,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
           "CoupleTeacher": "Басаева Е.К.",
           "CoupleAud": "ауд.506"
@@ -2599,6 +3113,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математические методы многомерного статистического анализа (практ.)",
           "CoupleTeacher": "Басаева Е.К.",
           "CoupleAud": "ауд.506"
@@ -2609,6 +3125,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Математические методы многомерного статистического анализа (лекция)",
           "CoupleTeacher": "Басаева Е.К.",
           "CoupleAud": "ауд.506"
@@ -2619,6 +3137,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Математические методы многомерного статистического анализа (лекция)",
           "CoupleTeacher": "Басаева Е.К.",
           "CoupleAud": "ауд.506"
@@ -2629,6 +3149,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Современные проблемы международных отношений и внешней политики РФ (лекция)",
           "CoupleTeacher": "Рубаева Э.М.",
           "CoupleAud": "ауд.609"
@@ -2639,6 +3161,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Современные проблемы международных отношений и внешней политики РФ (лекция)",
           "CoupleTeacher": "Рубаева Э.М.",
           "CoupleAud": "ауд.609"
@@ -2649,6 +3173,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория аппроксимации (практ.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.506"
@@ -2659,6 +3185,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория аппроксимации (практ.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.506"
@@ -2669,6 +3197,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория аппроксимации (практ.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.506"
@@ -2679,6 +3209,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория аппроксимации (практ.)",
           "CoupleTeacher": "Баззаев А.К.",
           "CoupleAud": "ауд.506"
@@ -2689,6 +3221,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы сетевых технологий (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2699,6 +3233,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы сетевых технологий (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2709,6 +3245,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы сетевых технологий (лаб.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2719,6 +3257,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы сетевых технологий (лаб.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -2729,6 +3269,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.509"
@@ -2739,6 +3281,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.509"
@@ -2749,6 +3293,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.509"
@@ -2759,6 +3305,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Численные методы решения задач математической физики (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.509"
@@ -2773,6 +3321,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2781,6 +3331,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2789,6 +3341,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.606"
@@ -2797,6 +3351,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.606"
@@ -2805,6 +3361,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -2813,6 +3371,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -2821,6 +3381,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра (практ.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.606"
@@ -2829,6 +3391,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра (практ.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.606"
@@ -2837,6 +3401,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2845,6 +3411,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2853,6 +3421,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2861,6 +3431,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2869,6 +3441,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2877,6 +3451,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Монако Т.П.",
           "CoupleAud": "ауд.606"
@@ -2885,6 +3461,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дополнительные главы математики (лаб.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2893,6 +3471,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дополнительные главы математики (лаб.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2901,6 +3481,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Аналитическая геометрия (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2909,6 +3491,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Аналитическая геометрия (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2917,6 +3501,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Аналитическая геометрия (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2925,6 +3511,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Аналитическая геометрия (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2933,6 +3521,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -2941,6 +3531,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -2949,6 +3541,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История (лекция)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.602"
@@ -2957,6 +3551,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История (практ.)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.602"
@@ -2965,6 +3561,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дополнительные главы математики (лаб.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -2973,6 +3571,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Компьютерные науки (Языки программирования) (лекция)",
           "CoupleTeacher": "Воронцова И.А .",
           "CoupleAud": "ауд.606"
@@ -2981,6 +3581,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Физическая культура и спорт (лекция)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "ауд.301"
@@ -2989,6 +3591,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Компьютерные науки (Языки программирования) (лаб.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.506"
@@ -2997,6 +3601,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Компьютерные науки (Информатика) (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.606"
@@ -3005,6 +3611,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Компьютерные науки (Информатика) (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.606"
@@ -3013,6 +3621,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Безопасность жизнедеятельности (лекция)",
           "CoupleTeacher": "Гацоев К.А.",
           "CoupleAud": "ауд.501"
@@ -3021,6 +3631,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Безопасность жизнедеятельности (практ.)",
           "CoupleTeacher": "Гацоев К.А.",
           "CoupleAud": "ауд.501"
@@ -3035,6 +3647,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Компьютерные науки (Практикум на ПК) (даб.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.505"
@@ -3043,6 +3657,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Компьютерные науки (Практикум на ПК) (даб.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.505"
@@ -3051,6 +3667,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика и математическая логика (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.513"
@@ -3059,6 +3677,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика и математическая логика (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.513"
@@ -3067,6 +3687,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Линейная алгебра и геометрия (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.513"
@@ -3075,6 +3697,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Линейная алгебра и геометрия (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.513"
@@ -3083,6 +3707,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3091,6 +3717,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3099,6 +3727,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Компьютерные науки (Языки программирования) (лаб.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.506"
@@ -3107,6 +3737,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Компьютерные науки (Языки программирования) (лекция)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.513"
@@ -3115,6 +3747,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика и математическая логика (практ.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.513"
@@ -3123,6 +3757,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дискретная математика и математическая логика (практ.)",
           "CoupleTeacher": "Воронцова И.А.",
           "CoupleAud": "ауд.513"
@@ -3131,6 +3767,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Компьютерные науки (Информатика) (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.513"
@@ -3139,6 +3777,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Компьютерные науки (Информатика) (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.513"
@@ -3147,6 +3787,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Линейная алгебра и геометрия (практ.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.513"
@@ -3155,6 +3797,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Линейная алгебра и геометрия (практ.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.513"
@@ -3163,6 +3807,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3171,6 +3817,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3179,6 +3827,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3187,6 +3837,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3195,6 +3847,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3203,6 +3857,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3211,6 +3867,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3219,6 +3877,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3227,6 +3887,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3235,6 +3897,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хугаева Л.Т.",
           "CoupleAud": "ауд.513"
@@ -3243,6 +3907,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3251,6 +3917,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3259,6 +3927,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальная геометрия и топология (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3267,6 +3937,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Философия (лекция)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.602"
@@ -3275,6 +3947,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Дифференциальная геометрия и топология (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3283,6 +3957,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -3291,6 +3967,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -3299,6 +3977,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальная геометрия и топология (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3307,6 +3987,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Философия (практ.)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.611"
@@ -3315,6 +3997,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3323,6 +4007,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Дифференциальные уравнения (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3337,6 +4023,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Функциональный анализ (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3345,6 +4033,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Функциональный анализ (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3353,6 +4043,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Функциональный анализ (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3361,6 +4053,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Функциональный анализ (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3369,6 +4063,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3377,6 +4073,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3385,6 +4083,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (лекция)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.603"
@@ -3393,6 +4093,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (лекция)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.603"
@@ -3401,6 +4103,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Компьютерные науки (Информатика) (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.504"
@@ -3409,6 +4113,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Компьютерные науки (Информатика) (лаб.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.504"
@@ -3417,6 +4123,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Уравнения с частными производными (лекция)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -3425,6 +4133,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Уравнения с частными производными (лекция)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.602"
@@ -3433,6 +4143,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Компьютерные науки (Практикум на ПК) (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.505"
@@ -3441,6 +4153,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Компьютерные науки (Практикум на ПК) (лаб.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.505"
@@ -3449,6 +4163,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лекция)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.603"
@@ -3457,6 +4173,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Численные методы (лекция)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.603"
@@ -3465,6 +4183,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Численные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.600"
@@ -3473,6 +4193,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Численные методы (практ.)",
           "CoupleTeacher": "Цахоева А.Ф.",
           "CoupleAud": "ауд.600"
@@ -3481,6 +4203,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3489,6 +4213,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3497,6 +4223,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Защита компьютерной информации (лекция)",
           "CoupleTeacher": "Гутнова А.К.",
           "CoupleAud": "ауд.509"
@@ -3505,6 +4233,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Защита компьютерной информации (лекция)",
           "CoupleTeacher": "Гутнова А.К.",
           "CoupleAud": "ауд.509"
@@ -3513,6 +4243,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Защита компьютерной информации (практ.)",
           "CoupleTeacher": "Гутнова А.К.",
           "CoupleAud": "ауд.509"
@@ -3521,6 +4253,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Комплексный анализ (теория функций комплексного переменного) (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3529,6 +4263,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Уравнения с частными производными (практ.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.509"
@@ -3537,6 +4273,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Уравнения с частными производными (практ.)",
           "CoupleTeacher": "Олисаев Э.Г.",
           "CoupleAud": "ауд.509"
@@ -3545,6 +4283,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3553,6 +4293,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3561,6 +4303,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -3569,6 +4313,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория вероятностей и математическая статистика (лекция)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -3577,6 +4323,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -3585,6 +4333,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Теория вероятностей и математическая статистика (практ.)",
           "CoupleTeacher": "Доев Ф.Х.",
           "CoupleAud": "ауд.609"
@@ -3593,6 +4343,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3601,6 +4353,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3609,6 +4363,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Группы, кольца и теоретико-числовые основы в криптографии (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3623,6 +4379,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математические основы анализа алгоритмов (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.603"
@@ -3631,6 +4389,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Вариационное исчисление и методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.603"
@@ -3639,6 +4399,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Вариационное исчисление и методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.603"
@@ -3647,6 +4409,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математические основы анализа алгоритмов (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.603"
@@ -3655,6 +4419,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория операторов (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3663,6 +4429,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория операторов (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3671,6 +4439,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Группы, кольца, алгоритмы и математическое обоснование RSA (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.603"
@@ -3679,6 +4449,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Группы, кольца, алгоритмы и математическое обоснование RSA (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.603"
@@ -3687,6 +4459,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Психология (лекция)",
           "CoupleTeacher": "Малиева З.К.",
           "CoupleAud": "ауд.603"
@@ -3695,6 +4469,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Психология (практ.)",
           "CoupleTeacher": "Малиева З.К.",
           "CoupleAud": "ауд.603"
@@ -3703,6 +4479,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3711,6 +4489,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3719,6 +4499,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория операторов (лаб.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3727,6 +4509,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория операторов (лаб.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3735,6 +4519,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Вариационное исчисление и методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.603"
@@ -3743,6 +4529,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Вариационное исчисление и методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.603"
@@ -3751,6 +4539,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Теоретическая механика (лекция)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.603"
@@ -3759,6 +4549,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Теоретическая механика (лекция)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.603"
@@ -3767,6 +4559,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Теоретическая механика (практ.)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.603"
@@ -3775,6 +4569,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Теоретическая механика (практ.)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.603"
@@ -3783,6 +4579,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория операторов (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3791,6 +4589,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Теория операторов (лаб.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -3799,6 +4599,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Методика, история и перспективы развития прикладной математики (лекция)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.603"
@@ -3807,6 +4609,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Методика, история и перспективы развития прикладной математики (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.603"
@@ -3815,6 +4619,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методика преподавания математики (лекция)",
           "CoupleTeacher": "Тетермазова И.Э.",
           "CoupleAud": "ауд.603"
@@ -3823,6 +4629,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методика преподавания математики (лекция)",
           "CoupleTeacher": "Тетермазова И.Э.",
           "CoupleAud": "ауд.603"
@@ -3831,6 +4639,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Методика преподавания математики (практ.)",
           "CoupleTeacher": "Тетермазова И.Э.",
           "CoupleAud": "ауд.603"
@@ -3839,6 +4649,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Методика преподавания математики (практ.)",
           "CoupleTeacher": "Тетермазова И.Э.",
           "CoupleAud": "ауд.603"
@@ -3847,6 +4659,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Коды, исправляющие ошибки (лекция)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.603"
@@ -3855,6 +4669,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математические основы анализа алгоритмов (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.603"
@@ -3863,6 +4679,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Коды, исправляющие ошибки (практ.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.603"
@@ -3871,6 +4689,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Коды, исправляющие ошибки (практ.)",
           "CoupleTeacher": "Джусоева Н.А.",
           "CoupleAud": "ауд.603"
@@ -3885,6 +4705,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3893,6 +4715,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Алгебра и геометрия (лекция)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3901,6 +4725,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3909,6 +4735,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Алгебра и геометрия (практ.)",
           "CoupleTeacher": "Дряева Р.Ю.",
           "CoupleAud": "ауд.512"
@@ -3917,6 +4745,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3925,6 +4755,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -3933,6 +4765,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.512"
@@ -3941,6 +4775,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.512"
@@ -3949,6 +4785,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лекция)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.512"
@@ -3957,6 +4795,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (практ.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.512"
@@ -3965,6 +4805,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.505"
@@ -3973,6 +4815,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Информатика (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.512"
@@ -3981,6 +4825,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Информатика (лекция)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.512"
@@ -3989,6 +4835,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Информатика (практ.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.512"
@@ -3997,6 +4845,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Информатика (практ.)",
           "CoupleTeacher": "Алборова В.Э.",
           "CoupleAud": "ауд.512"
@@ -4005,6 +4855,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Программирование (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4013,6 +4865,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Программирование (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4021,6 +4875,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Программирование (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4029,6 +4885,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Программирование (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4037,6 +4895,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -4045,6 +4905,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Кудзаева А.Г., Мильдзихова А.К., Гадзаова Л.П.",
           "CoupleAud": "ауд.512, 606,611"
@@ -4053,6 +4915,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История России (лекция)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.602"
@@ -4061,6 +4925,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "История России (практ.)",
           "CoupleTeacher": "Батагова Л.Х.",
           "CoupleAud": "ауд.602"
@@ -4069,6 +4935,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.512"
@@ -4077,6 +4945,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.512"
@@ -4085,6 +4955,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Физическая культура и спорт (лекция)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "ауд.301"
@@ -4093,6 +4965,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы аппаратного и программного обеспечения ПК (лаб.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.505"
@@ -4101,6 +4975,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.505"
@@ -4109,6 +4985,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Практикум на ПК (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.505"
@@ -4117,6 +4995,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Безопасность жизнедеятельности (лекция)",
           "CoupleTeacher": "Гацоев К.А.",
           "CoupleAud": "ауд.501"
@@ -4125,6 +5005,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Безопасность жизнедеятельности (практ.)",
           "CoupleTeacher": "Гацоев К.А.",
           "CoupleAud": "ауд.501"
@@ -4139,6 +5021,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Программирование (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -4147,6 +5031,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Программирование (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -4155,6 +5041,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Цибирова И.М.",
           "CoupleAud": "(физ.мат. Ул. Маркуса)"
@@ -4163,6 +5051,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Цибирова И.М.",
           "CoupleAud": "(физ.мат. Ул. Маркуса)"
@@ -4171,6 +5061,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Физика (лекция)",
           "CoupleTeacher": "Цибирова И.М.",
           "CoupleAud": "(физ.мат. Ул. Маркуса)"
@@ -4179,6 +5071,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Цибирова И.М.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -4187,6 +5081,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Цибирова И.М.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -4195,6 +5091,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Физика (лаб.)",
           "CoupleTeacher": "Цибирова И.М.",
           "CoupleAud": "(лаб. физ.-тех. ф-та ул. Маркуса)"
@@ -4203,6 +5101,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Программирование (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -4211,6 +5111,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Программирование (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -4219,6 +5121,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дифференциальные и интегральные уравнения (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4227,6 +5131,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Дифференциальные и интегральные уравнения (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4235,6 +5141,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные и интегральные уравнения (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4243,6 +5151,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Дифференциальные и интегральные уравнения (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4251,6 +5161,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Вычислительная математика (лекция)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.600"
@@ -4259,6 +5171,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Вычислительная математика (лекция)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.600"
@@ -4267,6 +5181,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Электротехника, электроника и схемотехника (лекция)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.604"
@@ -4275,6 +5191,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Электротехника, электроника и схемотехника (лекция)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.604"
@@ -4283,6 +5201,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Электротехника, электроника и схемотехника (практ.)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.604"
@@ -4291,6 +5211,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Электротехника, электроника и схемотехника (практ.)",
           "CoupleTeacher": "Галимов Н.Б.",
           "CoupleAud": "ауд.604"
@@ -4299,6 +5221,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4307,6 +5231,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4315,6 +5241,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -4323,6 +5251,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Математический анализ (лекция)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -4331,6 +5261,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -4339,6 +5271,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Математический анализ (практ.)",
           "CoupleTeacher": "Хубежты Ш.С.",
           "CoupleAud": "ауд.604"
@@ -4347,6 +5281,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4355,6 +5291,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4363,6 +5301,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Технология численного решения инженерных задач (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.505"
@@ -4371,6 +5311,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Технология численного решения инженерных задач (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.505"
@@ -4379,6 +5321,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -4387,6 +5331,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Иностранный язык (практ.)",
           "CoupleTeacher": "Гутиева М.Т., Малиева З.Н., Тамерьян Т.Ю.",
           "CoupleAud": "ауд.602, 606,611"
@@ -4395,6 +5341,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Вычислительная математика (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.506"
@@ -4403,6 +5351,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Вычислительная математика (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.506"
@@ -4411,6 +5361,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Практикум на ПК (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.506"
@@ -4419,6 +5371,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Практикум на ПК (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.506"
@@ -4433,6 +5387,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Системы управления базами данных (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.604"
@@ -4441,6 +5397,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Инженерная и компьютерная графика (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.604"
@@ -4449,6 +5407,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Инженерная и компьютерная графика (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.604"
@@ -4457,6 +5417,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Инженерная и компьютерная графика (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4465,6 +5427,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Инженерная и компьютерная графика (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4473,6 +5437,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Системы управления базами данных (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -4481,6 +5447,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Системы управления базами данных (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -4489,6 +5457,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Базы данных (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -4497,6 +5467,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Базы данных (лекция)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -4505,6 +5477,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Технология численного решения инженерных задач (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.509"
@@ -4513,6 +5487,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Технология численного решения инженерных задач (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.509"
@@ -4521,6 +5497,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Операционные системы (лекция)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.600"
@@ -4529,6 +5507,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Операционные системы (лекция)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.600"
@@ -4537,6 +5517,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Основы теории управления (практ.)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.512"
@@ -4545,6 +5527,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Основы теории управления (практ.)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.512"
@@ -4553,6 +5537,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.611"
@@ -4561,6 +5547,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Методы оптимизации (лекция)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.611"
@@ -4569,6 +5557,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Функциональный анализ и вычислительная математика (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4577,6 +5567,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Функциональный анализ и вычислительная математика (лекция)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4585,6 +5577,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.611"
@@ -4593,6 +5587,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Методы оптимизации (практ.)",
           "CoupleTeacher": "Кулаев Р.Ч.",
           "CoupleAud": "ауд.611"
@@ -4601,6 +5597,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Функциональный анализ и вычислительная математика (практ.)",
           "CoupleTeacher": "Бичегкуев М.С.",
           "CoupleAud": "ауд.511"
@@ -4609,6 +5607,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Базы данных (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -4617,6 +5617,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Базы данных (практ.)",
           "CoupleTeacher": "Биткина В.В.",
           "CoupleAud": "ауд.505"
@@ -4625,6 +5627,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Операционные системы (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.505"
@@ -4633,6 +5637,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Операционные системы (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.505"
@@ -4641,6 +5647,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Сети и телекоммуникации (практ.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.600"
@@ -4649,6 +5657,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Сети и телекоммуникации (практ.)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.600"
@@ -4657,6 +5667,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4665,6 +5677,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4673,6 +5687,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Сети и телекоммуникации (лекция)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.600"
@@ -4681,6 +5697,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Сети и телекоммуникации (лекция)",
           "CoupleTeacher": "Цуцаев А.О.",
           "CoupleAud": "ауд.600"
@@ -4689,6 +5707,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы теории управления (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.512"
@@ -4697,6 +5717,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Основы теории управления (лекция)",
           "CoupleTeacher": "Тедеев А.Ф.",
           "CoupleAud": "ауд.512"
@@ -4711,6 +5733,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Проектирование информационных систем (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.506"
@@ -4719,6 +5743,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Проектирование информационных систем (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.506"
@@ -4727,6 +5753,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Администрирование WEB-серверов (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.506"
@@ -4735,6 +5763,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Администрирование WEB-серверов (практ.)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.506"
@@ -4743,6 +5773,8 @@
           "Week": 1,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Проектирование информационных систем (лекция)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.604"
@@ -4751,6 +5783,8 @@
           "Week": 2,
           "Day": "monday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Администрирование WEB-серверов (лекция)",
           "CoupleTeacher": "Толоконников И.Г.",
           "CoupleAud": "ауд.604"
@@ -4759,6 +5793,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Системное программное обеспечение (лекция)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.604"
@@ -4767,6 +5803,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Системное программное обеспечение (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.506"
@@ -4775,6 +5813,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Системное программное обеспечение (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.506"
@@ -4783,6 +5823,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Системное программное обеспечение (практ.)",
           "CoupleTeacher": "Уруцкаева М.",
           "CoupleAud": "ауд.506"
@@ -4791,6 +5833,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математическая логика и теория алгоритмов (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -4799,6 +5843,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математическая логика и теория алгоритмов (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.606"
@@ -4807,6 +5853,8 @@
           "Week": 1,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4815,6 +5863,8 @@
           "Week": 2,
           "Day": "tuesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Элективные курсы по физической культуре и спорту (практ.)",
           "CoupleTeacher": "Калустьянц К.А.",
           "CoupleAud": "Дворец спорта"
@@ -4823,6 +5873,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Защита информации (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.509"
@@ -4831,6 +5883,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Защита информации (лекция)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.509"
@@ -4839,6 +5893,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Защита информации (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.509"
@@ -4847,6 +5903,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Защита информации (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.509"
@@ -4855,6 +5913,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Основы сетевых технологий (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.509"
@@ -4863,6 +5923,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Основы сетевых технологий (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.509"
@@ -4871,6 +5933,8 @@
           "Week": 1,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Основы сетевых технологий (практ.)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.506"
@@ -4879,6 +5943,8 @@
           "Week": 2,
           "Day": "wednesday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Метрология, стандартизация и сертификация (практ.)",
           "CoupleTeacher": "Нартикоева А.О.",
           "CoupleAud": "ауд.604"
@@ -4887,6 +5953,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "WEB-программирование (лекция)",
           "CoupleTeacher": "Хасиева Р.В.",
           "CoupleAud": "ауд.600"
@@ -4895,6 +5963,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "WEB-программирование (лекция)",
           "CoupleTeacher": "Хасиева Р.В.",
           "CoupleAud": "ауд.600"
@@ -4903,6 +5973,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "WEB-программирование (практ.)",
           "CoupleTeacher": "Хасиева Р.В.",
           "CoupleAud": "ауд.600"
@@ -4911,6 +5983,8 @@
           "Week": 2,
           "Day": "thursday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "WEB-программирование (практ.)",
           "CoupleTeacher": "Хасиева Р.В.",
           "CoupleAud": "ауд.600"
@@ -4919,6 +5993,8 @@
           "Week": 1,
           "Day": "thursday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Математическая логика и теория алгоритмов (практ.)",
           "CoupleTeacher": "Секинаева Б.Ш.",
           "CoupleAud": "ауд.604"
@@ -4927,6 +6003,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "1",
+          "TimeBegin": "9:00",
+          "TimeEnd": "10:30",
           "CoupleName": "Философия (лекция)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.602"
@@ -4935,6 +6013,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Метрология, стандартизация и сертификация (лекция)",
           "CoupleTeacher": "Нартикоева А.О.",
           "CoupleAud": "ауд.604"
@@ -4943,6 +6023,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "2",
+          "TimeBegin": "10:40",
+          "TimeEnd": "12:10",
           "CoupleName": "Метрология, стандартизация и сертификация (лекция)",
           "CoupleTeacher": "Нартикоева А.О.",
           "CoupleAud": "ауд.604"
@@ -4951,6 +6033,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Основы сетевых технологий (лекция)",
           "CoupleTeacher": "Мансуров Ш.М.",
           "CoupleAud": "ауд.600"
@@ -4959,6 +6043,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "3",
+          "TimeBegin": "12:50",
+          "TimeEnd": "14:20",
           "CoupleName": "Философия (практ.)",
           "CoupleTeacher": "Бязрова Д.Б.",
           "CoupleAud": "ауд.611"
@@ -4967,6 +6053,8 @@
           "Week": 1,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Экология (лекция)",
           "CoupleTeacher": "Оказова З.П.",
           "CoupleAud": "ауд.604"
@@ -4975,6 +6063,8 @@
           "Week": 2,
           "Day": "friday",
           "CoupleNum": "4",
+          "TimeBegin": "14:30",
+          "TimeEnd": "16:00",
           "CoupleName": "Экология (лекция)",
           "CoupleTeacher": "Оказова З.П.",
           "CoupleAud": "ауд.604"

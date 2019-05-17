@@ -38,7 +38,7 @@
                         <Button Text="Выход" 
                                 HorizontalOptions="End"
                                 BackgroundColor="White"
-                                Clicked="exit_Clicked"/>
+                                Clicked="Exit_Clicked"/>
                     </StackLayout>    
                     
                 </Grid>

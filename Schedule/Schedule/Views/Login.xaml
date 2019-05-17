@@ -12,7 +12,7 @@
                     />
                 <Label Text="Выберите тип пользователя:"
                     Margin="10, 0, 0, 0" TextColor="#262626" FontSize="Medium"/>
-                <Picker x:Name="pickerUserType" SelectedIndexChanged="pickerUserType_SelectedIndexChanged">
+                <Picker x:Name="pickerUserType" SelectedIndexChanged="PickerUserType_SelectedIndexChanged">
                     <Picker.Items>
                         <x:String>Студент</x:String>
                         <x:String>Преподаватель</x:String>

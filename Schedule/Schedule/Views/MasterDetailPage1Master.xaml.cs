@@ -27,7 +27,7 @@ namespace Schedule.Views
 
         protected override void OnAppearing()
         {
-            changeUserName();
+            ChangeUserName();
             base.OnAppearing();
         }
 
@@ -60,20 +60,19 @@ namespace Schedule.Views
         }
 
         //Изменяет имя пользователя, прописанное в меню
-        public void changeUserName()
+        public void ChangeUserName()
         {
-            object name = "";
-            if (App.Current.Properties.TryGetValue("groupIdName", out name))
+            if (App.Current.Properties.TryGetValue("groupIdName", out object name))
             {
                 userName.Text = (string)name;
             }
-            else if (App.Current.Properties.TryGetValue("teacherName", out name))
+            else if (App.Current.Properties.TryGetValue("teacherName", out object tname))
             {
-                userName.Text = (string)name;
+                userName.Text = (string)tname;
             }
         }
 
-        private void exit_Clicked(object sender, SelectedItemChangedEventArgs e)
+        private void Exit_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
             App.Current.Properties.Clear();
 

@@ -22,10 +22,9 @@ namespace Schedule.Views
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MasterDetailPage1MenuItem;
-            if (item == null)
+            if (!(e.SelectedItem is MasterDetailPage1MenuItem item))
                 return;
-             
+
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 

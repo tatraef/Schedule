@@ -18,7 +18,7 @@ namespace Schedule.Views
 		public Login ()
 		{
 			InitializeComponent ();
-            loadFaculties();
+            LoadFaculties();
         }
 
         //переменные хранения выбранных значений
@@ -31,7 +31,7 @@ namespace Schedule.Views
 
         //Загрузка факультетов, для отображения в списке факультетов
         List<string> faculties = new List<string>();
-        void loadFaculties()
+        void LoadFaculties()
         {
             foreach (var faculty in App.facultiesJSON)
             {
@@ -43,7 +43,7 @@ namespace Schedule.Views
         }
         //Загрузка групп, для отображения в списке групп
         List<string> groups = new List<string>();
-        void loadGroups()
+        void LoadGroups()
         {
             groups.Clear();
             foreach (var f in App.facultiesJSON)
@@ -59,7 +59,7 @@ namespace Schedule.Views
         }
         //Загрузка подгрупп, для отображения в списке групп
         List<string> subgroups = new List<string>();
-        void loadSubgroups()
+        void LoadSubgroups()
         {
             subgroups.Clear();
             foreach (var f in App.facultiesJSON)
@@ -88,7 +88,7 @@ namespace Schedule.Views
         }
         //Загрузка преподавателей, для отображения в списке преподавателей
         List<string> teachers = new List<string>();
-        void loadTeachers()
+        void LoadTeachers()
         {
             foreach (var f in App.facultiesJSON)
             {
@@ -131,7 +131,7 @@ namespace Schedule.Views
         Picker picker;
 
         //изменение поля с выбором типа пользователя
-        void pickerUserType_SelectedIndexChanged(object sender, EventArgs e)
+        void PickerUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedGroupName = ""; //обнуляем переменные хранения значений
             selectedGroupId = ""; //обнуляем переменные хранения значений
@@ -162,7 +162,7 @@ namespace Schedule.Views
                 picker.Items.Add(item);
             }
 
-            picker.SelectedIndexChanged += pickerFaculty_SelectedIndexChanged;
+            picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
 
             SelectFacultyStackLoyaout.Children.Clear();
             SelectGroupStackLoyaout.Children.Clear();
@@ -173,12 +173,12 @@ namespace Schedule.Views
 
         }
         //изменение поля с выбором факультета
-        void pickerFaculty_SelectedIndexChanged(object sender, EventArgs e)
+        void PickerFaculty_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
             selectedFaculty = pic.SelectedItem.ToString(); //сохранение группы
 
-            loadGroups();
+            LoadGroups();
 
             if (!isTeacher) //Если выбран студент
             {
@@ -200,13 +200,13 @@ namespace Schedule.Views
                     picker.Items.Add(item);
                 }
 
-                picker.SelectedIndexChanged += pickerGroup_SelectedIndexChanged;
+                picker.SelectedIndexChanged += PickerGroup_SelectedIndexChanged;
 
 
             }
             else //Если выбран преподаватель
             {
-                loadTeachers();
+                LoadTeachers();
 
                 headerForPicker = new Label
                 {
@@ -226,7 +226,7 @@ namespace Schedule.Views
                     picker.Items.Add(item);
                 }
 
-                picker.SelectedIndexChanged += pickerTeacher_SelectedIndexChanged;
+                picker.SelectedIndexChanged += PickerTeacher_SelectedIndexChanged;
 
             }
 
@@ -238,14 +238,14 @@ namespace Schedule.Views
 
         }
         //изменение поля с выбором группы
-        void pickerGroup_SelectedIndexChanged(object sender, EventArgs e)
+        void PickerGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
             string[] gr = pic.SelectedItem.ToString().Split('|');
             selectedGroupId = gr[0].TrimEnd(); //сохранение номера группы
             selectedGroupName = gr[1].TrimStart(); //сохранение имени группы
 
-            loadSubgroups();
+            LoadSubgroups();
 
             if (subgroups.Count > 0)
             {
@@ -268,7 +268,7 @@ namespace Schedule.Views
                     picker.Items.Add(item);
                 }
 
-                picker.SelectedIndexChanged += pickerSubgroup_SelectedIndexChanged;
+                picker.SelectedIndexChanged += PickerSubgroup_SelectedIndexChanged;
 
                 SelectSubgroupStackLoyaout.Children.Clear();
                 SelectSubgroupStackLoyaout.Children.Add(headerForPicker);
@@ -278,7 +278,7 @@ namespace Schedule.Views
             {
                 SelectSubgroupStackLoyaout.Children.Clear();
                 //Если нет подгруппы показываем кнопку сохранения
-                saveButton.Clicked += onSavebuttonClick;
+                saveButton.Clicked += OnSavebuttonClick;
                 StackLoyaoutForSavebutton.Children.Clear();
                 StackLoyaoutForSavebutton.Children.Add(saveButton);
             }
@@ -297,28 +297,28 @@ namespace Schedule.Views
         };
 
         //изменение поля с выбором преподавателя
-        void pickerTeacher_SelectedIndexChanged(object sender, EventArgs e)
+        void PickerTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
             selectedTeacher = pic.SelectedItem.ToString();
-            saveButton.Clicked += onSavebuttonClick;
+            saveButton.Clicked += OnSavebuttonClick;
             StackLoyaoutForSavebutton.Children.Clear();
             StackLoyaoutForSavebutton.Children.Add(saveButton);
         }
 
         //изменение поля с выбором подгруппы
-        void pickerSubgroup_SelectedIndexChanged(object sender, EventArgs e)
+        void PickerSubgroup_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
             selectedSubgroup = pic.SelectedItem.ToString();
-            saveButton.Clicked += onSavebuttonClick;
+            saveButton.Clicked += OnSavebuttonClick;
             StackLoyaoutForSavebutton.Children.Clear();
             StackLoyaoutForSavebutton.Children.Add(saveButton);
         }
 
 
         //Нажатие на кнопку Сохранить
-        void onSavebuttonClick(object sender, EventArgs e)
+        void OnSavebuttonClick(object sender, EventArgs e)
         {
             //проверка, так как если выбрать факультет, 
             //а потом поменять его на другой и нажать на Сохранить, 

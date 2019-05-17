@@ -24,52 +24,19 @@ namespace Schedule.Models
         public string SubgroupId { get; set; }
         public string Week { get; set; }
         public string Day { get; set; }
-        private string coupleNum;
-        public string СoupleNum
-        {
-            set
-            {
-                if (value == "1")
-                {
-                    TimeBegin = "9:00";
-                    TimeEnd = "10:30";
-                }
-                else if (value == "2")
-                {
-                    TimeBegin = "10:40";
-                    TimeEnd = "12:10";
-                }
-                else if (value == "3")
-                {
-                    TimeBegin = "12:50";
-                    TimeEnd = "14:20";
-                }
-                else if (value == "4")
-                {
-                    TimeBegin = "14:30";
-                    TimeEnd = "16:00";
-                }
-                else if (value == "5")
-                {
-                    TimeBegin = "16:10";
-                    TimeEnd = "17:40";
-                }
-                coupleNum = value;
-
-            }
-            get { return coupleNum; }
-        }
+        public string CoupleNum { get; set; }
+        public string TimeBegin { get; set; }
+        public string TimeEnd { get; set; }
         public string CoupleName { get; set; }
         public string CoupleTeacher { get; set; }
         public string CoupleAud { get; set; }
-        public string TimeBegin { get; set; }
-        public string TimeEnd { get; set; }
+        
     }
 
     public class TeacherCouple
     {
         public string CoupleName { get; set; }
-        public string CoupleTeacher { get; set; }
+        public string CoupleGroups { get; set; }
         public string CoupleAud { get; set; }
         public string TimeBegin { get; set; }
         public string TimeEnd { get; set; }
@@ -78,11 +45,11 @@ namespace Schedule.Models
         public TeacherCouple(Couple couple, string groupId)
         {
             CoupleName = couple.CoupleName;
-            CoupleTeacher = groupId;
+            CoupleGroups = groupId;
             CoupleAud = couple.CoupleAud;
             TimeBegin = couple.TimeBegin;
             TimeEnd = couple.TimeEnd;
-            CoupleNum = couple.СoupleNum;
+            CoupleNum = couple.CoupleNum;
         }
     }
 
