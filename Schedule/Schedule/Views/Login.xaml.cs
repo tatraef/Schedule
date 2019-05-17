@@ -35,7 +35,7 @@ namespace Schedule.Views
         {
             foreach (var faculty in App.facultiesJSON)
             {
-                if (!groups.Contains(faculty.FacultyName))
+                if (!faculties.Contains(faculty.FacultyName))
                 {
                     faculties.Add(faculty.FacultyName);
                 }
@@ -98,8 +98,22 @@ namespace Schedule.Views
                     {
                         foreach (var s in g.Couples)
                         {
-                            if (!teachers.Contains(s.CoupleTeacher))
+                            //Если в строке преподавателя есть запятая, то это английский, то есть три преподавателя
+                            if (s.CoupleTeacher.Contains(',')) 
                             {
+                                //поэтому их нужно разделить
+                                string[] someTeachers = s.CoupleTeacher.Split(',');
+                                foreach (var item in someTeachers)
+                                {
+                                    if (!teachers.Contains(item.Trim()))
+                                    {
+                                        teachers.Add(item.Trim());
+                                    }
+                                }
+                            }
+                            else if (!teachers.Contains(s.CoupleTeacher))
+                            {
+
                                 teachers.Add(s.CoupleTeacher);
                             }
                         }
@@ -265,6 +279,7 @@ namespace Schedule.Views
                 SelectSubgroupStackLoyaout.Children.Clear();
                 //Если нет подгруппы показываем кнопку сохранения
                 saveButton.Clicked += onSavebuttonClick;
+                StackLoyaoutForSavebutton.Children.Clear();
                 StackLoyaoutForSavebutton.Children.Add(saveButton);
             }
 
@@ -287,6 +302,7 @@ namespace Schedule.Views
             Picker pic = (Picker)sender;
             selectedTeacher = pic.SelectedItem.ToString();
             saveButton.Clicked += onSavebuttonClick;
+            StackLoyaoutForSavebutton.Children.Clear();
             StackLoyaoutForSavebutton.Children.Add(saveButton);
         }
 
@@ -296,6 +312,7 @@ namespace Schedule.Views
             Picker pic = (Picker)sender;
             selectedSubgroup = pic.SelectedItem.ToString();
             saveButton.Clicked += onSavebuttonClick;
+            StackLoyaoutForSavebutton.Children.Clear();
             StackLoyaoutForSavebutton.Children.Add(saveButton);
         }
 
@@ -303,46 +320,52 @@ namespace Schedule.Views
         //Нажатие на кнопку Сохранить
         void onSavebuttonClick(object sender, EventArgs e)
         {
-            if (selectedFaculty != "")
+            //проверка, так как если выбрать факультет, 
+            //а потом поменять его на другой и нажать на Сохранить, 
+            //программа снова заходит в этот метод и пытается добавить данный ключ
+            if (!App.Current.Properties.ContainsKey("facultyName")) 
             {
-                App.Current.Properties.Add("facultyName", selectedFaculty);
-
-                if (selectedGroupId != "")
+                if (selectedFaculty != "")
                 {
-                    //Сохранение данных в словарь App.Current.Properties
-                    App.Current.Properties.Add("groupId", selectedGroupId);
-                    App.Current.Properties.Add("groupName", selectedGroupName);
-                    //получение наименования группы (специальность) (нужна для вывода в меню)
-                    foreach (var f in App.facultiesJSON)
+                    App.Current.Properties.Add("facultyName", selectedFaculty);
+
+                    if (selectedGroupId != "")
                     {
-                        if (f.FacultyName == selectedFaculty)
+                        //Сохранение данных в словарь App.Current.Properties
+                        App.Current.Properties.Add("groupId", selectedGroupId);
+                        App.Current.Properties.Add("groupName", selectedGroupName);
+                        //получение наименования группы (специальность) (нужна для вывода в меню)
+                        foreach (var f in App.facultiesJSON)
                         {
-                            foreach (var g in f.Groups)
+                            if (f.FacultyName == selectedFaculty)
                             {
-                                if (g.GroupId == selectedGroupId && g.GroupName == selectedGroupName)
+                                foreach (var g in f.Groups)
                                 {
-                                    App.Current.Properties.Add("groupIdName", selectedGroupId + " | " + selectedGroupName);
+                                    if (g.GroupId == selectedGroupId && g.GroupName == selectedGroupName)
+                                    {
+                                        App.Current.Properties.Add("groupIdName", selectedGroupId + " | " + selectedGroupName);
+                                    }
                                 }
                             }
                         }
-                    }
 
-                    if (selectedSubgroup != "")
+                        if (selectedSubgroup != "")
+                        {
+                            App.Current.Properties.Add("subgroup", selectedSubgroup);
+                        }
+
+                        App.Current.Properties.Add("isTeacher", false);
+                    }
+                    else
                     {
-                        App.Current.Properties.Add("subgroup", selectedSubgroup);
+                        App.Current.Properties.Add("isTeacher", true);
+                        App.Current.Properties.Add("teacherName", selectedTeacher);
                     }
+                }
 
-                    App.Current.Properties.Add("isTeacher", false);
-                }
-                else
-                {
-                    App.Current.Properties.Add("isTeacher", true);
-                    App.Current.Properties.Add("teacherName", selectedTeacher);
-                }
+                App.Current.Properties.Add("numOfWeek", "1");
+                App.Current.MainPage = new MasterDetailPage1();
             }
-
-            App.Current.Properties.Add("numOfWeek", "1");
-            App.Current.MainPage = new MasterDetailPage1();
         }
     }
 }
