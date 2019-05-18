@@ -15,8 +15,16 @@ namespace Schedule.Views
 	{
 		public DaySaturday()
 		{
-			InitializeComponent ();
-            //BindingContext = new FillSaturday();
+            InitializeComponent();
+            DayViewModel bind = new DayViewModel("saturday");
+            BindingContext = bind;
+
+            //проверяется студент или преподаватель
+            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+                if ((bool)isTeacher)
+                {
+                    couplesList.ItemsSource = bind.TeacherCoupleList;
+                }
 
         }
 	}

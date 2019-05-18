@@ -13,16 +13,16 @@
                             <Frame Margin="5, 5, 5, 5" CornerRadius="10" Padding="0">
                                 <StackLayout>
                                     <StackLayout Orientation="Horizontal" Padding="5, 0" BackgroundColor="#262626">
-                                        <Label Text="{Binding numOfCouple}" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="#EBB30D"/>
+                                        <Label Text="{Binding CoupleNum, StringFormat='\{0:C\} пара'} " FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="#EBB30D"/>
                                         <StackLayout Orientation="Vertical" HorizontalOptions="End">
-                                            <Label Text="{Binding timeBegin}" FontSize="Medium" VerticalOptions="Start" TextColor="#EBB30D"/>
-                                            <Label Text="{Binding timeEnd}" FontSize="Micro"  VerticalOptions="EndAndExpand" HorizontalOptions="End" TextColor="#EBB30D"/>
+                                            <Label Text="{Binding TimeBegin}" FontSize="Medium" VerticalOptions="Start" TextColor="#EBB30D"/>
+                                            <Label Text="{Binding TimeEnd}" FontSize="Micro"  VerticalOptions="EndAndExpand" HorizontalOptions="End" TextColor="#EBB30D"/>
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Padding="5, 0">
-                                        <Label Text="{Binding coupleName}" FontSize="Medium" TextColor="#262626"/>
-                                        <Label Text="{Binding coupleTeacher}" FontSize="Small" TextColor="#262626"/>
-                                        <Label Text="{Binding coupleAud}" FontSize="Small" TextColor="#262626"/>
+                                        <Label Text="{Binding CoupleName}" FontSize="Medium" TextColor="#262626"/>
+                                        <Label Text="{Binding CoupleGroups}" FontSize="Small" TextColor="#262626"/>
+                                        <Label Text="{Binding CoupleAud}" FontSize="Small" TextColor="#262626"/>
                                     </StackLayout>
                                 </StackLayout>
                             </Frame>

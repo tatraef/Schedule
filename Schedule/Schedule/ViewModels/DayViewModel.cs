@@ -15,6 +15,16 @@ namespace Schedule.ViewModels
 
         public DayViewModel(string dayOfWeek)
         {
+            string numOfWeek = "";
+            if (App.Current.Properties.TryGetValue("numOfWeek", out object num))
+            {
+                numOfWeek = (string)num;
+            }
+            else
+            {
+                numOfWeek = "1";
+            }
+
              //проверяется студент или преподаватель
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
@@ -35,28 +45,21 @@ namespace Schedule.ViewModels
                                     //Contains, так как в паре английского может быть несколь преподавателей
                                     if (c.CoupleTeacher.Contains(thisTeacher)) 
                                     {
-                                        if (c.Day == dayOfWeek)
+                                        if (c.Week == numOfWeek)
                                         {
-                                            try
+                                            if (c.Day == dayOfWeek)
                                             {
-
-
                                                 byte coupleNum = Convert.ToByte(c.CoupleNum);
                                                 if (!TeacherCouples.ContainsKey(coupleNum))
                                                 {
-                                                    TeacherCouples.Add(coupleNum, new TeacherCouple(c, g.GroupId));
+                                                    TeacherCouples.Add(coupleNum, new TeacherCouple(c, g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "")));
                                                 }
                                                 else
                                                 {
-                                                    TeacherCouples[coupleNum].CoupleGroups += ", " + g.GroupId;
+                                                    TeacherCouples[coupleNum].CoupleGroups += ", " + g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "");
                                                 }
                                             }
-                                            catch (Exception e)
-                                            {
-                                                string s = e.Message;
-                                                throw;
-                                            }
-                                        }      
+                                        }
                                     }
                                 }
                             }
