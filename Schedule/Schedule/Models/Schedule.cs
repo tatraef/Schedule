@@ -36,7 +36,7 @@ namespace Schedule.Models
     public class TeacherCouple
     {
         public string CoupleName { get; set; }
-        public string CoupleGroups { get; set; }
+        public string CoupleTeacher { get; set; }
         public string CoupleAud { get; set; }
         public string TimeBegin { get; set; }
         public string TimeEnd { get; set; }
@@ -45,7 +45,7 @@ namespace Schedule.Models
         public TeacherCouple(Couple couple, string groupId)
         {
             CoupleName = couple.CoupleName;
-            CoupleGroups = groupId;
+            CoupleTeacher = groupId;
             CoupleAud = couple.CoupleAud;
             TimeBegin = couple.TimeBegin;
             TimeEnd = couple.TimeEnd;

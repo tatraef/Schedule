@@ -25,6 +25,10 @@ namespace Schedule.Views
                 {
                     couplesList.ItemsSource = bind.TeacherCoupleList;
                 }
+                else
+                {
+                    couplesList.ItemsSource = bind.Couples;
+                }
         }
 	}
 }

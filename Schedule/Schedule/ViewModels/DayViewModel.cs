@@ -56,7 +56,7 @@ namespace Schedule.ViewModels
                                                 }
                                                 else
                                                 {
-                                                    TeacherCouples[coupleNum].CoupleGroups += ", " + g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "");
+                                                    TeacherCouples[coupleNum].CoupleTeacher += ", " + g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "");
                                                 }
                                             }
                                         }
@@ -70,6 +70,46 @@ namespace Schedule.ViewModels
                     {
                         SortedDictionary<byte, TeacherCouple> sortedTeacherCouples = new SortedDictionary<byte, TeacherCouple>(TeacherCouples);
                         TeacherCoupleList = sortedTeacherCouples.Values.ToList();
+                    }
+                }
+                /************************Студент***************************************/
+                else
+                {
+                    Couples = new List<Couple>();
+                    //проверяется факультет
+                    if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                    {
+                        string facultyName = (string)FacultyName;
+                        //проверяются номер группы, имя группы и подгруппа
+                        string groupId = "";
+                        if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
+                        { groupId = (string)GroupId; }
+                        string groupName = "";
+                        if (App.Current.Properties.TryGetValue("groupName", out object GroupName))
+                        { groupName = (string)GroupName; }
+                        string subgroup = null;
+                        if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
+                        { subgroup = (string)Subgroup; }
+
+                        foreach (var f in App.facultiesJSON)
+                        {
+                            if (f.FacultyName == facultyName)
+                            {
+                                foreach (var g in f.Groups)
+                                {
+                                    if (g.GroupId == groupId && g.GroupName == groupName)
+                                    {
+                                        foreach (var c in g.Couples)
+                                        {
+                                            if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dayOfWeek)
+                                            {
+                                                Couples.Add(c);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
