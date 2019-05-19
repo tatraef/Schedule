@@ -39,11 +39,8 @@ namespace Schedule.Views
             {
                 MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
                 {
-                    new MasterDetailPage1MenuItem { Id = 0, Title = "Таймлайн"},
+                    new MasterDetailPage1MenuItem { Id = 0, Title = "Таймлайн", TargetType = typeof(TimelinePage)},
                     new MasterDetailPage1MenuItem { Id = 1, Title = "Расписание", TargetType = typeof(ScheduleTabbedPage)},
-                    new MasterDetailPage1MenuItem { Id = 2, Title = "Page 3" },
-                    new MasterDetailPage1MenuItem { Id = 3, Title = "Page 4" },
-                    new MasterDetailPage1MenuItem { Id = 4, Title = "Page 5" },
                 });
             }
             

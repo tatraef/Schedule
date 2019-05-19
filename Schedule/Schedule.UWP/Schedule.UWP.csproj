@@ -131,7 +131,10 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="json.txt" />
-    <AndroidResource Include="logoLogin.png" />
+    <AndroidResource Include="logoLogin.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="logoNOSU.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
