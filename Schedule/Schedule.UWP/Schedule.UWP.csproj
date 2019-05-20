@@ -130,6 +130,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Bullet.png" />
+    <Content Include="FadeToWhite.png" />
     <Content Include="json.txt" />
     <AndroidResource Include="logoLogin.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
@@ -137,6 +139,7 @@
     </AndroidResource>
     <Content Include="logoNOSU.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="YogaImage.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

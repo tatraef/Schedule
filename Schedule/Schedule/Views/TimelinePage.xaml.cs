@@ -10,6 +10,8 @@ using Newtonsoft.Json;
 using System.Reflection;
 using System.IO;
 using Schedule.Models;
+using System.Collections.ObjectModel;
+using Schedule.ViewModels;
 
 namespace Schedule.Views
 {
@@ -21,6 +23,7 @@ namespace Schedule.Views
         public TimelinePage()
         {
             InitializeComponent();
+            BindingContext = new TimelineViewModel();
 
             timetable = new List<Specialty>();
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
@@ -32,4 +35,6 @@ namespace Schedule.Views
             }
         }
     }
+
+    
 }
