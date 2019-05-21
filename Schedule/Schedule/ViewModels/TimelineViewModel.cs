@@ -21,7 +21,7 @@ namespace Schedule.ViewModels
 
             for (int i = 0; i < 7; i++)
             {
-                lines.Add(MakeDays(DateTime.Now));
+                lines.Add(MakeDays(DateTime.Now.AddDays(i)));
             }
 
             return lines;
@@ -78,6 +78,16 @@ namespace Schedule.ViewModels
             {
                 ThisDate = NeedDate
             };
+
+            if (couples.Count == 0)
+            {
+                Couple some = new Couple
+                {
+                    CoupleName = "Ничего интересного..."
+                };
+                couples.Add(some);
+            }
+
             nowaday.AddRange(couples);
             return nowaday;
         }

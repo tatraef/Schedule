@@ -109,8 +109,8 @@
     <AndroidResource Include="Resources\drawable\logoLogin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\drawable\calendar.png" />
-    <Content Include="Resources\drawable\clock.png" />
+    <AndroidResource Include="Resources\drawable\calendar.png" />
+    <AndroidResource Include="Resources\drawable\clock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

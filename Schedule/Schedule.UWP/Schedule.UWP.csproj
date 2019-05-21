@@ -132,10 +132,10 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="calendar.png" />
     <Content Include="clock.png" />
-    <AndroidResource Include="logoLogin.png">
+    <Content Include="logoLogin.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
-    </AndroidResource>
+    </Content>
     <Content Include="logoNOSU.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>

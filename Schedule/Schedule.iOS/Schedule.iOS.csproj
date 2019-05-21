@@ -164,7 +164,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\logoNOSU.png" />
+    <Content Include="Resources\logoNOSU.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logoLogin.png" />

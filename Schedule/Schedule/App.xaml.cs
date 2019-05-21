@@ -16,7 +16,8 @@ namespace Schedule
         public static List<Faculty> facultiesJSON;
         public static Dictionary<string, Group> sched;
 
-        
+        public static List<Specialty> timetable;
+
         public int MyProperty { get; set; }
 
         public App()
@@ -35,19 +36,14 @@ namespace Schedule
                 string json = reader.ReadToEnd();
                 facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
             }
-            /*
-            #region LoadData
-            //GetManifestResourceStream используется для доступа к внедренному файлу, 
-            //путь определяется через Assembly
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
-                Stream stream = assembly.GetManifestResourceStream("Schedule.data.json");
 
-                using (var reader = new System.IO.StreamReader(stream))
-                {
-                    string json = reader.ReadToEnd();
-                    sched = JsonConvert.DeserializeObject<Dictionary<string, Group>>(json);
-                }
-            #endregion*/
+            timetable = new List<Specialty>();
+            Stream stream2 = assembly.GetManifestResourceStream("Schedule.timetable.json");
+            using (var reader = new System.IO.StreamReader(stream2))
+            {
+                string json = reader.ReadToEnd();
+                timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
+            }
 
             InitializeComponent();
 
