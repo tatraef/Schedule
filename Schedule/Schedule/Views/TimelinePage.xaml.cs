@@ -25,14 +25,14 @@ namespace Schedule.Views
             InitializeComponent();
             BindingContext = new TimelineViewModel();
 
-            timetable = new List<Specialty>();
+            /*timetable = new List<Specialty>();
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
             Stream stream = assembly.GetManifestResourceStream("Schedule.timetable.json");
             using (var reader = new System.IO.StreamReader(stream))
             {
                 string json = reader.ReadToEnd();
                 timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
-            }
+            }*/
         }
     }
 

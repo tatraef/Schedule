@@ -164,12 +164,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\json.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\logoNOSU.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logoLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\calendar.png" />
+    <Content Include="Resources\clock.png" />
   </ItemGroup>
 </Project>

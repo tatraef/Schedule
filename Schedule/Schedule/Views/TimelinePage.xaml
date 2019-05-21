@@ -9,7 +9,7 @@
         <ListView.GroupHeaderTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <Label Text="{Binding ThisDate}" />
+                    <Label Text="{Binding ThisDate, StringFormat='{}{0:dddd, dd MMMM yyyy}'}" />
                 </ViewCell>
             </DataTemplate>
         </ListView.GroupHeaderTemplate>
