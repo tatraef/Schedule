@@ -19,6 +19,7 @@ namespace Schedule.Models
     public class Day
     {
         public int ThisDate { get; set; }
+        public int ThisWeek { get; set; }
         public int ThisMonth { get; set; }
         public string Content { get; set; }
     }
