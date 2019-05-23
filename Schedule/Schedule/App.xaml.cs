@@ -17,6 +17,7 @@ namespace Schedule
         public static Dictionary<string, Group> sched;
 
         public static List<Specialty> timetable;
+        public static List<Day> myTimetable;
 
         public int MyProperty { get; set; }
 
@@ -49,14 +50,39 @@ namespace Schedule
 
             
             //параметры пользователя
-            if (!Current.Properties.ContainsKey("isTeacher"))
+            if (!Current.Properties.ContainsKey("isTeacher")) //проверка на авторизованность
             {
                 MainPage = new Login();
             }
             else
             {
                 MainPage = new MasterDetailPage1();
+
+                string table = "";
+                if (App.Current.Properties.TryGetValue("timetable", out object tableFrom)) //проверка графика
+                {
+                    table = (string)tableFrom;
+                    myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+                }
+
+                DateTime now = DateTime.Now;
+                int day = now.Day;
+                int month = now.Month;
+                foreach (var item in myTimetable)
+                {
+                    if (item.ThisDay == day && item.ThisMonth == month)
+                    {
+                        if (item.ThisWeek % 2 == 0)
+                        {
+                            App.Current.Properties["numOfWeek"] = "2";
+                        } else 
+                            App.Current.Properties["numOfWeek"] = "1";
+                        break;
+                    }
+                }
             }
+
+            
         }
 
         protected override void OnStart()
