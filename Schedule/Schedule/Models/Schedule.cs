@@ -51,6 +51,10 @@ namespace Schedule.Models
             TimeEnd = couple.TimeEnd;
             CoupleNum = couple.CoupleNum;
         }
+        public TeacherCouple()
+        {
+
+        }
     }
 
 }

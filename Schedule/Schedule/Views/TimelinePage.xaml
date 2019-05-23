@@ -4,7 +4,7 @@
 			 xmlns:local="clr-namespace:Schedule.Models"
 			 x:Class="Schedule.Views.TimelinePage">
 
-    <ListView ItemsSource="{Binding Items}" HasUnevenRows="True" IsGroupingEnabled="true">
+    <ListView x:Name="couplesList" ItemsSource="{Binding ItemsForStudents}" HasUnevenRows="True" IsGroupingEnabled="true">
         
         <ListView.GroupHeaderTemplate>
             <DataTemplate>

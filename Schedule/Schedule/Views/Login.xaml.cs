@@ -355,6 +355,8 @@ namespace Schedule.Views
                         }
 
                         App.Current.Properties.Add("isTeacher", false);
+
+
                     }
                     else
                     {
