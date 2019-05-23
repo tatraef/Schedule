@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Schedule.Models;
 
 using Xamarin.Forms;
@@ -356,7 +357,34 @@ namespace Schedule.Views
 
                         App.Current.Properties.Add("isTeacher", false);
 
+                        //Сохранение графика
+                        int indexOfDigit = 0;
+                        for (int i = 0; i < selectedGroupName.Length; i++)//вырезаем код специальности, чтобы по нему искать
+                        {
+                            if (Char.IsDigit(selectedGroupName[i]))
+                            {
+                                indexOfDigit = i;
+                                break;
+                            }
+                        }
+                        string code = selectedGroupName.Substring(indexOfDigit, 8);
+                        string course = selectedGroupId[0].ToString();
 
+                        foreach (var item in App.timetable)
+                        {
+                            if (item.SpecialtyName.Contains(code))
+                            {
+                                foreach (var courses in item.Courses)
+                                {
+                                    if (courses.CourseNumber == course)
+                                    {
+                                        string json = JsonConvert.SerializeObject(courses.Days);
+                                        App.Current.Properties.Add("timetable", json);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
                     }
                     else
                     {
