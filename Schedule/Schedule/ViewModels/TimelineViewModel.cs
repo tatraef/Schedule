@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace Schedule.ViewModels
 {
@@ -13,6 +14,33 @@ namespace Schedule.ViewModels
 
         public TimelineViewModel()
         {
+            #region Определение номера недели
+            List<Day> myTimetable = new List<Day>();
+            string table = "";
+            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+            {
+                table = (string)tableFrom;
+                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+            }
+
+            DateTime now = DateTime.Now;
+            int day = now.Day;
+            int month = now.Month;
+            foreach (var item in myTimetable)
+            {
+                if (item.ThisDay == day && item.ThisMonth == month)
+                {
+                    if (item.ThisWeek % 2 == 0)
+                    {
+                        App.Current.Properties["numOfWeek"] = "2";
+                    }
+                    else
+                        App.Current.Properties["numOfWeek"] = "1";
+                    break;
+                }
+            }
+            #endregion
+
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
                 if ((bool)isTeacher)

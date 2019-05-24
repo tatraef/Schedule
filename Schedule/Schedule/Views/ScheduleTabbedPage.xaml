@@ -5,7 +5,7 @@
             x:Class="Schedule.Views.ScheduleTabbedPage"
             BarBackgroundColor="#262626"
             BarTextColor="#EBB30D">
-  <!--Pages can be added as references or inline-->
+    <!--Pages can be added as references or inline-->
     <local:DayMonday />
     <local:DayTuesday />
     <local:DayWednesday />
