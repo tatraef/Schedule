@@ -54,7 +54,7 @@ namespace Schedule.ViewModels
 
         public TimelineItemForTeacher MakeDaysForTeacher(DateTime NeedDate)
         {
-
+            DateTime now = DateTime.Now;
             Dictionary<byte, TeacherCouple> teacherCouples = new Dictionary<byte, TeacherCouple>();
             List<TeacherCouple> teacherCoupleList = new List<TeacherCouple>();
 
@@ -83,6 +83,18 @@ namespace Schedule.ViewModels
                                 {
                                     if (c.Day == dt)
                                     {
+                                        //проверка, чтобы не показывать уже завершенные пары
+                                        if (NeedDate.Day == now.Day)
+                                        {
+                                            string[] s = c.TimeEnd.Split(':');
+                                            int h = Convert.ToInt32(s[0]);
+                                            int m = Convert.ToInt32(s[1]);
+                                            TimeSpan t = new TimeSpan(h, m, 0);
+                                            if (t < now.TimeOfDay)
+                                            {
+                                                continue;
+                                            }
+                                        }
                                         byte coupleNum = Convert.ToByte(c.CoupleNum);
                                         if (!teacherCouples.ContainsKey(coupleNum))
                                         {
@@ -129,7 +141,7 @@ namespace Schedule.ViewModels
 
         public TimelineItemForStudent MakeDaysForStudent(DateTime NeedDate)
         {
-
+            DateTime now = DateTime.Now;
             List<Couple> couples = new List<Couple>();
 
             string dt = NeedDate.DayOfWeek.ToString().ToLower();
@@ -167,6 +179,18 @@ namespace Schedule.ViewModels
                                 {
                                     if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dt)
                                     {
+                                        //проверка, чтобы не показывать уже завершенные пары
+                                        if (NeedDate.Day == now.Day)
+                                        {   
+                                            string[] s = c.TimeEnd.Split(':');
+                                            int h = Convert.ToInt32(s[0]);
+                                            int m = Convert.ToInt32(s[1]);
+                                            TimeSpan t = new TimeSpan(h, m, 0);
+                                            if (t < now.TimeOfDay)
+                                            {
+                                                continue; 
+                                            }
+                                        }
                                         couples.Add(c);
                                     }
                                 }
