@@ -23,62 +23,53 @@ namespace Schedule
 
         public App()
         {
-            facultiesJSON = new List<Faculty>();
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
-            Stream stream = assembly.GetManifestResourceStream("Schedule.math_b.json");
-            using (var reader = new System.IO.StreamReader(stream))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
-            }
-            Stream stream1 = assembly.GetManifestResourceStream("Schedule.math_m.json");
-            using (var reader = new System.IO.StreamReader(stream1))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
-            }
-
-            timetable = new List<Specialty>();
-            Stream stream2 = assembly.GetManifestResourceStream("Schedule.timetable.json");
-            using (var reader = new System.IO.StreamReader(stream2))
-            {
-                string json = reader.ReadToEnd();
-                timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
-            }
+            SchedulesLoad();
 
             InitializeComponent();
 
-            
             //параметры пользователя
             if (!Current.Properties.ContainsKey("isTeacher")) //проверка на авторизованность
             {
                 MainPage = new Login();
+
+                //Значит пользователь еще не входил и нужно загрузить файл с графиком, 
+                //чтобы в дальнейшем сделать в Properties переменную timetable
+                TimetableLoad();
             }
             else
             {
                 MainPage = new MasterDetailPage1();
-
-                string table = "";
-                if (App.Current.Properties.TryGetValue("timetable", out object tableFrom)) //проверка графика
+                //проверка графика, для студента нужен, сохраненная при авторизации "timetable" в Properties,
+                //а для преподавателя весь файл timetable.json
+                if (!Current.Properties.ContainsKey("groupIdName")) 
                 {
-                    table = (string)tableFrom;
-                    myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-                }
-
-                DateTime now = DateTime.Now;
-                int day = now.Day;
-                int month = now.Month;
-                foreach (var item in myTimetable)
-                {
-                    if (item.ThisDay == day && item.ThisMonth == month)
+                    string table = "";
+                    if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
                     {
-                        if (item.ThisWeek % 2 == 0)
-                        {
-                            App.Current.Properties["numOfWeek"] = "2";
-                        } else 
-                            App.Current.Properties["numOfWeek"] = "1";
-                        break;
+                        table = (string)tableFrom;
+                        myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
                     }
+
+                    DateTime now = DateTime.Now;
+                    int day = now.Day;
+                    int month = now.Month;
+                    foreach (var item in myTimetable)
+                    {
+                        if (item.ThisDay == day && item.ThisMonth == month)
+                        {
+                            if (item.ThisWeek % 2 == 0)
+                            {
+                                App.Current.Properties["numOfWeek"] = "2";
+                            }
+                            else
+                                App.Current.Properties["numOfWeek"] = "1";
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    TimetableLoad();
                 }
             }
 
@@ -99,5 +90,36 @@ namespace Schedule
         {
             // Handle when your app resumes
         }
+
+        protected void TimetableLoad() //загрузка файла с графиком
+        {
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
+            timetable = new List<Specialty>();
+            Stream stream2 = assembly.GetManifestResourceStream("Schedule.timetable.json");
+            using (var reader = new System.IO.StreamReader(stream2))
+            {
+                string json = reader.ReadToEnd();
+                timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
+            }
+        }
+
+        protected void SchedulesLoad() //загрузка расписаний каждого факультета
+        {
+            facultiesJSON = new List<Faculty>();
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
+            Stream stream = assembly.GetManifestResourceStream("Schedule.math_b.json");
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
+            }
+            Stream stream1 = assembly.GetManifestResourceStream("Schedule.math_m.json");
+            using (var reader = new System.IO.StreamReader(stream1))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
+            }
+        }
+
     }
 }
