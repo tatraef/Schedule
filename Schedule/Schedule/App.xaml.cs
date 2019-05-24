@@ -39,7 +39,7 @@ namespace Schedule
             else
             {
                 MainPage = new MasterDetailPage1();
-                //проверка графика, для студента нужен, сохраненная при авторизации "timetable" в Properties,
+                //проверка графика, для студента нужен, сохраненный при авторизации "timetable" в Properties,
                 //а для преподавателя весь файл timetable.json
                 if (!Current.Properties.ContainsKey("groupIdName")) 
                 {
@@ -70,6 +70,30 @@ namespace Schedule
                 else
                 {
                     TimetableLoad();
+
+                    string table = "";
+                    if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+                    {
+                        table = (string)tableFrom;
+                        myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+                    }
+
+                    DateTime now = DateTime.Now;
+                    int day = now.Day;
+                    int month = now.Month;
+                    foreach (var item in myTimetable)
+                    {
+                        if (item.ThisDay == day && item.ThisMonth == month)
+                        {
+                            if (item.ThisWeek % 2 == 0)
+                            {
+                                App.Current.Properties["numOfWeek"] = "2";
+                            }
+                            else
+                                App.Current.Properties["numOfWeek"] = "1";
+                            break;
+                        }
+                    }
                 }
             }
 
@@ -91,7 +115,7 @@ namespace Schedule
             // Handle when your app resumes
         }
 
-        protected void TimetableLoad() //загрузка файла с графиком
+        public void TimetableLoad() //загрузка файла с графиком
         {
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
             timetable = new List<Specialty>();
@@ -103,7 +127,7 @@ namespace Schedule
             }
         }
 
-        protected void SchedulesLoad() //загрузка расписаний каждого факультета
+        public void SchedulesLoad() //загрузка расписаний каждого факультета
         {
             facultiesJSON = new List<Faculty>();
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;

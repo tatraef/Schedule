@@ -65,6 +65,15 @@ namespace Schedule.ViewModels
             {
                 numOfWeek = (string)num;
             }
+            //Если прошел переход через неделю, то есть открыл страницу в четверг,
+            //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
+            if (NeedDate.DayOfWeek < now.DayOfWeek)
+            {
+                if (numOfWeek == "1")
+                    numOfWeek = "2";
+                else
+                    numOfWeek = "1";
+            }
 
             //проверяется имя преподавателя
             if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
@@ -151,6 +160,16 @@ namespace Schedule.ViewModels
             {
                 numOfWeek = (string)num;
             }
+            //Если прошел переход через неделю, то есть открыл страницу в четверг,
+            //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
+            if (NeedDate.DayOfWeek < now.DayOfWeek)
+            {
+                if (numOfWeek == "1")
+                    numOfWeek = "2";
+                else
+                    numOfWeek = "1";
+            }
+
 
             //проверяется факультет
             if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))

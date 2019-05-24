@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Schedule.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +78,16 @@ namespace Schedule.Views
             App.Current.Properties.Clear();
 
             App.Current.MainPage = new Login();
+            
+            //загрузка графика, необходимо загружать здесь, так как если пользователь выйдет, данного файла не будет
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
+            App.timetable = new List<Specialty>();
+            Stream stream2 = assembly.GetManifestResourceStream("Schedule.timetable.json");
+            using (var reader = new System.IO.StreamReader(stream2))
+            {
+                string json = reader.ReadToEnd();
+                App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
+            }
         }
     }
 }
