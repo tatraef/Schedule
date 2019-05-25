@@ -24,6 +24,7 @@ namespace Schedule
         public App()
         {
             SchedulesLoad();
+            TimetableLoad();
 
             InitializeComponent();
 
@@ -31,72 +32,35 @@ namespace Schedule
             if (!Current.Properties.ContainsKey("isTeacher")) //проверка на авторизованность
             {
                 MainPage = new Login();
-
-                //Значит пользователь еще не входил и нужно загрузить файл с графиком, 
-                //чтобы в дальнейшем сделать в Properties переменную timetable
-                TimetableLoad();
             }
             else
             {
                 MainPage = new MasterDetailPage1();
-                //проверка графика, для студента нужен, сохраненный при авторизации "timetable" в Properties,
-                //а для преподавателя еще и весь файл timetable.json
-                if (!Current.Properties.ContainsKey("groupIdName")) 
+                //проверка графика для определения номера недели
+                string table = "";
+                if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
                 {
-                    TimetableLoad();
-                    string table = "";
-                    if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
-                    {
-                        table = (string)tableFrom;
-                        myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-                    }
-
-                    DateTime now = DateTime.Now;
-                    int day = now.Day;
-                    int month = now.Month;
-                    foreach (var item in myTimetable)
-                    {
-                        if (item.ThisDay == day && item.ThisMonth == month)
-                        {
-                            if (item.ThisWeek % 2 == 0)
-                            {
-                                App.Current.Properties["numOfWeek"] = "2";
-                            }
-                            else
-                                App.Current.Properties["numOfWeek"] = "1";
-                            break;
-                        }
-                    }
+                    table = (string)tableFrom;
+                    myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
                 }
-                else
-                {
-                    string table = "";
-                    if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
-                    {
-                        table = (string)tableFrom;
-                        myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-                    }
 
-                    DateTime now = DateTime.Now;
-                    int day = now.Day;
-                    int month = now.Month;
-                    foreach (var item in myTimetable)
+                DateTime now = DateTime.Now;
+                int day = now.Day;
+                int month = now.Month;
+                foreach (var item in myTimetable)
+                {
+                    if (item.ThisDay == day && item.ThisMonth == month)
                     {
-                        if (item.ThisDay == day && item.ThisMonth == month)
+                        if (item.ThisWeek % 2 == 0)
                         {
-                            if (item.ThisWeek % 2 == 0)
-                            {
-                                App.Current.Properties["numOfWeek"] = "2";
-                            }
-                            else
-                                App.Current.Properties["numOfWeek"] = "1";
-                            break;
+                            App.Current.Properties["numOfWeek"] = "2";
                         }
+                        else
+                            App.Current.Properties["numOfWeek"] = "1";
+                        break;
                     }
                 }
             }
-
-            
         }
 
         protected override void OnStart()

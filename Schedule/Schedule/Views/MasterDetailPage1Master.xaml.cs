@@ -79,7 +79,7 @@ namespace Schedule.Views
 
             App.Current.MainPage = new Login();
             
-            //загрузка графика, необходимо загружать здесь, так как если пользователь выйдет, данного файла не будет
+            /*загрузка графика, необходимо загружать здесь, так как если пользователь выйдет, данного файла не будет
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
             App.timetable = new List<Specialty>();
             Stream stream2 = assembly.GetManifestResourceStream("Schedule.timetable.json");
@@ -87,7 +87,7 @@ namespace Schedule.Views
             {
                 string json = reader.ReadToEnd();
                 App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
-            }
+            }*/
         }
     }
 }

@@ -132,15 +132,56 @@ namespace Schedule.ViewModels
                                                 continue;
                                             }
                                         }
-                                        byte coupleNum = Convert.ToByte(c.CoupleNum);
-                                        if (!teacherCouples.ContainsKey(coupleNum))
-                                        {
-                                            teacherCouples.Add(coupleNum, new TeacherCouple(c, g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "")));
-                                        }
-                                        else
-                                        {
-                                            teacherCouples[coupleNum].CoupleTeacher += ", " + g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "");
-                                        }
+                                        #region Проверка в графике, учится ли данная группа, если да, то пара добавляется в коллекцию
+                                            int indexOfDigit = 0;
+                                            for (int i = 0; i < g.GroupName.Length; i++)//вырезаем код специальности, чтобы по нему искать
+                                            {
+                                                if (Char.IsDigit(g.GroupName[i]))
+                                                {
+                                                    indexOfDigit = i;
+                                                    break;
+                                                }
+                                            }
+
+                                            string code = g.GroupName.Substring(indexOfDigit, 8);
+                                            string course = g.GroupId[0].ToString();
+
+                                            foreach (var item in App.timetable)
+                                            {
+                                                if (item.SpecialtyName.Contains(code))
+                                                {
+                                                    foreach (var courses in item.Courses)
+                                                    {
+                                                        if (courses.CourseNumber == course)
+                                                        {
+                                                            int day = NeedDate.Day;
+                                                            int month = NeedDate.Month;
+                                                            foreach (var days in courses.Days)
+                                                            {
+                                                                if (days.ThisDay == day && days.ThisMonth == month)
+                                                                {
+                                                                    if (days.Content == null)
+                                                                    {
+                                                                        byte coupleNum = Convert.ToByte(c.CoupleNum);
+
+                                                                        if (!teacherCouples.ContainsKey(coupleNum))
+                                                                        {
+                                                                            teacherCouples.Add(coupleNum, new TeacherCouple(c, g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "")));
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            teacherCouples[coupleNum].CoupleTeacher += ", " + g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "");
+                                                                        }
+                                                                    }
+                                                                    break;
+                                                                }
+                                                            }
+                                                            break;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        #endregion  
                                     }
                                 }
                             }
