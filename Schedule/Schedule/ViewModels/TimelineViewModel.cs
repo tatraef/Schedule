@@ -178,72 +178,116 @@ namespace Schedule.ViewModels
 
         public TimelineItemForStudent MakeDaysForStudent(DateTime NeedDate)
         {
-            DateTime now = DateTime.Now;
             List<Couple> couples = new List<Couple>();
 
-            string dt = NeedDate.DayOfWeek.ToString().ToLower();
-
-            string numOfWeek = "";
-            if (App.Current.Properties.TryGetValue("numOfWeek", out object num))
+            //Что сегодня? Обычный/Выходной/Практика/Экзамен/Рейтинг?
+            List<Day> myTimetable;
+            string table = "";
+            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
             {
-                numOfWeek = (string)num;
-            }
-            //Если прошел переход через неделю, то есть открыл страницу в четверг,
-            //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
-            if (NeedDate.DayOfWeek < now.DayOfWeek)
-            {
-                if (numOfWeek == "1")
-                    numOfWeek = "2";
-                else
-                    numOfWeek = "1";
-            }
+                table = (string)tableFrom;
+                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
 
-
-            //проверяется факультет
-            if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
-            {
-                string facultyName = (string)FacultyName;
-                //проверяются номер группы, имя группы и подгруппа
-                string groupId = "";
-                if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
-                { groupId = (string)GroupId; }
-                string groupName = "";
-                if (App.Current.Properties.TryGetValue("groupName", out object GroupName))
-                { groupName = (string)GroupName; }
-                string subgroup = null;
-                if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
-                { subgroup = (string)Subgroup; }
-
-                foreach (var f in App.facultiesJSON)
+                int day = NeedDate.Day;
+                int month = NeedDate.Month;
+                foreach (var item in myTimetable)
                 {
-                    if (f.FacultyName == facultyName)
+                    if (item.ThisDay == day && item.ThisMonth == month)
                     {
-                        foreach (var g in f.Groups)
+                        if (item.Content != null || item.Content != "Э") //пока не проверяю на экзамены
                         {
-                            if (g.GroupId == groupId && g.GroupName == groupName)
+                            switch (item.Content)
                             {
-                                foreach (var c in g.Couples)
+                                case "*": NothingInteresting(couples, ""); break;
+                                case "Д": NothingInteresting(couples, "Д"); break;
+                                //case "Э": LoadExams(couples); LoadRaiting(couples); break;
+                                case "Г": NothingInteresting(couples, ""); break;
+                                case "У": NothingInteresting(couples, "П"); break;
+                                case "К": NothingInteresting(couples, ""); break;
+                                case "П": NothingInteresting(couples, "П"); break;
+                                case "Н": NothingInteresting(couples, "Н"); break;
+                                default:
+                                    break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+            
+            //Если в коллекции ничего нет, значит обычный день
+            if (couples.Count == 0)
+            {
+                DateTime now = DateTime.Now;
+
+                string dt = NeedDate.DayOfWeek.ToString().ToLower();
+
+                string numOfWeek = "";
+                if (App.Current.Properties.TryGetValue("numOfWeek", out object num))
+                {
+                    numOfWeek = (string)num;
+                }
+                //Если прошел переход через неделю, то есть открыл страницу в четверг,
+                //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
+                if (NeedDate.DayOfWeek < now.DayOfWeek)
+                {
+                    if (numOfWeek == "1")
+                        numOfWeek = "2";
+                    else
+                        numOfWeek = "1";
+                }
+
+
+                //проверяется факультет
+                if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                {
+                    string facultyName = (string)FacultyName;
+                    //проверяются номер группы, имя группы и подгруппа
+                    string groupId = "";
+                    if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
+                    { groupId = (string)GroupId; }
+                    string groupName = "";
+                    if (App.Current.Properties.TryGetValue("groupName", out object GroupName))
+                    { groupName = (string)GroupName; }
+                    string subgroup = null;
+                    if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
+                    { subgroup = (string)Subgroup; }
+
+                    foreach (var f in App.facultiesJSON)
+                    {
+                        if (f.FacultyName == facultyName)
+                        {
+                            foreach (var g in f.Groups)
+                            {
+                                if (g.GroupId == groupId && g.GroupName == groupName)
                                 {
-                                    if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dt)
+                                    foreach (var c in g.Couples)
                                     {
-                                        //проверка, чтобы не показывать уже завершенные пары
-                                        if (NeedDate.Day == now.Day)
-                                        {   
-                                            string[] s = c.TimeEnd.Split(':');
-                                            int h = Convert.ToInt32(s[0]);
-                                            int m = Convert.ToInt32(s[1]);
-                                            TimeSpan t = new TimeSpan(h, m, 0);
-                                            if (t < now.TimeOfDay)
+                                        if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dt)
+                                        {
+                                            //проверка, чтобы не показывать уже завершенные пары
+                                            if (NeedDate.Day == now.Day)
                                             {
-                                                continue; 
+                                                string[] s = c.TimeEnd.Split(':');
+                                                int h = Convert.ToInt32(s[0]);
+                                                int m = Convert.ToInt32(s[1]);
+                                                TimeSpan t = new TimeSpan(h, m, 0);
+                                                if (t < now.TimeOfDay)
+                                                {
+                                                    continue;
+                                                }
                                             }
+                                            couples.Add(c);
                                         }
-                                        couples.Add(c);
                                     }
                                 }
                             }
                         }
                     }
+                }
+                if (couples.Count == 0)
+                {
+                    NothingInteresting(couples, "");
                 }
             }
 
@@ -252,18 +296,34 @@ namespace Schedule.ViewModels
                 ThisDate = NeedDate
             };
 
-            if (couples.Count == 0)
-            {
-                Couple some = new Couple
-                {
-                    CoupleName = "Ничего интересного..."
-                };
-                couples.Add(some);
-            }
-
             nowaday.AddRange(couples);
             return nowaday;
+        }
 
+        public void NothingInteresting(List<Couple> couples, string s)
+        {
+            Couple some = new Couple();
+            if (s == "П")
+                some.CoupleName = "Практика...";
+            else if (s == "К")
+                some.CoupleName = "Каникулы";
+            else if (s == "Д")
+                some.CoupleName = "Дипломная работа на носу...";
+            else if (s == "Н")
+                some.CoupleName = "Научно-исследовательская работа...";
+            else
+                some.CoupleName = "Ничего интересного...";
+
+            couples.Add(some);
+        }
+
+        public void LoadRaiting(List<Couple> couples)
+        {
+            
+        }
+
+        public void LoadExams(List<Couple> couples)
+        {
 
         }
     }
