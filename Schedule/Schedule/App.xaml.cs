@@ -40,9 +40,10 @@ namespace Schedule
             {
                 MainPage = new MasterDetailPage1();
                 //проверка графика, для студента нужен, сохраненный при авторизации "timetable" в Properties,
-                //а для преподавателя весь файл timetable.json
+                //а для преподавателя еще и весь файл timetable.json
                 if (!Current.Properties.ContainsKey("groupIdName")) 
                 {
+                    TimetableLoad();
                     string table = "";
                     if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
                     {
@@ -69,8 +70,6 @@ namespace Schedule
                 }
                 else
                 {
-                    TimetableLoad();
-
                     string table = "";
                     if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
                     {
