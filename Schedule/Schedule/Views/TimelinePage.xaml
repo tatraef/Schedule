@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:local="clr-namespace:Schedule.Models"
-			 x:Class="Schedule.Views.TimelinePage">
+			 x:Class="Schedule.Views.TimelinePage"
+             Title="Таймлайн">
 
     <ListView x:Name="couplesList" ItemsSource="{Binding ItemsForStudents}" HasUnevenRows="True" IsGroupingEnabled="true">
         

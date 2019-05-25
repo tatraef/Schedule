@@ -17,7 +17,7 @@ namespace Schedule.Views
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
 
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MasterDetailPage1Detail))) { BarBackgroundColor = Color.FromRgb(38, 38, 38), BarTextColor = Color.FromRgb(235, 179, 13) };
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(TimelinePage))) { BarBackgroundColor = Color.FromRgb(38, 38, 38), BarTextColor = Color.FromRgb(235, 179, 13) };
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
