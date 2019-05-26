@@ -36,6 +36,7 @@
                             VerticalOptions="Center"
                             Style="{DynamicResource SubtitleStyle}"/>
                         <Button Text="Выход" 
+                                VerticalOptions="Center"
                                 HorizontalOptions="End"
                                 BackgroundColor="White"
                                 Clicked="Exit_Clicked"/>
