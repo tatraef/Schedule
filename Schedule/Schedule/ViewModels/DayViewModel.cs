@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Text;
 using Schedule.Models;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace Schedule.ViewModels
 {
@@ -28,9 +29,15 @@ namespace Schedule.ViewModels
              //проверяется студент или преподаватель
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
-                /************************Преподаватель***************************************/
                 if ((bool)isTeacher)
                 {
+                    /************************Преподаватель***************************************/
+                    if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
+                    {
+                        //проверка на наличие расписания в коллекции Properties
+                        TeacherCoupleList = JsonConvert.DeserializeObject<List<TeacherCouple>>(Convert.ToString(schedule));
+                        return;
+                    }
                     TeacherCouples = new Dictionary<byte, TeacherCouple>();
                     //проверяется имя преподавателя
                     if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
@@ -71,10 +78,18 @@ namespace Schedule.ViewModels
                         SortedDictionary<byte, TeacherCouple> sortedTeacherCouples = new SortedDictionary<byte, TeacherCouple>(TeacherCouples);
                         TeacherCoupleList = sortedTeacherCouples.Values.ToList();
                     }
+                    //Сохранение расписания, для дальнейшего использования
+                    string json = JsonConvert.SerializeObject(TeacherCoupleList);
+                    App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);
                 }
-                /************************Студент***************************************/
-                else
+                else /************************Студент***************************************/
                 {
+                    if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
+                    {
+                        //проверка на наличие расписания в коллекции Properties
+                        Couples = JsonConvert.DeserializeObject<List<Couple>>(Convert.ToString(schedule));
+                        return;
+                    }
                     Couples = new List<Couple>();
                     //проверяется факультет
                     if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
@@ -110,6 +125,9 @@ namespace Schedule.ViewModels
                                 }
                             }
                         }
+                        //Сохранение расписания, для дальнейшего использования
+                        string json = JsonConvert.SerializeObject(Couples);
+                        App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);
                     }
                 }
             }
