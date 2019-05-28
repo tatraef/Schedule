@@ -20,6 +20,21 @@ namespace Schedule.Views
     {
         public TimelinePage()
         {
+            ToolbarItem selectDate = new ToolbarItem
+            {
+                Icon = "calendar.png"
+            };
+            selectDate.Clicked += (object sender, System.EventArgs e) =>
+            {
+                if (forSelectDate.IsVisible)
+                {
+                    forSelectDate.IsVisible = false;
+                }else
+                    forSelectDate.IsVisible = true;
+
+            };
+            ToolbarItems.Add(selectDate);
+
             InitializeComponent();
             TimelineViewModel bind = new TimelineViewModel();
             BindingContext = bind;

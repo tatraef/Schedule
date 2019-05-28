@@ -4,63 +4,75 @@
 			 xmlns:local="clr-namespace:Schedule.Models"
 			 x:Class="Schedule.Views.TimelinePage"
              Title="Таймлайн">
+    <StackLayout>
+        <ListView x:Name="couplesList" ItemsSource="{Binding ItemsForStudents}" HasUnevenRows="True" IsGroupingEnabled="true" SelectionMode="None">
 
-    <ListView x:Name="couplesList" ItemsSource="{Binding ItemsForStudents}" HasUnevenRows="True" IsGroupingEnabled="true">
-        
-        <ListView.GroupHeaderTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Padding="10">
-                        <Label Text="{Binding ThisDate, StringFormat='{}{0:dddd, dd MMMM yyyy}'}" 
-                               TextColor="#262626"/>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.GroupHeaderTemplate>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding ThisDate, StringFormat='{}{0:dddd, dd MMMM yyyy}'}" 
+                                   TextColor="#262626"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
 
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid ColumnSpacing="0" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnSpacing="0" RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
 
-                        <Label 
-                               Text="{Binding TimeBegin, StringFormat='{}{0:H:mm}'}"
-                               TextColor="#EBB30D"
-                               FontSize="Medium"
-                               Margin="10,5"/>
-                        
-                        <Label Grid.Column="1"
-                               Margin="20,5"
-                               Text="{Binding CoupleName}" 
-                               TextColor="Black"
-                               FontSize="Medium"/>
+                            <Label 
+                                   Text="{Binding TimeBegin, StringFormat='{}{0:H:mm}'}"
+                                   TextColor="#EBB30D"
+                                   FontSize="Medium"
+                                   Margin="10,5"/>
 
-                        <Label Grid.Row="1"
-                               Grid.Column="1"
-                               Margin="20,5"
-                               Text="{Binding CoupleTeacher}"
-                               FontSize="Small" 
-                               TextColor="#262626"/>
-                        <Label Grid.Row="2"
-                               Grid.Column="1"
-                               Margin="20,0"
-                               Text="{Binding CoupleAud}" 
-                               FontSize="Small" 
-                               TextColor="#262626"/>
-                    </Grid>
-                    
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+                            <Label Grid.Column="1"
+                                   Margin="20,5"
+                                   Text="{Binding CoupleName}" 
+                                   TextColor="Black"
+                                   FontSize="Medium"/>
 
-    </ListView>
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Margin="20,5"
+                                   Text="{Binding CoupleTeacher}"
+                                   FontSize="Small" 
+                                   TextColor="#262626"/>
+                            <Label Grid.Row="2"
+                                   Grid.Column="1"
+                                   Margin="20,0"
+                                   Text="{Binding CoupleAud}" 
+                                   FontSize="Small" 
+                                   TextColor="#262626"/>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <StackLayout x:Name="forSelectDate" Padding="5" Orientation="Horizontal" BackgroundColor="#262626" IsVisible="False">
+            <Label Text="Выбрать дату:" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Center" 
+                   FontSize="Medium"
+                   TextColor="#EBB30D"/>
+            <DatePicker HorizontalOptions="EndAndExpand" 
+                        VerticalOptions="Center"
+                        TextColor="#EBB30D"/>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
