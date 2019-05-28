@@ -55,6 +55,53 @@ namespace Schedule.ViewModels
                 }
             }
         }
+        //перегрузка для выбора определенной даты
+        public TimelineViewModel(DateTime selectedDate)
+        {
+            #region Определение номера недели
+            List<Day> myTimetable = new List<Day>();
+            string table = "";
+            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+            {
+                table = (string)tableFrom;
+                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+            }
+
+            int day = selectedDate.Day;
+            int month = selectedDate.Month;
+            foreach (var item in myTimetable)
+            {
+                if (item.ThisDay == day && item.ThisMonth == month)
+                {
+                    if (item.ThisWeek % 2 == 0)
+                    {
+                        App.Current.Properties["numOfWeek"] = "2";
+                    }
+                    else
+                        App.Current.Properties["numOfWeek"] = "1";
+                    break;
+                }
+            }
+            #endregion
+
+            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+            {
+                if ((bool)isTeacher)
+                {
+                    ItemsForTeacher = new List<TimelineItemForTeacher>
+                    {
+                        MakeDaysForTeacher(selectedDate)
+                    };
+                }
+                else
+                {
+                    ItemsForStudents = new List<TimelineItemForStudent>
+                    {
+                        MakeDaysForStudent(selectedDate)
+                    };
+                }
+            }
+        }
 
         public List<TimelineItemForStudent> GetItemsForStudent()
         {

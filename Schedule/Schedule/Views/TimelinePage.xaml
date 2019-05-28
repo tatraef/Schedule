@@ -72,7 +72,8 @@
                    TextColor="#EBB30D"/>
             <DatePicker HorizontalOptions="EndAndExpand" 
                         VerticalOptions="Center"
-                        TextColor="#EBB30D"/>
+                        TextColor="#EBB30D"
+                        DateSelected="DatePicker_DateSelected"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
