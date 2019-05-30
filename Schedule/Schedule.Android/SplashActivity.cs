@@ -8,7 +8,7 @@ using Schedule.Droid;
 
 namespace com.xamarin.sample.splashscreen
 {
-    [Activity(Label = "Schedule", Icon = "@mipmap/icon", Theme = "@style/MainTheme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Расписание", Icon = "@mipmap/icon", Theme = "@style/MainTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
 
