@@ -90,14 +90,14 @@ namespace Schedule.ViewModels
                 {
                     ItemsForTeacher = new List<TimelineItemForTeacher>
                     {
-                        MakeDaysForTeacher(selectedDate)
+                        MakeDaysForTeacher(selectedDate, true)
                     };
                 }
                 else
                 {
                     ItemsForStudents = new List<TimelineItemForStudent>
                     {
-                        MakeDaysForStudent(selectedDate)
+                        MakeDaysForStudent(selectedDate, true)
                     };
                 }
             }
@@ -109,7 +109,7 @@ namespace Schedule.ViewModels
 
             for (int i = 0; i < 7; i++)
             {
-                lines.Add(MakeDaysForStudent(DateTime.Now.AddDays(i)));
+                lines.Add(MakeDaysForStudent(DateTime.Now.AddDays(i), false));
             }
 
             return lines;
@@ -121,13 +121,15 @@ namespace Schedule.ViewModels
 
             for (int i = 0; i < 7; i++)
             {
-                lines.Add(MakeDaysForTeacher(DateTime.Now.AddDays(i)));
+                lines.Add(MakeDaysForTeacher(DateTime.Now.AddDays(i), false));
             }
 
             return lines;
         }
 
-        public TimelineItemForTeacher MakeDaysForTeacher(DateTime NeedDate)
+        //isItForOne - для определения откуда пришел запрос, если с загрузки определенного дня, 
+        //то не нужно проверять на проход через недели
+        public TimelineItemForTeacher MakeDaysForTeacher(DateTime NeedDate, bool isItForOne) 
         {
             DateTime now = DateTime.Now;
             Dictionary<byte, TeacherCouple> teacherCouples = new Dictionary<byte, TeacherCouple>();
@@ -142,7 +144,7 @@ namespace Schedule.ViewModels
             }
             //Если прошел переход через неделю, то есть открыл страницу в четверг,
             //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
-            if (NeedDate.DayOfWeek < now.DayOfWeek)
+            if (!isItForOne && NeedDate.DayOfWeek < now.DayOfWeek)
             {
                 if (numOfWeek == "1")
                     numOfWeek = "2";
@@ -264,7 +266,7 @@ namespace Schedule.ViewModels
             
         }
 
-        public TimelineItemForStudent MakeDaysForStudent(DateTime NeedDate)
+        public TimelineItemForStudent MakeDaysForStudent(DateTime NeedDate, bool isItForOne)
         {
             List<Couple> couples = new List<Couple>();
 
@@ -288,7 +290,7 @@ namespace Schedule.ViewModels
                             {
                                 case "*": NothingInteresting(couples, ""); break;
                                 case "Д": NothingInteresting(couples, "Д"); break;
-                                //case "Э": LoadExams(couples); LoadRaiting(couples); break;
+                                case "Э": NothingInteresting(couples, "Э"); break;
                                 case "Г": NothingInteresting(couples, ""); break;
                                 case "У": NothingInteresting(couples, "П"); break;
                                 case "К": NothingInteresting(couples, ""); break;
@@ -317,7 +319,7 @@ namespace Schedule.ViewModels
                 }
                 //Если прошел переход через неделю, то есть открыл страницу в четверг,
                 //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
-                if (NeedDate.DayOfWeek < now.DayOfWeek)
+                if (!isItForOne && NeedDate.DayOfWeek < now.DayOfWeek)
                 {
                     if (numOfWeek == "1")
                         numOfWeek = "2";
@@ -399,6 +401,8 @@ namespace Schedule.ViewModels
                 some.CoupleName = "Дипломная работа на носу...";
             else if (s == "Н")
                 some.CoupleName = "Научно-исследовательская работа...";
+            else if (s == "Э")
+                some.CoupleName = "Экзамены да зачеты...";
             else
                 some.CoupleName = "Ничего интересного...";
 
