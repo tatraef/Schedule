@@ -16,6 +16,7 @@ namespace Schedule.ViewModels
 
         public DayViewModel(string dayOfWeek)
         {
+            #region Определяется номер недели (numOfWeek)
             string numOfWeek = "";
             if (App.Current.Properties.TryGetValue("numOfWeek", out object num))
             {
@@ -25,13 +26,14 @@ namespace Schedule.ViewModels
             {
                 numOfWeek = "1";
             }
+            #endregion
 
-             //проверяется студент или преподаватель
+            //проверяется студент или преподаватель
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
                 if ((bool)isTeacher)
                 {
-                    /************************Преподаватель***************************************/
+                    #region Загрузка пар для Преподавателя
                     if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
                     {
                         //проверка на наличие расписания в коллекции Properties
@@ -49,7 +51,7 @@ namespace Schedule.ViewModels
                             {
                                 foreach (var c in g.Couples)
                                 {
-                                    //Contains, так как в паре английского может быть несколь преподавателей
+                                    //Contains, так как в паре английского может быть несколько преподавателей
                                     if (c.CoupleTeacher.Contains(thisTeacher)) 
                                     {
                                         if (c.Week == numOfWeek)
@@ -57,12 +59,15 @@ namespace Schedule.ViewModels
                                             if (c.Day == dayOfWeek)
                                             {
                                                 byte coupleNum = Convert.ToByte(c.CoupleNum);
+                                                //проверка на наличие пары с таким номером
                                                 if (!TeacherCouples.ContainsKey(coupleNum))
                                                 {
+                                                    //Если пары с таким номером еще нет, то пара просто добавляется в коллекцию
                                                     TeacherCouples.Add(coupleNum, new TeacherCouple(c, g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "")));
                                                 }
                                                 else
                                                 {
+                                                    //Если пара с таким номером уже есть, то в поле CoupleTeacher этой пары дописывается номер новой группы
                                                     TeacherCouples[coupleNum].CoupleTeacher += ", " + g.GroupId + (c.SubgroupId != null ? "(" + c.SubgroupId + ")" : "");
                                                 }
                                             }
@@ -81,12 +86,14 @@ namespace Schedule.ViewModels
                     //Сохранение расписания, для дальнейшего использования
                     string json = JsonConvert.SerializeObject(TeacherCoupleList);
                     App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);
+                    #endregion
                 }
-                else /************************Студент***************************************/
+                else 
                 {
+                    #region Загрузка пар для Студента
                     if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
                     {
-                        //проверка на наличие расписания в коллекции Properties
+                        //проверка на наличие собранного расписания в коллекции Properties
                         Couples = JsonConvert.DeserializeObject<List<Couple>>(Convert.ToString(schedule));
                         return;
                     }
@@ -129,6 +136,7 @@ namespace Schedule.ViewModels
                         string json = JsonConvert.SerializeObject(Couples);
                         App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);
                     }
+                    #endregion
                 }
             }
         }
