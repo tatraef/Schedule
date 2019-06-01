@@ -10,14 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="data.json" />
     <None Remove="math_b.json" />
     <None Remove="math_m.json" />
     <None Remove="timetable.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="data.json" />
     <EmbeddedResource Include="math_b.json" />
     <EmbeddedResource Include="math_m.json" />
     <EmbeddedResource Include="timetable.json" />
