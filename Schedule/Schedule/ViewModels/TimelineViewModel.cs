@@ -356,6 +356,65 @@ namespace Schedule.ViewModels
             return nowaday;
         }
 
+        public void WhatTodayForStudent(List<Couple> couples, DateTime NeedDate)
+        {
+            //Что сегодня? Обычный/Выходной/Практика/Экзамен/Рейтинг?
+            List<Day> myTimetable;
+            string table = "";
+
+            int firstWeekOfSecondSemestr = 0;
+            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+            {
+                table = (string)tableFrom;
+                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+
+                int day = NeedDate.Day;
+                int month = NeedDate.Month;
+                for (int i = 0; i < myTimetable.Count; i++)
+                {
+                    if (myTimetable[i].ThisDay == day && myTimetable[i].ThisMonth == month)
+                    {
+                        if (myTimetable[i].Content != null || myTimetable[i].Content != "Э") //пока не проверяю на экзамены
+                        {
+                            switch (myTimetable[i].Content)
+                            {
+                                case "*": NothingInteresting(couples, ""); break;
+                                case "Д": NothingInteresting(couples, "Д"); break;
+                                case "Э": NothingInteresting(couples, "Э"); break;
+                                case "Г": NothingInteresting(couples, ""); break;
+                                case "У": NothingInteresting(couples, "П"); break;
+                                case "К": NothingInteresting(couples, ""); break;
+                                case "П": NothingInteresting(couples, "П"); break;
+                                case "Н": NothingInteresting(couples, "Н"); break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                        if (couples.Count > 0)
+                        {
+                            break;
+                        }
+
+                        //если через шесть дней сессия или если сейчас девятая неделя семестра, то это рейтинг
+                        //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать.
+                        if (i + 6 < myTimetable.Count && (myTimetable[i + 6].Content == "Э" || myTimetable[i].ThisWeek - firstWeekOfSecondSemestr == 9))
+                        {
+                            LoadRaitingForStudent(couples, NeedDate);
+                            break;
+                        }
+                        
+                    }
+                    //Определение первой недели второго семестра для определения первого рейтинга второго семестра, 
+                    //ведь он начинаяется на девятой неделе после каникул
+                    if (myTimetable[i].Content == "K")
+                    {
+                        firstWeekOfSecondSemestr = myTimetable[i].ThisWeek;
+                    }
+                }
+            }
+        }
+
         public void NothingInteresting(List<Couple> couples, string s)
         {
             Couple some = new Couple();
@@ -375,9 +434,70 @@ namespace Schedule.ViewModels
             couples.Add(some);
         }
 
-        public void LoadRaiting(List<Couple> couples)
+        public void LoadRaitingForStudent(List<Couple> couples, DateTime NeedDate)
         {
-            
+            Couple someCouple;
+            //проверяется факультет
+            if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+            {
+                DateTime now = DateTime.Now;
+                string dt = NeedDate.DayOfWeek.ToString().ToLower();
+
+                string facultyName = (string)FacultyName;
+                //проверяются номер группы, имя группы и подгруппа
+                string groupId = "";
+                if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
+                { groupId = (string)GroupId; }
+                string groupName = "";
+                if (App.Current.Properties.TryGetValue("groupName", out object GroupName))
+                { groupName = (string)GroupName; }
+                string subgroup = null;
+                if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
+                { subgroup = (string)Subgroup; }
+
+                foreach (var f in App.facultiesJSONRaiting)
+                {
+                    if (f.FacultyName == facultyName)
+                    {
+                        foreach (var g in f.Groups)
+                        {
+                            if (g.GroupId == groupId && g.GroupName == groupName)
+                            {
+                                for (int i = 0; i < g.Couples.Count; i++)
+                                {
+                                    if (g.Couples[i].Day == dt && g.Couples[i].Week == "1" && g.Couples[i].SubgroupName == subgroup)
+                                    {
+                                        //проверка, чтобы не показывать уже завершенные пары
+                                        if (NeedDate.Day == now.Day)
+                                        {
+                                            string[] s = g.Couples[i].TimeEnd.Split(':');
+                                            int h = Convert.ToInt32(s[0]);
+                                            int m = Convert.ToInt32(s[1]);
+                                            TimeSpan t = new TimeSpan(h, m, 0);
+                                            if (t < now.TimeOfDay)
+                                            {
+                                                continue;
+                                            }
+                                        }
+                                        someCouple = g.Couples[i];
+                                        //проверка на два рейтинга за пару
+                                        if (g.Couples[i+1].SubgroupName == subgroup && g.Couples[i + 1].CoupleName != someCouple.CoupleName)
+                                        {
+                                            someCouple.CoupleName += ", " + g.Couples[i + 1].CoupleName;
+                                        }
+                                        else if (g.Couples[i + 2].CoupleName != someCouple.CoupleName)
+                                        {
+                                            someCouple.CoupleName += ", " + g.Couples[i + 2].CoupleName;
+                                        }
+
+                                        couples.Add(someCouple);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         public void LoadExams(List<Couple> couples)
@@ -385,62 +505,6 @@ namespace Schedule.ViewModels
 
         }
 
-        public void WhatTodayForStudent(List<Couple> couples, DateTime NeedDate)
-        {
-            //Что сегодня? Обычный/Выходной/Практика/Экзамен/Рейтинг?
-            List<Day> myTimetable;
-            string table = "";
-
-            int firstWeekOfSecondSemestr = 0;
-            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
-            {
-                table = (string)tableFrom;
-                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-
-                int day = NeedDate.Day;
-                int month = NeedDate.Month;
-                for (int i = 0; i < myTimetable.Count; i++)
-                {
-                    if (myTimetable[i].ThisDay == day && myTimetable[i].ThisMonth == month)
-                    {
-                        //если через шесть дней сессия или если сейчас девятая неделя семестра, то это рейтинг
-                        //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать.
-                        if (i+6 < myTimetable.Count && (myTimetable[i+6].Content == "Э" || myTimetable[i].ThisWeek - firstWeekOfSecondSemestr == 9))
-                        {
-                            if (true)
-                            {
-
-                            }
-                            LoadRaiting(couples);
-                            break;
-                        }
-
-                        if (myTimetable[i].Content != null || myTimetable[i].Content != "Э") //пока не проверяю на экзамены
-                        {
-                            switch (myTimetable[i].Content)
-                            {
-                                case "*": NothingInteresting(couples, ""); break;
-                                case "Д": NothingInteresting(couples, "Д"); break;
-                                case "Э": NothingInteresting(couples, "Э"); break;
-                                case "Г": NothingInteresting(couples, ""); break;
-                                case "У": NothingInteresting(couples, "П"); break;
-                                case "К": NothingInteresting(couples, ""); break;
-                                case "П": NothingInteresting(couples, "П"); break;
-                                case "Н": NothingInteresting(couples, "Н"); break;
-                                default:
-                                    break;
-                            }
-                        }
-                        break;
-                    }
-                    //Определение первой недели второго семестра для определения первого рейтинга второго семестра, 
-                    //ведь он начинаяется на девятой неделе после каникул
-                    if (myTimetable[i].Content == "K")
-                    {
-                        firstWeekOfSecondSemestr = myTimetable[i].ThisWeek;
-                    }
-                }
-            }
-        }
+        
     }
 }

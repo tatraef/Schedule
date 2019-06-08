@@ -94,6 +94,7 @@ namespace Schedule
         public void SchedulesLoad() //загрузка расписаний каждого факультета
         {
             facultiesJSON = new List<Faculty>();
+            facultiesJSONRaiting = new List<Faculty>();
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
             Stream stream = assembly.GetManifestResourceStream("Schedule.math_b.json");
             using (var reader = new System.IO.StreamReader(stream))
