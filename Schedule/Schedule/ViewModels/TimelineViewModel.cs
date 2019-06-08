@@ -46,12 +46,12 @@ namespace Schedule.ViewModels
                 if ((bool)isTeacher)
                 {
                     ItemsForTeacher = new List<TimelineItemForTeacher>();
-                    ItemsForTeacher = GetItemsForTeacher();
+                    ItemsForTeacher = GetDaysForTeacher();
                 }
                 else
                 {
                     ItemsForStudents = new List<TimelineItemForStudent>();
-                    ItemsForStudents = GetItemsForStudent();
+                    ItemsForStudents = GetDaysForStudent();
                 }
             }
         }
@@ -90,38 +90,38 @@ namespace Schedule.ViewModels
                 {
                     ItemsForTeacher = new List<TimelineItemForTeacher>
                     {
-                        MakeDaysForTeacher(selectedDate, true)
+                        MakeDayForTeacher(selectedDate, true)
                     };
                 }
                 else
                 {
                     ItemsForStudents = new List<TimelineItemForStudent>
                     {
-                        MakeDaysForStudent(selectedDate, true)
+                        MakeDayForStudent(selectedDate, true)
                     };
                 }
             }
         }
 
-        public List<TimelineItemForStudent> GetItemsForStudent()
+        public List<TimelineItemForStudent> GetDaysForStudent()
         {
             List<TimelineItemForStudent> lines = new List<TimelineItemForStudent>();
 
             for (int i = 0; i < 7; i++)
             {
-                lines.Add(MakeDaysForStudent(DateTime.Now.AddDays(i), false));
+                lines.Add(MakeDayForStudent(DateTime.Now.AddDays(i), false));
             }
 
             return lines;
         }
 
-        public List<TimelineItemForTeacher> GetItemsForTeacher()
+        public List<TimelineItemForTeacher> GetDaysForTeacher()
         {
             List<TimelineItemForTeacher> lines = new List<TimelineItemForTeacher>();
 
             for (int i = 0; i < 7; i++)
             {
-                lines.Add(MakeDaysForTeacher(DateTime.Now.AddDays(i), false));
+                lines.Add(MakeDayForTeacher(DateTime.Now.AddDays(i), false));
             }
 
             return lines;
@@ -129,7 +129,7 @@ namespace Schedule.ViewModels
 
         //isItForOne - для определения откуда пришел запрос, если с загрузки определенного дня, 
         //то не нужно проверять на проход через недели
-        public TimelineItemForTeacher MakeDaysForTeacher(DateTime NeedDate, bool isItForOne) 
+        public TimelineItemForTeacher MakeDayForTeacher(DateTime NeedDate, bool isItForOne) 
         {
             DateTime now = DateTime.Now;
             Dictionary<byte, TeacherCouple> teacherCouples = new Dictionary<byte, TeacherCouple>();
@@ -266,44 +266,11 @@ namespace Schedule.ViewModels
             
         }
 
-        public TimelineItemForStudent MakeDaysForStudent(DateTime NeedDate, bool isItForOne)
+        public TimelineItemForStudent MakeDayForStudent(DateTime NeedDate, bool isItForOne)
         {
             List<Couple> couples = new List<Couple>();
 
-            //Что сегодня? Обычный/Выходной/Практика/Экзамен/Рейтинг?
-            List<Day> myTimetable;
-            string table = "";
-            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
-            {
-                table = (string)tableFrom;
-                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-
-                int day = NeedDate.Day;
-                int month = NeedDate.Month;
-                foreach (var item in myTimetable)
-                {
-                    if (item.ThisDay == day && item.ThisMonth == month)
-                    {
-                        if (item.Content != null || item.Content != "Э") //пока не проверяю на экзамены
-                        {
-                            switch (item.Content)
-                            {
-                                case "*": NothingInteresting(couples, ""); break;
-                                case "Д": NothingInteresting(couples, "Д"); break;
-                                case "Э": NothingInteresting(couples, "Э"); break;
-                                case "Г": NothingInteresting(couples, ""); break;
-                                case "У": NothingInteresting(couples, "П"); break;
-                                case "К": NothingInteresting(couples, ""); break;
-                                case "П": NothingInteresting(couples, "П"); break;
-                                case "Н": NothingInteresting(couples, "Н"); break;
-                                default:
-                                    break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
+            WhatTodayForStudent(couples, NeedDate);
             
             //Если в коллекции ничего нет, значит обычный день
             if (couples.Count == 0)
@@ -326,7 +293,6 @@ namespace Schedule.ViewModels
                     else
                         numOfWeek = "1";
                 }
-
 
                 //проверяется факультет
                 if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
@@ -417,6 +383,64 @@ namespace Schedule.ViewModels
         public void LoadExams(List<Couple> couples)
         {
 
+        }
+
+        public void WhatTodayForStudent(List<Couple> couples, DateTime NeedDate)
+        {
+            //Что сегодня? Обычный/Выходной/Практика/Экзамен/Рейтинг?
+            List<Day> myTimetable;
+            string table = "";
+
+            int firstWeekOfSecondSemestr = 0;
+            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+            {
+                table = (string)tableFrom;
+                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+
+                int day = NeedDate.Day;
+                int month = NeedDate.Month;
+                for (int i = 0; i < myTimetable.Count; i++)
+                {
+                    if (myTimetable[i].ThisDay == day && myTimetable[i].ThisMonth == month)
+                    {
+                        //если через шесть дней сессия или если сейчас девятая неделя семестра, то это рейтинг
+                        //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать.
+                        if (i+6 < myTimetable.Count && (myTimetable[i+6].Content == "Э" || myTimetable[i].ThisWeek - firstWeekOfSecondSemestr == 9))
+                        {
+                            if (true)
+                            {
+
+                            }
+                            LoadRaiting(couples);
+                            break;
+                        }
+
+                        if (myTimetable[i].Content != null || myTimetable[i].Content != "Э") //пока не проверяю на экзамены
+                        {
+                            switch (myTimetable[i].Content)
+                            {
+                                case "*": NothingInteresting(couples, ""); break;
+                                case "Д": NothingInteresting(couples, "Д"); break;
+                                case "Э": NothingInteresting(couples, "Э"); break;
+                                case "Г": NothingInteresting(couples, ""); break;
+                                case "У": NothingInteresting(couples, "П"); break;
+                                case "К": NothingInteresting(couples, ""); break;
+                                case "П": NothingInteresting(couples, "П"); break;
+                                case "Н": NothingInteresting(couples, "Н"); break;
+                                default:
+                                    break;
+                            }
+                        }
+                        break;
+                    }
+                    //Определение первой недели второго семестра для определения первого рейтинга второго семестра, 
+                    //ведь он начинаяется на девятой неделе после каникул
+                    if (myTimetable[i].Content == "K")
+                    {
+                        firstWeekOfSecondSemestr = myTimetable[i].ThisWeek;
+                    }
+                }
+            }
         }
     }
 }

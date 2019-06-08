@@ -14,6 +14,7 @@ namespace Schedule
     public partial class App : Application
     {
         public static List<Faculty> facultiesJSON;
+        public static List<Faculty> facultiesJSONRaiting;
         public static Dictionary<string, Group> sched;
 
         public static List<Specialty> timetable;
@@ -105,6 +106,13 @@ namespace Schedule
             {
                 string json = reader.ReadToEnd();
                 facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
+            }
+
+            Stream stream2 = assembly.GetManifestResourceStream("Schedule.math_r.json");
+            using (var reader = new System.IO.StreamReader(stream2))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(json));
             }
         }
 
