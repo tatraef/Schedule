@@ -205,11 +205,11 @@ namespace Schedule.ViewModels
                                                         {
                                                             int day = NeedDate.Day;
                                                             int month = NeedDate.Month;
-                                                            foreach (var days in courses.Days)
+                                                            for (int j = 0; j < courses.Days.Count; j++)
                                                             {
-                                                                if (days.ThisDay == day && days.ThisMonth == month)
+                                                                if (courses.Days[j].ThisDay == day && courses.Days[j].ThisMonth == month)
                                                                 {
-                                                                    if (days.Content == null)
+                                                                    if (courses.Days[j].Content == null && j + 6 < courses.Days.Count && (courses.Days[j + 6].Content != "Э" || courses.Days[j].ThisWeek - 24 != 9)) //change 24
                                                                     {
                                                                         byte coupleNum = Convert.ToByte(c.CoupleNum);
 
@@ -245,11 +245,12 @@ namespace Schedule.ViewModels
                 teacherCoupleList = sortedTeacherCouples.Values.ToList();
             }
 
+            LoadRaitingForTeacher(teacherCoupleList, NeedDate);
+
             TimelineItemForTeacher nowaday = new TimelineItemForTeacher
             {
                 ThisDate = NeedDate
             };
-
 
             if (teacherCouples.Count == 0)
             {
@@ -494,6 +495,142 @@ namespace Schedule.ViewModels
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void LoadRaitingForTeacher(List<TeacherCouple> teacherCoupleList, DateTime NeedDate)
+        {
+            DateTime now = DateTime.Now;
+            Dictionary<byte, TeacherCouple> teacherCouplesRaiting = new Dictionary<byte, TeacherCouple>();
+            List<TeacherCouple> teacherCoupleListRaiting = new List<TeacherCouple>();
+
+            string dt = NeedDate.DayOfWeek.ToString().ToLower();
+
+            //проверяется имя преподавателя
+            if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
+            {
+                string thisTeacher = (string)AppTeacherName;
+                foreach (var f in App.facultiesJSONRaiting)
+                {
+                    foreach (var g in f.Groups)
+                    {
+                        for (int j = 0; j < g.Couples.Count; j++)
+                        {
+                            //Contains, так как в паре английского может быть несколь преподавателей
+                            if (g.Couples[j].CoupleTeacher.Contains(thisTeacher))
+                            {
+                                if (g.Couples[j].Week == "1")
+                                {
+                                    if (g.Couples[j].Day == dt)
+                                    {
+                                        //проверка, чтобы не показывать уже завершенные пары
+                                        if (NeedDate.Day == now.Day)
+                                        {
+                                            string[] s = g.Couples[j].TimeEnd.Split(':');
+                                            int h = Convert.ToInt32(s[0]);
+                                            int m = Convert.ToInt32(s[1]);
+                                            TimeSpan t = new TimeSpan(h, m, 0);
+                                            if (t < now.TimeOfDay)
+                                            {
+                                                continue;
+                                            }
+                                        }
+                                        #region Проверка в графике, учится ли данная группа, если да, то пара добавляется в коллекцию
+                                        int indexOfDigit = 0;
+                                        for (int i = 0; i < g.GroupName.Length; i++)//вырезаем код специальности, чтобы по нему искать
+                                        {
+                                            if (Char.IsDigit(g.GroupName[i]))
+                                            {
+                                                indexOfDigit = i;
+                                                break;
+                                            }
+                                        }
+
+                                        string code = g.GroupName.Substring(indexOfDigit, 8);
+                                        string course = g.GroupId[0].ToString();
+
+                                        foreach (var item in App.timetable)
+                                        {
+                                            if (item.SpecialtyName.Contains(code))
+                                            {
+                                                foreach (var courses in item.Courses)
+                                                {
+                                                    if (courses.CourseNumber == course)
+                                                    {
+                                                        int day = NeedDate.Day;
+                                                        int month = NeedDate.Month;
+                                                        for (int i = 0; i < courses.Days.Count; i++)
+                                                        {
+                                                            if (courses.Days[i].ThisDay == day && courses.Days[i].ThisMonth == month)
+                                                            {
+                                                                if (i + 6 < courses.Days.Count && (courses.Days[i + 6].Content == "Э" || courses.Days[i].ThisWeek - 24 == 9)) //change 24
+                                                                {
+                                                                    if (courses.Days[i].Content == null)
+                                                                    {
+                                                                        byte coupleNum = Convert.ToByte(g.Couples[j].CoupleNum);
+
+                                                                        if (!teacherCouplesRaiting.ContainsKey(coupleNum))
+                                                                        {
+                                                                            teacherCouplesRaiting.Add(coupleNum, new TeacherCouple(g.Couples[j],
+                                                                                g.GroupId + (g.Couples[j].SubgroupId != null ? "(" + g.Couples[j].SubgroupId + ")" : "")));
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            teacherCouplesRaiting[coupleNum].CoupleTeacher += ", " + g.GroupId + (g.Couples[j].SubgroupId != null ? "(" + g.Couples[j].SubgroupId + ")" : "");
+                                                                        }
+
+                                                                        //проверка на два рейтинга за пару
+                                                                        if (g.Couples[j + 1].SubgroupId == g.Couples[j].SubgroupId && g.Couples[j + 1].CoupleName != teacherCouplesRaiting[coupleNum].CoupleName)
+                                                                        {
+                                                                            teacherCouplesRaiting[coupleNum].CoupleName += ", " + g.Couples[j + 1].CoupleName;
+                                                                        }
+                                                                        else if (g.Couples[j + 2].SubgroupId != null && g.Couples[j + 2].CoupleName != teacherCouplesRaiting[coupleNum].CoupleName)
+                                                                        {
+                                                                            //рейтинг уже может быть записан после первой группы, поэтому проверка
+                                                                            if (!teacherCouplesRaiting[coupleNum].CoupleName.Contains(g.Couples[j + 2].CoupleName))
+                                                                            {
+                                                                                teacherCouplesRaiting[coupleNum].CoupleName += ", " + g.Couples[j + 2].CoupleName;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    break;
+                                                                }
+                                                            }
+                                                        }
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        #endregion  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (teacherCouplesRaiting.Count > 0)
+            {
+                //сортировка пар, так как могут находится не в правильном порядке
+                if (teacherCouplesRaiting != null)
+                {
+                    SortedDictionary<byte, TeacherCouple> sortedTeacherCouples = new SortedDictionary<byte, TeacherCouple>(teacherCouplesRaiting);
+                    teacherCoupleListRaiting = sortedTeacherCouples.Values.ToList();
+                }
+
+                for (int i = 0; i < teacherCoupleList.Count; i++)
+                {
+                    foreach (var raitCouple in teacherCoupleListRaiting)
+                    {
+                        if (teacherCoupleList[i].CoupleNum == raitCouple.CoupleNum)
+                        {
+                            teacherCoupleList[i] = raitCouple;
+                            break;
                         }
                     }
                 }
