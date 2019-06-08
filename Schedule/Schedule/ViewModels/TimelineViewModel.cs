@@ -209,7 +209,7 @@ namespace Schedule.ViewModels
                                                             {
                                                                 if (courses.Days[j].ThisDay == day && courses.Days[j].ThisMonth == month)
                                                                 {
-                                                                    if (courses.Days[j].Content == null && j + 6 < courses.Days.Count && (courses.Days[j + 6].Content != "Э" || courses.Days[j].ThisWeek - 24 != 9)) //change 24
+                                                                    if (courses.Days[j].Content == null && j + 6 < courses.Days.Count && courses.Days[j + 6].Content != "Э" && courses.Days[j].ThisWeek - 24 != 9) //change 24
                                                                     {
                                                                         byte coupleNum = Convert.ToByte(c.CoupleNum);
 
@@ -242,10 +242,11 @@ namespace Schedule.ViewModels
             if (teacherCouples != null)
             {
                 SortedDictionary<byte, TeacherCouple> sortedTeacherCouples = new SortedDictionary<byte, TeacherCouple>(teacherCouples);
+
+                LoadRaitingForTeacher(sortedTeacherCouples, NeedDate);
+
                 teacherCoupleList = sortedTeacherCouples.Values.ToList();
             }
-
-            LoadRaitingForTeacher(teacherCoupleList, NeedDate);
 
             TimelineItemForTeacher nowaday = new TimelineItemForTeacher
             {
@@ -501,7 +502,7 @@ namespace Schedule.ViewModels
             }
         }
 
-        public void LoadRaitingForTeacher(List<TeacherCouple> teacherCoupleList, DateTime NeedDate)
+        public void LoadRaitingForTeacher(SortedDictionary<byte, TeacherCouple> sortedTeacherCouples, DateTime NeedDate)
         {
             DateTime now = DateTime.Now;
             Dictionary<byte, TeacherCouple> teacherCouplesRaiting = new Dictionary<byte, TeacherCouple>();
@@ -619,20 +620,16 @@ namespace Schedule.ViewModels
                 //сортировка пар, так как могут находится не в правильном порядке
                 if (teacherCouplesRaiting != null)
                 {
-                    SortedDictionary<byte, TeacherCouple> sortedTeacherCouples = new SortedDictionary<byte, TeacherCouple>(teacherCouplesRaiting);
-                    teacherCoupleListRaiting = sortedTeacherCouples.Values.ToList();
-                }
-
-                for (int i = 0; i < teacherCoupleList.Count; i++)
-                {
-                    foreach (var raitCouple in teacherCoupleListRaiting)
+                    foreach (var item in sortedTeacherCouples)
                     {
-                        if (teacherCoupleList[i].CoupleNum == raitCouple.CoupleNum)
+                        if (!teacherCouplesRaiting.ContainsKey(item.Key))
                         {
-                            teacherCoupleList[i] = raitCouple;
-                            break;
+                            teacherCouplesRaiting.Add(item.Key, item.Value);
                         }
                     }
+
+                    SortedDictionary<byte, TeacherCouple> sortedTeacherCouplesRaiting = new SortedDictionary<byte, TeacherCouple>(teacherCouplesRaiting);
+                    sortedTeacherCouples = sortedTeacherCouplesRaiting;
                 }
             }
         }
