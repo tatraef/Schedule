@@ -142,6 +142,7 @@ namespace Schedule.ViewModels
             {
                 numOfWeek = (string)num;
             }
+
             //Если прошел переход через неделю, то есть открыл страницу в четверг,
             //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
             if (!isItForOne && NeedDate.DayOfWeek < now.DayOfWeek)
@@ -253,7 +254,7 @@ namespace Schedule.ViewModels
                 ThisDate = NeedDate
             };
 
-            if (teacherCouples.Count == 0)
+            if (teacherCoupleList.Count == 0)
             {
                 TeacherCouple some = new TeacherCouple
                 {
@@ -584,11 +585,11 @@ namespace Schedule.ViewModels
                                                                         }
 
                                                                         //проверка на два рейтинга за пару
-                                                                        if (g.Couples[j + 1].SubgroupId == g.Couples[j].SubgroupId && g.Couples[j + 1].CoupleName != teacherCouplesRaiting[coupleNum].CoupleName)
+                                                                        if (j + 1 < g.Couples.Count && g.Couples[j + 1].SubgroupId == g.Couples[j].SubgroupId && g.Couples[j + 1].CoupleName != teacherCouplesRaiting[coupleNum].CoupleName)
                                                                         {
                                                                             teacherCouplesRaiting[coupleNum].CoupleName += ", " + g.Couples[j + 1].CoupleName;
                                                                         }
-                                                                        else if (g.Couples[j + 2].SubgroupId != null && g.Couples[j + 2].CoupleName != teacherCouplesRaiting[coupleNum].CoupleName)
+                                                                        else if (j + 2 < g.Couples.Count && g.Couples[j + 2].SubgroupId != null && g.Couples[j + 2].CoupleName != teacherCouplesRaiting[coupleNum].CoupleName)
                                                                         {
                                                                             //рейтинг уже может быть записан после первой группы, поэтому проверка
                                                                             if (!teacherCouplesRaiting[coupleNum].CoupleName.Contains(g.Couples[j + 2].CoupleName))
@@ -617,7 +618,7 @@ namespace Schedule.ViewModels
 
             if (teacherCouplesRaiting.Count > 0)
             {
-                //сортировка пар, так как могут находится не в правильном порядке
+                //Соединение рейтингов с парами
                 if (teacherCouplesRaiting != null)
                 {
                     foreach (var item in sortedTeacherCouples)
@@ -629,7 +630,11 @@ namespace Schedule.ViewModels
                     }
 
                     SortedDictionary<byte, TeacherCouple> sortedTeacherCouplesRaiting = new SortedDictionary<byte, TeacherCouple>(teacherCouplesRaiting);
-                    sortedTeacherCouples = sortedTeacherCouplesRaiting;
+                    sortedTeacherCouples.Clear();
+                    foreach (KeyValuePair<byte, TeacherCouple> item in sortedTeacherCouplesRaiting)
+                    {
+                        sortedTeacherCouples.Add(item.Key, item.Value);
+                    }
                 }
             }
         }
