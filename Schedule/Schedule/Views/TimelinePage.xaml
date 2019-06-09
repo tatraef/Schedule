@@ -23,7 +23,7 @@
                     <ViewCell>
                         <Grid ColumnSpacing="0" RowSpacing="0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="75" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
