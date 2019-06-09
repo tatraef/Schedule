@@ -114,7 +114,38 @@ namespace Schedule.Views
                             }
                             else if (!teachers.Contains(s.CoupleTeacher))
                             {
+                                teachers.Add(s.CoupleTeacher);
+                            }
+                        }
 
+                    }
+                    break;
+                }
+            }
+            //в файлах рейтинга
+            foreach (var f in App.facultiesJSONRaiting)
+            {
+                if (f.FacultyName == selectedFaculty)
+                {
+                    foreach (var g in f.Groups)
+                    {
+                        foreach (var s in g.Couples)
+                        {
+                            //Если в строке преподавателя есть запятая, то это английский, то есть три преподавателя
+                            if (s.CoupleTeacher.Contains(','))
+                            {
+                                //поэтому их нужно разделить
+                                string[] someTeachers = s.CoupleTeacher.Split(',');
+                                foreach (var item in someTeachers)
+                                {
+                                    if (!teachers.Contains(item.Trim()))
+                                    {
+                                        teachers.Add(item.Trim());
+                                    }
+                                }
+                            }
+                            else if (!teachers.Contains(s.CoupleTeacher))
+                            {
                                 teachers.Add(s.CoupleTeacher);
                             }
                         }
