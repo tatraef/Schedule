@@ -400,10 +400,14 @@ namespace Schedule.ViewModels
                         }
 
                         //если через шесть дней сессия или если сейчас девятая неделя семестра, то это рейтинг
-                        //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать.
+                        //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать. change
                         if (i + 6 < myTimetable.Count && (myTimetable[i + 6].Content == "Э" || myTimetable[i].ThisWeek - firstWeekOfSecondSemestr == 9))
                         {
                             LoadRaitingForStudent(couples, NeedDate);
+                            if (couples.Count == 0)
+                            {
+                                NothingInteresting(couples, "");
+                            }
                             break;
                         }
                         
@@ -484,11 +488,11 @@ namespace Schedule.ViewModels
                                         }
                                         someCouple = g.Couples[i];
                                         //проверка на два рейтинга за пару
-                                        if (g.Couples[i+1].SubgroupName == subgroup && g.Couples[i + 1].CoupleName != someCouple.CoupleName)
+                                        if (i + 1 < g.Couples.Count && g.Couples[i + 1].Week == "2" && g.Couples[i+1].SubgroupName == subgroup && g.Couples[i + 1].CoupleName != someCouple.CoupleName)
                                         {
                                             someCouple.CoupleName += ", " + g.Couples[i + 1].CoupleName;
                                         }
-                                        else if (g.Couples[i + 2].CoupleName != someCouple.CoupleName)
+                                        else if (i + 2 < g.Couples.Count && g.Couples[i + 2].Week == "2" && g.Couples[i + 2].CoupleName != someCouple.CoupleName)
                                         {
                                             someCouple.CoupleName += ", " + g.Couples[i + 2].CoupleName;
                                         }
