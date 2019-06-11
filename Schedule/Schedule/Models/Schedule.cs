@@ -31,6 +31,24 @@ namespace Schedule.Models
         public string CoupleTeacher { get; set; }
         public string CoupleAud { get; set; }
         
+        public Couple(Couple some)
+        {
+            SubgroupName = some.SubgroupName;
+            SubgroupId = some.SubgroupId;
+            Week = some.Week;
+            Day = some.Day;
+            CoupleNum = some.CoupleNum;
+            TimeBegin = some.TimeBegin;
+            TimeEnd = some.TimeEnd;
+            CoupleName = some.CoupleName;
+            CoupleTeacher = some.CoupleTeacher;
+            CoupleAud = some.CoupleAud;
+        }
+
+        public Couple()
+        {
+
+        }
     }
 
     public class TeacherCouple

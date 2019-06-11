@@ -486,7 +486,7 @@ namespace Schedule.ViewModels
                                                 continue;
                                             }
                                         }
-                                        someCouple = g.Couples[i];
+                                        someCouple = new Couple(g.Couples[i]);
                                         //проверка на два рейтинга за пару
                                         if (i + 1 < g.Couples.Count && g.Couples[i + 1].Week == "2" && g.Couples[i+1].SubgroupName == subgroup && g.Couples[i + 1].CoupleName != someCouple.CoupleName)
                                         {
