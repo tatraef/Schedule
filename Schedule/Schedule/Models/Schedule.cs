@@ -75,4 +75,19 @@ namespace Schedule.Models
         }
     }
 
+
+    public class ExamFaculty
+    {
+        public string FacultyName { get; set; }
+        public List<ExamGroup> Groups { get; set; }
+    }
+
+    public class ExamGroup
+    {
+        public string GroupName { get; set; }
+        public string SpecName { get; set; }
+        public string Course { get; set; }
+        public List<Couple> Couples { get; set; }
+    }
+
 }

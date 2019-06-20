@@ -246,6 +246,8 @@ namespace Schedule.ViewModels
 
                 LoadRaitingForTeacher(sortedTeacherCouples, NeedDate);
 
+                LoadExamsForTeacher(sortedTeacherCouples, NeedDate);
+
                 teacherCoupleList = sortedTeacherCouples.Values.ToList();
             }
 
@@ -377,13 +379,13 @@ namespace Schedule.ViewModels
                 {
                     if (myTimetable[i].ThisDay == day && myTimetable[i].ThisMonth == month)
                     {
-                        if (myTimetable[i].Content != null || myTimetable[i].Content != "Э") //пока не проверяю на экзамены
+                        if (myTimetable[i].Content != null) //пока не проверяю на экзамены
                         {
                             switch (myTimetable[i].Content)
                             {
                                 case "*": NothingInteresting(couples, ""); break;
                                 case "Д": NothingInteresting(couples, "Д"); break;
-                                case "Э": NothingInteresting(couples, "Э"); break;
+                                case "Э": LoadExamsForStudent(couples, NeedDate); break;
                                 case "Г": NothingInteresting(couples, ""); break;
                                 case "У": NothingInteresting(couples, "П"); break;
                                 case "К": NothingInteresting(couples, ""); break;
@@ -643,11 +645,103 @@ namespace Schedule.ViewModels
             }
         }
 
-        public void LoadExams(List<Couple> couples)
+        public void LoadExamsForStudent(List<Couple> couples, DateTime NeedDate)
         {
+            Couple someCouple;
+            //проверяется факультет
+            if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+            {
+                string facultyName = (string)FacultyName;
+                //проверяются номер группы, имя группы и подгруппа
+                string groupId = "";
+                if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
+                { groupId = (string)GroupId; }
+                string groupName = "";
+                if (App.Current.Properties.TryGetValue("groupName", out object GroupName))
+                { groupName = (string)GroupName; }
+                string subgroup = null;
+                if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
+                { subgroup = (string)Subgroup; }
 
+                foreach (var f in App.facultiesJSONExams)
+                {
+                    if (f.FacultyName == facultyName)
+                    {
+                        foreach (var g in f.Groups)
+                        {
+                            if (groupName.Contains(g.GroupName) && g.Course == groupId[0].ToString())
+                            {
+                                for (int i = 0; i < g.Couples.Count; i++)
+                                {
+                                    if (Convert.ToDateTime(g.Couples[i].Day).Day == NeedDate.Day)
+                                    {
+                                        someCouple = new Couple(g.Couples[i]);
+                                        couples.Add(someCouple);
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        
+        public void LoadExamsForTeacher(SortedDictionary<byte, TeacherCouple> sortedTeacherCouples, DateTime NeedDate)
+        {
+            Dictionary<byte, TeacherCouple> teacherCouplesExams = new Dictionary<byte, TeacherCouple>();
+
+            //проверяется имя преподавателя
+            if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
+            {
+                string thisTeacher = (string)AppTeacherName;
+                foreach (var f in App.facultiesJSONExams)
+                {
+                    foreach (var g in f.Groups)
+                    {
+                        for (int j = 0; j < g.Couples.Count; j++)
+                        {
+                            //Contains, так как в паре английского может быть несколько преподавателей
+                            if (g.Couples[j].CoupleTeacher.Contains(thisTeacher))
+                            {
+                                if (Convert.ToDateTime(g.Couples[j].Day).Day == NeedDate.Day)
+                                {
+                                    byte timeOfExam = Convert.ToByte(g.Couples[j].TimeBegin[0] + (g.Couples[j].TimeBegin[1] != ':' ? g.Couples[j].TimeBegin[1] : '\0').ToString());
+                                    if (!teacherCouplesExams.ContainsKey(timeOfExam))
+                                    {
+                                        teacherCouplesExams.Add(timeOfExam,
+                                        new TeacherCouple(g.Couples[j], g.GroupName + " (" + g.Course + " курс)"));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (teacherCouplesExams.Count > 0)
+            {
+                //Соединение экзаменов с парами
+                if (teacherCouplesExams != null)
+                {
+                    foreach (var item in sortedTeacherCouples)
+                    {
+                        if (!teacherCouplesExams.ContainsKey(item.Key))
+                        {
+                            teacherCouplesExams.Add(item.Key, item.Value);
+                        }
+                    }
+
+                    SortedDictionary<byte, TeacherCouple> sortedTeacherCouplesExams = new SortedDictionary<byte, TeacherCouple>(teacherCouplesExams);
+                    sortedTeacherCouples.Clear();
+                    foreach (KeyValuePair<byte, TeacherCouple> item in sortedTeacherCouplesExams)
+                    {
+                        sortedTeacherCouples.Add(item.Key, item.Value);
+                    }
+                }
+            }
+        }
+
+
     }
 }

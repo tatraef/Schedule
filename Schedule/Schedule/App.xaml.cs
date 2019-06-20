@@ -15,6 +15,7 @@ namespace Schedule
     {
         public static List<Faculty> facultiesJSON;
         public static List<Faculty> facultiesJSONRaiting;
+        public static List<ExamFaculty> facultiesJSONExams;
         public static Dictionary<string, Group> sched;
 
         public static List<Specialty> timetable;
@@ -95,6 +96,8 @@ namespace Schedule
         {
             facultiesJSON = new List<Faculty>();
             facultiesJSONRaiting = new List<Faculty>();
+            facultiesJSONExams = new List<ExamFaculty>();
+
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
             Stream stream = assembly.GetManifestResourceStream("Schedule.math_b.json");
             using (var reader = new System.IO.StreamReader(stream))
@@ -114,6 +117,13 @@ namespace Schedule
             {
                 string json = reader.ReadToEnd();
                 facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(json));
+            }
+
+            Stream streamExams = assembly.GetManifestResourceStream("Schedule.math_e.json");
+            using (var reader = new System.IO.StreamReader(streamExams))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
             }
         }
 
