@@ -676,7 +676,20 @@ namespace Schedule.ViewModels
                                     if (Convert.ToDateTime(g.Couples[i].Day).Day == NeedDate.Day)
                                     {
                                         someCouple = new Couple(g.Couples[i]);
-                                        couples.Add(someCouple);
+                                        bool added = false;
+                                        for (int j = 0; j < couples.Count; j++)
+                                        {
+                                            if (Convert.ToDateTime(couples[j].TimeBegin) > Convert.ToDateTime(someCouple.TimeBegin))
+                                            {
+                                                couples.Insert(j, someCouple);
+                                                added = true;
+                                                j++;
+                                            }
+                                        }
+                                        if (!added)
+                                        {
+                                            couples.Add(someCouple);
+                                        }  
                                     }
                                 }
                                 break;
