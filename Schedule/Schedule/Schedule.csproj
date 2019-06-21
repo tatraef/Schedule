@@ -13,6 +13,7 @@
     <None Remove="math_b.json" />
     <None Remove="math_e.json" />
     <None Remove="math_m.json" />
+    <None Remove="math_me.json" />
     <None Remove="math_r.json" />
     <None Remove="timetable.json" />
   </ItemGroup>
@@ -21,6 +22,7 @@
     <EmbeddedResource Include="math_b.json" />
     <EmbeddedResource Include="math_e.json" />
     <EmbeddedResource Include="math_m.json" />
+    <EmbeddedResource Include="math_me.json" />
     <EmbeddedResource Include="math_r.json" />
     <EmbeddedResource Include="timetable.json" />
   </ItemGroup>

@@ -75,5 +75,27 @@
                         TextColor="#EBB30D"
                         DateSelected="DatePicker_DateSelected"/>
         </StackLayout>
+
+        <StackLayout x:Name="forChangeNumberOfItems" Padding="5" Orientation="Horizontal" BackgroundColor="#262626" IsVisible="False">
+            <Label Text="Показать больше дней:" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Center" 
+                   FontSize="Medium"
+                   TextColor="#EBB30D"/>
+
+            <Picker x:Name="pickerToChangeNumberOfItems"
+                    HorizontalOptions="EndAndExpand" 
+                    VerticalOptions="Center"
+                    TextColor="#EBB30D"
+                    BackgroundColor="White"
+                    WidthRequest="30"
+                    SelectedIndexChanged="PickerToChangeNumberOfItems_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>14</x:String>
+                    <x:String>21</x:String>
+                    <x:String>28</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

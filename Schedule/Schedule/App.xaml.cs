@@ -125,6 +125,13 @@ namespace Schedule
                 string json = reader.ReadToEnd();
                 facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
             }
+
+            Stream streamExamsM = assembly.GetManifestResourceStream("Schedule.math_me.json");
+            using (var reader = new System.IO.StreamReader(streamExamsM))
+            {
+                string json = reader.ReadToEnd();
+                facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
+            }
         }
 
     }

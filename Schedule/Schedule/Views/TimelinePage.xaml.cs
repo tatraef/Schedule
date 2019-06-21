@@ -18,29 +18,36 @@ namespace Schedule.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TimelinePage : ContentPage
     {
+        public byte NumberOfItems { get; set; }
+
         public TimelinePage()
         {
+            ToolbarItem changeNumberOfItems = new ToolbarItem
+            {
+                Icon = "settings.png"
+            };
+            changeNumberOfItems.Clicked += (object sender, System.EventArgs e) =>
+            {
+                forSelectDate.IsVisible = false;
+                forChangeNumberOfItems.IsVisible = forChangeNumberOfItems.IsVisible ? false : true;
+            };
+            ToolbarItems.Add(changeNumberOfItems);
+
             ToolbarItem selectDate = new ToolbarItem
             {
                 Icon = "calendar.png"
             };
             selectDate.Clicked += (object sender, System.EventArgs e) =>
             {
-                if (forSelectDate.IsVisible)
-                {
-                    forSelectDate.IsVisible = false;
-                }
-                else
-                {
-                    forSelectDate.IsVisible = true;
-                }
-                    
-
+                forChangeNumberOfItems.IsVisible = false;
+                forSelectDate.IsVisible = forSelectDate.IsVisible ? false : true;
             };
             ToolbarItems.Add(selectDate);
 
+            NumberOfItems = 7;
+
             InitializeComponent();
-            TimelineViewModel bind = new TimelineViewModel();
+            TimelineViewModel bind = new TimelineViewModel(NumberOfItems);
             BindingContext = bind;
 
             //проверяется студент или преподаватель
@@ -104,6 +111,27 @@ namespace Schedule.Views
                     DisplayAlert("Ошибка", "Можно просматривать только текущий учебный год.", "ОK");
                 }
             }
+        }
+
+        private void PickerToChangeNumberOfItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NumberOfItems = Convert.ToByte(pickerToChangeNumberOfItems.Items[pickerToChangeNumberOfItems.SelectedIndex]);
+
+            TimelineViewModel bind = new TimelineViewModel(NumberOfItems);
+            BindingContext = bind;
+
+            //проверяется студент или преподаватель
+            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+                if ((bool)isTeacher)
+                {
+                    couplesList.ItemsSource = bind.ItemsForTeacher;
+                }
+                else
+                {
+                    couplesList.ItemsSource = bind.ItemsForStudents;
+                }
+
+            forChangeNumberOfItems.IsVisible = false;
         }
     }
 

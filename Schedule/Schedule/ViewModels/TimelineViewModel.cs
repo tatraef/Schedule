@@ -12,7 +12,7 @@ namespace Schedule.ViewModels
         public List<TimelineItemForStudent> ItemsForStudents { get; set; }
         public List<TimelineItemForTeacher> ItemsForTeacher { get; set; }
 
-        public TimelineViewModel()
+        public TimelineViewModel(byte numberOfItems)
         {
             #region Определение номера недели
             List<Day> myTimetable = new List<Day>();
@@ -46,12 +46,12 @@ namespace Schedule.ViewModels
                 if ((bool)isTeacher)
                 {
                     ItemsForTeacher = new List<TimelineItemForTeacher>();
-                    ItemsForTeacher = GetDaysForTeacher();
+                    ItemsForTeacher = GetDaysForTeacher(numberOfItems);
                 }
                 else
                 {
                     ItemsForStudents = new List<TimelineItemForStudent>();
-                    ItemsForStudents = GetDaysForStudent();
+                    ItemsForStudents = GetDaysForStudent(numberOfItems);
                 }
             }
         }
@@ -103,11 +103,11 @@ namespace Schedule.ViewModels
             }
         }
 
-        public List<TimelineItemForStudent> GetDaysForStudent()
+        public List<TimelineItemForStudent> GetDaysForStudent(byte numberOfItems)
         {
             List<TimelineItemForStudent> lines = new List<TimelineItemForStudent>();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < numberOfItems; i++)
             {
                 lines.Add(MakeDayForStudent(DateTime.Now.AddDays(i), false));
             }
@@ -115,11 +115,11 @@ namespace Schedule.ViewModels
             return lines;
         }
 
-        public List<TimelineItemForTeacher> GetDaysForTeacher()
+        public List<TimelineItemForTeacher> GetDaysForTeacher(byte numberOfItems)
         {
             List<TimelineItemForTeacher> lines = new List<TimelineItemForTeacher>();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < numberOfItems; i++)
             {
                 lines.Add(MakeDayForTeacher(DateTime.Now.AddDays(i), false));
             }
@@ -696,6 +696,11 @@ namespace Schedule.ViewModels
                             }
                         }
                     }
+                }
+
+                if (couples.Count == 0)
+                {
+                    NothingInteresting(couples, "");
                 }
             }
         }

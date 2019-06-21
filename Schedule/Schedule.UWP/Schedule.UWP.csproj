@@ -144,6 +144,7 @@
     </Content>
     <Content Include="logoNOSU.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="settings.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
