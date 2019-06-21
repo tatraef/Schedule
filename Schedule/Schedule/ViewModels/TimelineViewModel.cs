@@ -246,9 +246,9 @@ namespace Schedule.ViewModels
 
                 LoadRaitingForTeacher(sortedTeacherCouples, NeedDate);
 
-                LoadExamsForTeacher(sortedTeacherCouples, NeedDate);
-
                 teacherCoupleList = sortedTeacherCouples.Values.ToList();
+
+                LoadExamsForTeacher(teacherCoupleList, NeedDate);
             }
 
             TimelineItemForTeacher nowaday = new TimelineItemForTeacher
@@ -683,7 +683,7 @@ namespace Schedule.ViewModels
                                             {
                                                 couples.Insert(j, someCouple);
                                                 added = true;
-                                                j++;
+                                                break;
                                             }
                                         }
                                         if (!added)
@@ -700,9 +700,9 @@ namespace Schedule.ViewModels
             }
         }
 
-        public void LoadExamsForTeacher(SortedDictionary<byte, TeacherCouple> sortedTeacherCouples, DateTime NeedDate)
+        public void LoadExamsForTeacher(List<TeacherCouple> couples, DateTime NeedDate)
         {
-            Dictionary<byte, TeacherCouple> teacherCouplesExams = new Dictionary<byte, TeacherCouple>();
+            TeacherCouple someCouple;
 
             //проверяется имя преподавателя
             if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
@@ -719,11 +719,37 @@ namespace Schedule.ViewModels
                             {
                                 if (Convert.ToDateTime(g.Couples[j].Day).Day == NeedDate.Day)
                                 {
-                                    byte timeOfExam = Convert.ToByte(g.Couples[j].TimeBegin[0] + (g.Couples[j].TimeBegin[1] != ':' ? g.Couples[j].TimeBegin[1] : '\0').ToString());
+                                    /*byte timeOfExam = Convert.ToByte(g.Couples[j].TimeBegin[0] + (g.Couples[j].TimeBegin[1] != ':' ? g.Couples[j].TimeBegin[1] : '\0').ToString());
                                     if (!teacherCouplesExams.ContainsKey(timeOfExam))
                                     {
                                         teacherCouplesExams.Add(timeOfExam,
                                         new TeacherCouple(g.Couples[j], g.GroupName + " (" + g.Course + " курс)"));
+                                    }*/
+
+                                    someCouple = new TeacherCouple(g.Couples[j], g.GroupName + " (" + g.Course + " курс)");
+                                    bool added = false;
+                                    for (int q = 0; q < couples.Count; q++)
+                                    {
+                                        if (Convert.ToDateTime(couples[q].TimeBegin) == Convert.ToDateTime(someCouple.TimeBegin))
+                                        {
+                                            //чтобы не добавлять одну группу два раза, 
+                                            //это возможно т.к. в расписании группа разделена на подгруппы
+                                            if (couples[q].CoupleTeacher == someCouple.CoupleTeacher)
+                                            {
+                                                added = true;
+                                                break;
+                                            }
+                                        }
+                                        if (Convert.ToDateTime(couples[q].TimeBegin) > Convert.ToDateTime(someCouple.TimeBegin))
+                                        {
+                                            couples.Insert(q, someCouple);
+                                            added = true;
+                                            break;
+                                        }
+                                    }
+                                    if (!added)
+                                    {
+                                        couples.Add(someCouple);
                                     }
                                 }
                             }
@@ -732,7 +758,7 @@ namespace Schedule.ViewModels
                 }
             }
 
-            if (teacherCouplesExams.Count > 0)
+            /*if (teacherCouplesExams.Count > 0)
             {
                 //Соединение экзаменов с парами
                 if (teacherCouplesExams != null)
@@ -752,7 +778,7 @@ namespace Schedule.ViewModels
                         sortedTeacherCouples.Add(item.Key, item.Value);
                     }
                 }
-            }
+            }*/
         }
 
 
