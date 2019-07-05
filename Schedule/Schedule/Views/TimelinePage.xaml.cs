@@ -148,7 +148,7 @@ namespace Schedule.Views
 
                 try
                 {
-                    HttpContent content = new StringContent("check");
+                    HttpContent content = new StringContent("check", Encoding.UTF8, "application/x-www-form-urlencoded");
                     HttpClient client = new HttpClient
                     {
                         BaseAddress = new Uri(url)
@@ -161,12 +161,12 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
-                    await DisplayAlert("Ошибка", ex.Message, "ОK");
+                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
                 }
             }
             else
             {
-                await DisplayAlert("Внимание", "Нет интернет-соединения, возможно расписание было обновлено", "ОK");
+                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
             }
         }
     }
