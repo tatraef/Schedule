@@ -31,6 +31,11 @@
                 <StackLayout x:Name="StackLoyaoutForSavebutton">
 
                 </StackLayout>
+
+
+                <StackLayout x:Name="StackLoyaoutForLoadAnimation">
+    
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

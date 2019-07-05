@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using Schedule.Models;
 
 using Xamarin.Forms;
@@ -19,7 +21,7 @@ namespace Schedule.Views
 		public Login ()
 		{
 			InitializeComponent ();
-            LoadFaculties();
+            LoadFacultiesAsync();
         }
 
         //переменные хранения выбранных значений
@@ -34,14 +36,44 @@ namespace Schedule.Views
         List<string> faculties = new List<string>();
         void LoadFaculties()
         {
-            foreach (var faculty in App.facultiesJSON)
+            
+        }
+
+        public async void LoadFacultiesAsync() //проверка обновлений расписания
+        {
+            List<String> listOfResults = new List<string>();
+
+            if (CrossConnectivity.Current.IsConnected == true)
             {
-                if (!faculties.Contains(faculty.FacultyName))
+                string url = "http://localhost/schedule/getAnswer.php";
+
+                try
                 {
-                    faculties.Add(faculty.FacultyName);
+                    HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
+                    HttpClient client = new HttpClient
+                    {
+                        BaseAddress = new Uri(url)
+                    };
+                    var response = await client.PostAsync(client.BaseAddress, content);
+                    response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                    var res = await response.Content.ReadAsStringAsync();
+                    listOfResults = JsonConvert.DeserializeObject<List<String>>(res);
+
+                    faculties = listOfResults;
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
                 }
             }
+            else
+            {
+                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно загрузить данные.", "Понятно");
+            }
         }
+
+
         //Загрузка групп, для отображения в списке групп
         List<string> groups = new List<string>();
         void LoadGroups()

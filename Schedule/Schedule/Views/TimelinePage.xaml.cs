@@ -148,7 +148,7 @@ namespace Schedule.Views
 
                 try
                 {
-                    HttpContent content = new StringContent("check", Encoding.UTF8, "application/x-www-form-urlencoded");
+                    HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
                     HttpClient client = new HttpClient
                     {
                         BaseAddress = new Uri(url)
@@ -157,7 +157,9 @@ namespace Schedule.Views
                     response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
 
                     var res = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("Получилось", res, "ОK");
+                    List<String> result = new List<string>();
+                    result = JsonConvert.DeserializeObject<List<String>>(res);
+                    await DisplayAlert("Получилось", result[0], "ОK");
                 }
                 catch (Exception ex)
                 {
