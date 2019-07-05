@@ -12,6 +12,8 @@ using System.IO;
 using Schedule.Models;
 using System.Collections.ObjectModel;
 using Schedule.ViewModels;
+using Plugin.Connectivity;
+using System.Net.Http;
 
 namespace Schedule.Views
 {
@@ -22,6 +24,7 @@ namespace Schedule.Views
 
         public TimelinePage()
         {
+            #region Добавление элементов в Toolbar
             ToolbarItem changeNumberOfItems = new ToolbarItem
             {
                 Icon = "settings.png"
@@ -43,6 +46,9 @@ namespace Schedule.Views
                 forSelectDate.IsVisible = forSelectDate.IsVisible ? false : true;
             };
             ToolbarItems.Add(selectDate);
+            #endregion
+
+            CheckUpdatesAsync();
 
             NumberOfItems = 7;
 
@@ -132,6 +138,36 @@ namespace Schedule.Views
                 }
 
             forChangeNumberOfItems.IsVisible = false;
+        }
+
+        public async void CheckUpdatesAsync() //проверка обновлений расписания
+        {
+            if (CrossConnectivity.Current.IsConnected == true)
+            {
+                string url = "http://localhost/schedule/getAnswer.php";
+
+                try
+                {
+                    HttpContent content = new StringContent("check");
+                    HttpClient client = new HttpClient
+                    {
+                        BaseAddress = new Uri(url)
+                    };
+                    var response = await client.PostAsync(client.BaseAddress, content);
+                    response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                    var res = await response.Content.ReadAsStringAsync();
+                    await DisplayAlert("Получилось", res, "ОK");
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ошибка", ex.Message, "ОK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Внимание", "Нет интернет-соединения, возможно расписание было обновлено", "ОK");
+            }
         }
     }
 

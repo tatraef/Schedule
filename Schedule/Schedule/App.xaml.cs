@@ -7,7 +7,6 @@ using Schedule.Models;
 using Schedule.Views;
 using Newtonsoft.Json;
 using System.Reflection;
-using Plugin.Connectivity;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Schedule
@@ -134,18 +133,6 @@ namespace Schedule
             {
                 string json = reader.ReadToEnd();
                 facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
-            }
-        }
-
-        public void CheckUpdates() //проверка обновлений расписания
-        {
-            if (CrossConnectivity.Current.IsConnected == true)
-            {
-
-            }
-            else
-            {
-
             }
         }
 
