@@ -19,6 +19,17 @@
                     </Picker.Items>
                 </Picker>
                 <!-- контейнеры для будущего добавления пикеров-->
+                <ActivityIndicator 
+                    x:Name="FacultyIndicator" 
+                    IsRunning="True"
+                    IsVisible="False"
+                    HorizontalOptions="Center"
+                    HeightRequest="50"/>
+                <Label 
+                    x:Name="act" 
+                    Text="Загрузка..." 
+                    IsVisible="False"
+                    HorizontalOptions="Center"/>
                 <StackLayout x:Name="SelectFacultyStackLoyaout">
 
                 </StackLayout>

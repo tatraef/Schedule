@@ -21,7 +21,6 @@ namespace Schedule.Views
 		public Login ()
 		{
 			InitializeComponent ();
-            LoadFacultiesAsync();
         }
 
         //переменные хранения выбранных значений
@@ -32,14 +31,10 @@ namespace Schedule.Views
         string selectedTeacher = "";
         bool isTeacher = false;
 
-        //Загрузка факультетов, для отображения в списке факультетов
         List<string> faculties = new List<string>();
-        void LoadFaculties()
-        {
-            
-        }
 
-        public async void LoadFacultiesAsync() //проверка обновлений расписания
+        //Загрузка факультетов с сервера, для отображения в списке факультетов
+        public async Task<List<String>> LoadFacultiesAsync() //проверка обновлений расписания
         {
             List<String> listOfResults = new List<string>();
 
@@ -59,8 +54,6 @@ namespace Schedule.Views
 
                     var res = await response.Content.ReadAsStringAsync();
                     listOfResults = JsonConvert.DeserializeObject<List<String>>(res);
-
-                    faculties = listOfResults;
                 }
                 catch (Exception ex)
                 {
@@ -71,6 +64,8 @@ namespace Schedule.Views
             {
                 await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно загрузить данные.", "Понятно");
             }
+
+            return listOfResults;
         }
 
 
@@ -90,6 +85,7 @@ namespace Schedule.Views
                 }
             }
         }
+
         //Загрузка подгрупп, для отображения в списке групп
         List<string> subgroups = new List<string>();
         void LoadSubgroups()
@@ -119,6 +115,7 @@ namespace Schedule.Views
                 }
             }
         }
+
         //Загрузка преподавателей, для отображения в списке преподавателей
         List<string> teachers = new List<string>();
         void LoadTeachers()
@@ -195,8 +192,22 @@ namespace Schedule.Views
         Picker picker;
 
         //изменение поля с выбором типа пользователя
-        void PickerUserType_SelectedIndexChanged(object sender, EventArgs e)
+        async void PickerUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Отчистка полей, если они, вдруг, заполнены
+            SelectFacultyStackLoyaout.Children.Clear();
+            SelectGroupStackLoyaout.Children.Clear();
+            SelectSubgroupStackLoyaout.Children.Clear();
+
+            //начинается загрузка факультетов с сервера
+            FacultyIndicator.IsVisible = true; //запускается ActivityIndicator
+            act.IsVisible = true;
+            //Ожидается выполнение асинхронного метода, так как данные уже нужны
+            faculties = await LoadFacultiesAsync();
+
+            FacultyIndicator.IsVisible = false;
+            act.IsVisible = false;
+
             selectedGroupName = ""; //обнуляем переменные хранения значений
             selectedGroupId = ""; //обнуляем переменные хранения значений
             selectedTeacher = "";
@@ -219,18 +230,14 @@ namespace Schedule.Views
             picker = new Picker
             {
                 Title = ""
-
             };
+
             foreach (var item in faculties)
             {
                 picker.Items.Add(item);
             }
 
             picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
-
-            SelectFacultyStackLoyaout.Children.Clear();
-            SelectGroupStackLoyaout.Children.Clear();
-            SelectSubgroupStackLoyaout.Children.Clear();
 
             SelectFacultyStackLoyaout.Children.Add(headerForPicker);
             SelectFacultyStackLoyaout.Children.Add(picker);
