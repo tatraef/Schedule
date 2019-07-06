@@ -34,7 +34,6 @@ namespace Schedule.Views
         //Загрузка факультетов с сервера, для отображения в списке факультетов
         public async Task<List<String>> LoadFacultiesAsync()
         {
-            await Task.Delay(1000);
             HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
             return JsonConvert.DeserializeObject<List<String>>(res);
@@ -43,13 +42,14 @@ namespace Schedule.Views
         //Загрузка групп, для отображения в списке групп
         public async Task<List<String>> LoadGroupsAsync()
         {
-            await Task.Delay(1000);
             HttpContent content = new StringContent("getScheduleMain&name="+selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
-            //сохранение полученного расписания
-            App.Current.Properties["ScheduleMain"] = res;
+            //сохранение полученного расписания и даты
+            List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
+            App.Current.Properties["ScheduleMain"] = some[0];
+            App.Current.Properties["UpdateMain"] = some[1];
             App.facultiesJSON.Clear();
-            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(res));
+            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
 
             List<string> groups = new List<string>();
 
@@ -175,9 +175,9 @@ namespace Schedule.Views
         async void PickerUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Отчистка полей, если они, вдруг, заполнены
-            SelectFacultyStackLoyaout.Children.Clear();
-            SelectGroupStackLoyaout.Children.Clear();
-            SelectSubgroupStackLoyaout.Children.Clear();
+            selectFacultyStackLoyaout.Children.Clear();
+            selectGroupStackLoyaout.Children.Clear();
+            selectSubgroupStackLoyaout.Children.Clear();
 
             List<string> faculties = new List<string>();
 
@@ -218,8 +218,8 @@ namespace Schedule.Views
 
             picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
 
-            SelectFacultyStackLoyaout.Children.Add(headerForPicker);
-            SelectFacultyStackLoyaout.Children.Add(picker);
+            selectFacultyStackLoyaout.Children.Add(headerForPicker);
+            selectFacultyStackLoyaout.Children.Add(picker);
 
         }
 
@@ -284,11 +284,11 @@ namespace Schedule.Views
 
             }
 
-            SelectGroupStackLoyaout.Children.Clear();
-            SelectSubgroupStackLoyaout.Children.Clear();
+            selectGroupStackLoyaout.Children.Clear();
+            selectSubgroupStackLoyaout.Children.Clear();
 
-            SelectGroupStackLoyaout.Children.Add(headerForPicker);
-            SelectGroupStackLoyaout.Children.Add(picker);
+            selectGroupStackLoyaout.Children.Add(headerForPicker);
+            selectGroupStackLoyaout.Children.Add(picker);
 
         }
 
@@ -325,17 +325,17 @@ namespace Schedule.Views
 
                 picker.SelectedIndexChanged += PickerSubgroup_SelectedIndexChanged;
 
-                SelectSubgroupStackLoyaout.Children.Clear();
-                SelectSubgroupStackLoyaout.Children.Add(headerForPicker);
-                SelectSubgroupStackLoyaout.Children.Add(picker);
+                selectSubgroupStackLoyaout.Children.Clear();
+                selectSubgroupStackLoyaout.Children.Add(headerForPicker);
+                selectSubgroupStackLoyaout.Children.Add(picker);
             }
             else
             {
-                SelectSubgroupStackLoyaout.Children.Clear();
+                selectSubgroupStackLoyaout.Children.Clear();
                 //Если нет подгруппы показываем кнопку сохранения
                 saveButton.Clicked += OnSavebuttonClick;
-                StackLoyaoutForSavebutton.Children.Clear();
-                StackLoyaoutForSavebutton.Children.Add(saveButton);
+                stackLoyaoutForSavebutton.Children.Clear();
+                stackLoyaoutForSavebutton.Children.Add(saveButton);
             }
 
 
@@ -357,8 +357,8 @@ namespace Schedule.Views
             Picker pic = (Picker)sender;
             selectedTeacher = pic.SelectedItem.ToString();
             saveButton.Clicked += OnSavebuttonClick;
-            StackLoyaoutForSavebutton.Children.Clear();
-            StackLoyaoutForSavebutton.Children.Add(saveButton);
+            stackLoyaoutForSavebutton.Children.Clear();
+            stackLoyaoutForSavebutton.Children.Add(saveButton);
         }
 
         //изменение поля с выбором подгруппы
@@ -367,8 +367,8 @@ namespace Schedule.Views
             Picker pic = (Picker)sender;
             selectedSubgroup = pic.SelectedItem.ToString();
             saveButton.Clicked += OnSavebuttonClick;
-            StackLoyaoutForSavebutton.Children.Clear();
-            StackLoyaoutForSavebutton.Children.Add(saveButton);
+            stackLoyaoutForSavebutton.Children.Clear();
+            stackLoyaoutForSavebutton.Children.Add(saveButton);
         }
 
         //Нажатие на кнопку Сохранить
@@ -398,6 +398,7 @@ namespace Schedule.Views
                                     if (g.GroupId == selectedGroupId && g.GroupName == selectedGroupName)
                                     {
                                         App.Current.Properties.Add("groupIdName", selectedGroupId + " | " + selectedGroupName);
+                                        break;
                                     }
                                 }
                             }
@@ -495,7 +496,7 @@ namespace Schedule.Views
 
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                string url = "http://localhost/schedule/getAnswer.php";
+                string url = "http://192.168.0.113/schedule/getAnswer.php";
 
                 try
                 {
@@ -523,14 +524,14 @@ namespace Schedule.Views
 
         void ShowActivityIndicator()
         {
-            FacultyIndicator.IsVisible = true;
-            act.IsVisible = true;
+            facultyIndicator.IsVisible = true;
+            loadingLabel.IsVisible = true;
         }
 
         void HideActivityIndicator()
         {
-            FacultyIndicator.IsVisible = false;
-            act.IsVisible = false;
+            facultyIndicator.IsVisible = false;
+            loadingLabel.IsVisible = false;
         }
     }
 }

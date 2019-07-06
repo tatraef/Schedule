@@ -48,8 +48,6 @@ namespace Schedule.Views
             ToolbarItems.Add(selectDate);
             #endregion
 
-            CheckUpdatesAsync();
-
             NumberOfItems = 7;
 
             InitializeComponent();
@@ -58,6 +56,7 @@ namespace Schedule.Views
 
             //проверяется студент или преподаватель
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+            {
                 if ((bool)isTeacher)
                 {
                     couplesList.ItemsSource = bind.ItemsForTeacher;
@@ -66,8 +65,12 @@ namespace Schedule.Views
                 {
                     couplesList.ItemsSource = bind.ItemsForStudents;
                 }
+            }
+
+            CheckUpdatesAsync();
         }
 
+        //Выбор определенной даты
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
             DateTime now = DateTime.Now;
@@ -119,6 +122,7 @@ namespace Schedule.Views
             }
         }
 
+        //Изменение количества отображаемых дней
         private void PickerToChangeNumberOfItems_SelectedIndexChanged(object sender, EventArgs e)
         {
             NumberOfItems = Convert.ToByte(pickerToChangeNumberOfItems.Items[pickerToChangeNumberOfItems.SelectedIndex]);
@@ -142,10 +146,11 @@ namespace Schedule.Views
 
         public async void CheckUpdatesAsync() //проверка обновлений расписания
         {
+            updateChecking.IsVisible = true;
+
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                string url = "http://localhost/schedule/getAnswer.php";
-
+                string url = "http://192.168.0.113/schedule/getAnswer.php";
                 try
                 {
                     HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
@@ -170,6 +175,8 @@ namespace Schedule.Views
             {
                 await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
             }
+
+            updateChecking.IsVisible = false;
         }
     }
 

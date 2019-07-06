@@ -64,7 +64,11 @@
 
         </ListView>
 
-        <StackLayout x:Name="forSelectDate" Padding="5" Orientation="Horizontal" BackgroundColor="#262626" IsVisible="False">
+        <StackLayout x:Name="forSelectDate" 
+                     Padding="5" 
+                     Orientation="Horizontal" 
+                     BackgroundColor="#262626" 
+                     IsVisible="False">
             <Label Text="Выбрать дату:" 
                    HorizontalOptions="Start" 
                    VerticalOptions="Center" 
@@ -76,7 +80,11 @@
                         DateSelected="DatePicker_DateSelected"/>
         </StackLayout>
 
-        <StackLayout x:Name="forChangeNumberOfItems" Padding="5" Orientation="Horizontal" BackgroundColor="#262626" IsVisible="False">
+        <StackLayout x:Name="forChangeNumberOfItems" 
+                     Padding="5" 
+                     Orientation="Horizontal" 
+                     BackgroundColor="#262626" 
+                     IsVisible="False">
             <Label Text="Показать больше дней:" 
                    HorizontalOptions="Start" 
                    VerticalOptions="Center" 
@@ -96,6 +104,24 @@
                     <x:String>28</x:String>
                 </Picker.Items>
             </Picker>
+        </StackLayout>
+
+        <StackLayout x:Name="updateChecking" 
+                     Padding="5" 
+                     Orientation="Horizontal" 
+                     BackgroundColor="#262626" 
+                     IsVisible="False">
+            <Label Text="Проверка наличия обновлений... " 
+                   HorizontalOptions="StartAndExpand" 
+                   VerticalOptions="Center" 
+                   FontSize="Small"
+                   TextColor="#EBB30D"/>
+
+            <ActivityIndicator 
+                IsRunning="True"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                HeightRequest="20"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

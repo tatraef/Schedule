@@ -19,32 +19,32 @@
                     </Picker.Items>
                 </Picker>
                 <!-- контейнеры для будущего добавления пикеров-->
-                <StackLayout x:Name="SelectFacultyStackLoyaout">
+                <StackLayout x:Name="selectFacultyStackLoyaout">
 
                 </StackLayout>
-                <StackLayout x:Name="SelectGroupStackLoyaout">
+                <StackLayout x:Name="selectGroupStackLoyaout">
 
                 </StackLayout>
-                <StackLayout x:Name="SelectSubgroupStackLoyaout">
+                <StackLayout x:Name="selectSubgroupStackLoyaout">
 
                 </StackLayout>
-                <StackLayout x:Name="StackLoyaoutForSavebutton">
+                <StackLayout x:Name="stackLoyaoutForSavebutton">
 
                 </StackLayout>
 
 
-                <StackLayout x:Name="StackLoyaoutForLoadAnimation">
+                <StackLayout x:Name="stackLoyaoutForLoadAnimation">
     
                 </StackLayout>
 
                 <ActivityIndicator 
-                    x:Name="FacultyIndicator" 
+                    x:Name="facultyIndicator" 
                     IsRunning="True"
                     IsVisible="False"
                     HorizontalOptions="Center"
                     HeightRequest="50"/>
                 <Label 
-                    x:Name="act" 
+                    x:Name="loadingLabel" 
                     Text="Загрузка..." 
                     IsVisible="False"
                     HorizontalOptions="Center"/>
