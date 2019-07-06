@@ -4,7 +4,7 @@
              x:Class="Schedule.Views.Login">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="10" BackgroundColor="White">
+            <StackLayout x:Name="mainStack" Padding="10" BackgroundColor="White">
                 <Image
                     HorizontalOptions="CenterAndExpand"
                     Source="logoLogin.png" 
@@ -19,17 +19,6 @@
                     </Picker.Items>
                 </Picker>
                 <!-- контейнеры для будущего добавления пикеров-->
-                <ActivityIndicator 
-                    x:Name="FacultyIndicator" 
-                    IsRunning="True"
-                    IsVisible="False"
-                    HorizontalOptions="Center"
-                    HeightRequest="50"/>
-                <Label 
-                    x:Name="act" 
-                    Text="Загрузка..." 
-                    IsVisible="False"
-                    HorizontalOptions="Center"/>
                 <StackLayout x:Name="SelectFacultyStackLoyaout">
 
                 </StackLayout>
@@ -47,6 +36,19 @@
                 <StackLayout x:Name="StackLoyaoutForLoadAnimation">
     
                 </StackLayout>
+
+                <ActivityIndicator 
+                    x:Name="FacultyIndicator" 
+                    IsRunning="True"
+                    IsVisible="False"
+                    HorizontalOptions="Center"
+                    HeightRequest="50"/>
+                <Label 
+                    x:Name="act" 
+                    Text="Загрузка..." 
+                    IsVisible="False"
+                    HorizontalOptions="Center"/>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

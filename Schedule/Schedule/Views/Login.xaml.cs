@@ -31,25 +31,28 @@ namespace Schedule.Views
         string selectedTeacher = "";
         bool isTeacher = false;
 
-        List<string> faculties = new List<string>();
-
         //Загрузка факультетов с сервера, для отображения в списке факультетов
         public async Task<List<String>> LoadFacultiesAsync()
         {
+            await Task.Delay(1000);
             HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
             return JsonConvert.DeserializeObject<List<String>>(res);
         }
 
-        List<string> groups = new List<string>();
-
         //Загрузка групп, для отображения в списке групп
-        public void LoadGroups()
+        public async Task<List<String>> LoadGroupsAsync()
         {
-            /*HttpContent content = new StringContent("getScheduleMain", Encoding.UTF8, "application/x-www-form-urlencoded");
+            await Task.Delay(1000);
+            HttpContent content = new StringContent("getScheduleMain&name="+selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
-            listOfResults = JsonConvert.DeserializeObject<List<String>>(res);*/
-            groups.Clear();
+            //сохранение полученного расписания
+            App.Current.Properties["ScheduleMain"] = res;
+            App.facultiesJSON.Clear();
+            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(res));
+
+            List<string> groups = new List<string>();
+
             foreach (var f in App.facultiesJSON)
             {
                 if (f.FacultyName == selectedFaculty)
@@ -60,6 +63,7 @@ namespace Schedule.Views
                     }
                 }
             }
+            return groups;
         }
 
         //Загрузка подгрупп, для отображения в списке групп
@@ -175,15 +179,13 @@ namespace Schedule.Views
             SelectGroupStackLoyaout.Children.Clear();
             SelectSubgroupStackLoyaout.Children.Clear();
 
+            List<string> faculties = new List<string>();
 
             //загрузка факультетов с сервера
-            FacultyIndicator.IsVisible = true; //запускается ActivityIndicator
-            act.IsVisible = true;
+            ShowActivityIndicator(); //показать анимацию загрузки
             //Ожидается выполнение асинхронного метода, так как данные уже нужны
             faculties = await LoadFacultiesAsync();
-
-            FacultyIndicator.IsVisible = false;
-            act.IsVisible = false;
+            HideActivityIndicator(); //скрыть анимацию загрузки
 
             selectedGroupName = ""; //обнуляем переменные хранения значений
             selectedGroupId = ""; //обнуляем переменные хранения значений
@@ -222,15 +224,20 @@ namespace Schedule.Views
         }
 
         //изменение поля с выбором факультета
-        void PickerFaculty_SelectedIndexChanged(object sender, EventArgs e)
+        async void PickerFaculty_SelectedIndexChanged(object sender, EventArgs e)
         {
             Picker pic = (Picker)sender;
-            selectedFaculty = pic.SelectedItem.ToString(); //сохранение группы
-
-            LoadGroups();
+            selectedFaculty = pic.SelectedItem.ToString(); //сохранение факультета
 
             if (!isTeacher) //Если выбран студент
             {
+                List<string> groups = new List<string>();
+
+                ShowActivityIndicator(); //показать анимацию загрузки
+                //Ожидается выполнение асинхронного метода, так как данные уже нужны
+                groups = await LoadGroupsAsync();
+                HideActivityIndicator(); //скрыть анимацию загрузки
+
                 headerForPicker = new Label
                 {
                     Text = "Выберите группу:",
@@ -250,8 +257,6 @@ namespace Schedule.Views
                 }
 
                 picker.SelectedIndexChanged += PickerGroup_SelectedIndexChanged;
-
-
             }
             else //Если выбран преподаватель
             {
@@ -286,6 +291,7 @@ namespace Schedule.Views
             SelectGroupStackLoyaout.Children.Add(picker);
 
         }
+
         //изменение поля с выбором группы
         void PickerGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -364,7 +370,6 @@ namespace Schedule.Views
             StackLoyaoutForSavebutton.Children.Clear();
             StackLoyaoutForSavebutton.Children.Add(saveButton);
         }
-
 
         //Нажатие на кнопку Сохранить
         void OnSavebuttonClick(object sender, EventArgs e)
@@ -483,6 +488,7 @@ namespace Schedule.Views
             }
         }
 
+        //Загрузка данных с сервера
         public async Task<String> LoadDataFromServer(HttpContent content)
         {
             string result = "";
@@ -513,6 +519,18 @@ namespace Schedule.Views
             }
 
             return result;
+        }
+
+        void ShowActivityIndicator()
+        {
+            FacultyIndicator.IsVisible = true;
+            act.IsVisible = true;
+        }
+
+        void HideActivityIndicator()
+        {
+            FacultyIndicator.IsVisible = false;
+            act.IsVisible = false;
         }
     }
 }
