@@ -34,45 +34,21 @@ namespace Schedule.Views
         List<string> faculties = new List<string>();
 
         //Загрузка факультетов с сервера, для отображения в списке факультетов
-        public async Task<List<String>> LoadFacultiesAsync() //проверка обновлений расписания
+        public async Task<List<String>> LoadFacultiesAsync()
         {
-            List<String> listOfResults = new List<string>();
-
-            if (CrossConnectivity.Current.IsConnected == true)
-            {
-                string url = "http://localhost/schedule/getAnswer.php";
-
-                try
-                {
-                    HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
-                    HttpClient client = new HttpClient
-                    {
-                        BaseAddress = new Uri(url)
-                    };
-                    var response = await client.PostAsync(client.BaseAddress, content);
-                    response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
-
-                    var res = await response.Content.ReadAsStringAsync();
-                    listOfResults = JsonConvert.DeserializeObject<List<String>>(res);
-                }
-                catch (Exception ex)
-                {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
-                }
-            }
-            else
-            {
-                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно загрузить данные.", "Понятно");
-            }
-
-            return listOfResults;
+            HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
+            string res = await LoadDataFromServer(content);
+            return JsonConvert.DeserializeObject<List<String>>(res);
         }
 
+        List<string> groups = new List<string>();
 
         //Загрузка групп, для отображения в списке групп
-        List<string> groups = new List<string>();
-        void LoadGroups()
+        public void LoadGroups()
         {
+            /*HttpContent content = new StringContent("getScheduleMain", Encoding.UTF8, "application/x-www-form-urlencoded");
+            string res = await LoadDataFromServer(content);
+            listOfResults = JsonConvert.DeserializeObject<List<String>>(res);*/
             groups.Clear();
             foreach (var f in App.facultiesJSON)
             {
@@ -199,7 +175,8 @@ namespace Schedule.Views
             SelectGroupStackLoyaout.Children.Clear();
             SelectSubgroupStackLoyaout.Children.Clear();
 
-            //начинается загрузка факультетов с сервера
+
+            //загрузка факультетов с сервера
             FacultyIndicator.IsVisible = true; //запускается ActivityIndicator
             act.IsVisible = true;
             //Ожидается выполнение асинхронного метода, так как данные уже нужны
@@ -243,6 +220,7 @@ namespace Schedule.Views
             SelectFacultyStackLoyaout.Children.Add(picker);
 
         }
+
         //изменение поля с выбором факультета
         void PickerFaculty_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -503,6 +481,38 @@ namespace Schedule.Views
                 }
                 App.Current.MainPage = new MasterDetailPage1();
             }
+        }
+
+        public async Task<String> LoadDataFromServer(HttpContent content)
+        {
+            string result = "";
+
+            if (CrossConnectivity.Current.IsConnected == true)
+            {
+                string url = "http://localhost/schedule/getAnswer.php";
+
+                try
+                {
+                    HttpClient client = new HttpClient
+                    {
+                        BaseAddress = new Uri(url)
+                    };
+                    var response = await client.PostAsync(client.BaseAddress, content);
+                    response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                    result = await response.Content.ReadAsStringAsync();
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно загрузить данные.", "Понятно");
+            }
+
+            return result;
         }
     }
 }
