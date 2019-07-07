@@ -13,6 +13,7 @@ namespace Schedule
 {
     public partial class App : Application
     {
+        public static bool updateWasLoaded = false; //переменная, чтобы проверять обновление только один раз
         public static List<Faculty> facultiesJSON;
         public static List<Faculty> facultiesJSONRaiting;
         public static List<ExamFaculty> facultiesJSONExams;

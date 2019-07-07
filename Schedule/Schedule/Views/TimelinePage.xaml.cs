@@ -51,23 +51,12 @@ namespace Schedule.Views
             NumberOfItems = 7;
 
             InitializeComponent();
-            TimelineViewModel bind = new TimelineViewModel(NumberOfItems);
-            BindingContext = bind;
+            ReloadPage();
 
-            //проверяется студент или преподаватель
-            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+            if (!App.updateWasLoaded)
             {
-                if ((bool)isTeacher)
-                {
-                    couplesList.ItemsSource = bind.ItemsForTeacher;
-                }
-                else
-                {
-                    couplesList.ItemsSource = bind.ItemsForStudents;
-                }
+                CheckUpdatesAsync();
             }
-
-            CheckUpdatesAsync();
         }
 
         //Выбор определенной даты
@@ -78,19 +67,7 @@ namespace Schedule.Views
             {
                 if (e.NewDate.Year == now.Year && e.NewDate.Month < 9)
                 {
-                    TimelineViewModel bind = new TimelineViewModel(e.NewDate);
-                    BindingContext = bind;
-
-                    //проверяется студент или преподаватель
-                    if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
-                        if ((bool)isTeacher)
-                        {
-                            couplesList.ItemsSource = bind.ItemsForTeacher;
-                        }
-                        else
-                        {
-                            couplesList.ItemsSource = bind.ItemsForStudents;
-                        }
+                    ReloadPage();
                 }
                 else
                 {
@@ -127,19 +104,7 @@ namespace Schedule.Views
         {
             NumberOfItems = Convert.ToByte(pickerToChangeNumberOfItems.Items[pickerToChangeNumberOfItems.SelectedIndex]);
 
-            TimelineViewModel bind = new TimelineViewModel(NumberOfItems);
-            BindingContext = bind;
-
-            //проверяется студент или преподаватель
-            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
-                if ((bool)isTeacher)
-                {
-                    couplesList.ItemsSource = bind.ItemsForTeacher;
-                }
-                else
-                {
-                    couplesList.ItemsSource = bind.ItemsForStudents;
-                }
+            ReloadPage();
 
             forChangeNumberOfItems.IsVisible = false;
         }
@@ -153,18 +118,39 @@ namespace Schedule.Views
                 string url = "http://192.168.0.113/schedule/getAnswer.php";
                 try
                 {
-                    HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
-                    HttpClient client = new HttpClient
+                    if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
                     {
-                        BaseAddress = new Uri(url)
-                    };
-                    var response = await client.PostAsync(client.BaseAddress, content);
-                    response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+                        string facultyName = (string)FacultyName;
 
-                    var res = await response.Content.ReadAsStringAsync();
-                    List<String> result = new List<string>();
-                    result = JsonConvert.DeserializeObject<List<String>>(res);
-                    await DisplayAlert("Получилось", result[0], "ОK");
+                        if (App.Current.Properties.TryGetValue("updateMain", out object UpdateMain))
+                        {
+                            string updateMain = (string)UpdateMain;
+                            HttpContent content = new StringContent("updateChecking&name=" + facultyName + "&update_main=" + updateMain, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            HttpClient client = new HttpClient
+                            {
+                                BaseAddress = new Uri(url)
+                            };
+                            var response = await client.PostAsync(client.BaseAddress, content);
+                            response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                            string res = await response.Content.ReadAsStringAsync();
+                            if (res == "YES")
+                            {
+                                updateChecking.IsVisible = false;
+                                availableUpdate.IsVisible = true;
+                            }
+                            else
+                            {
+                                updateText.Text = "Нет доступных обновлений";
+                                updateIndicator.IsVisible = false;
+                                await Task.Delay(4000);
+                                updateChecking.IsVisible = false;
+
+                                App.updateWasLoaded = true;
+                            }
+                        }
+                        
+                    }           
                 }
                 catch (Exception ex)
                 {
@@ -174,9 +160,72 @@ namespace Schedule.Views
             else
             {
                 await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
-            }
+            }  
+        }
 
-            updateChecking.IsVisible = false;
+        private async void UpdateButton_Clicked(object sender, EventArgs e)
+        {
+            availableUpdate.IsVisible = false;
+            updateText.Text = "Загрузка обновления...";
+            updateChecking.IsVisible = true;
+            if (CrossConnectivity.Current.IsConnected == true)
+            {
+                string url = "http://192.168.0.113/schedule/getAnswer.php";
+                try
+                {
+                    if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                    {
+                        string facultyName = (string)FacultyName;
+
+                        HttpContent content = new StringContent("getScheduleMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
+                        HttpClient client = new HttpClient
+                        {
+                            BaseAddress = new Uri(url)
+                        };
+                        var response = await client.PostAsync(client.BaseAddress, content);
+                        response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                        string res = await response.Content.ReadAsStringAsync();
+                        List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
+                        App.Current.Properties["scheduleMain"] = some[0];
+                        App.Current.Properties["updateMain"] = some[1];
+                        App.facultiesJSON.Clear();
+                        App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+
+                        ReloadPage();
+
+                        updateText.Text = "Обновления загружены";
+                        updateIndicator.IsVisible = false;
+                        await Task.Delay(4000);
+                        updateChecking.IsVisible = false;
+
+                        App.updateWasLoaded = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                }
+            }
+        }
+
+        private void ReloadPage()
+        {
+            TimelineViewModel bind = new TimelineViewModel(NumberOfItems);
+            BindingContext = bind;
+
+            //проверяется студент или преподаватель
+            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+            {
+                if ((bool)isTeacher)
+                {
+                    couplesList.ItemsSource = bind.ItemsForTeacher;
+                }
+                else
+                {
+                    couplesList.ItemsSource = bind.ItemsForStudents;
+                }
+            }
         }
     }
 

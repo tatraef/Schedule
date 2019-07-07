@@ -46,8 +46,8 @@ namespace Schedule.Views
             string res = await LoadDataFromServer(content);
             //сохранение полученного расписания и даты
             List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
-            App.Current.Properties["ScheduleMain"] = some[0];
-            App.Current.Properties["UpdateMain"] = some[1];
+            App.Current.Properties["scheduleMain"] = some[0];
+            App.Current.Properties["updateMain"] = some[1];
             App.facultiesJSON.Clear();
             App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
 

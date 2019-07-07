@@ -12,7 +12,7 @@
                     <ViewCell>
                         <StackLayout Padding="10">
                             <Label Text="{Binding ThisDate, StringFormat='{}{0:dddd, dd MMMM yyyy}'}" 
-                                   TextColor="#262626"/>
+                                   TextColor="{StaticResource Key=colorPrimary}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -34,7 +34,7 @@
 
                             <Label 
                                    Text="{Binding TimeBegin, StringFormat='{}{0:H:mm}'}"
-                                   TextColor="#EBB30D"
+                                   TextColor="{StaticResource Key=colorAccent}"
                                    FontSize="Medium"
                                    Margin="10,5"/>
 
@@ -49,13 +49,13 @@
                                    Margin="20,5"
                                    Text="{Binding CoupleTeacher}"
                                    FontSize="Small" 
-                                   TextColor="#262626"/>
+                                   TextColor="{StaticResource Key=colorPrimary}"/>
                             <Label Grid.Row="2"
                                    Grid.Column="1"
                                    Margin="20,0"
                                    Text="{Binding CoupleAud}" 
                                    FontSize="Small" 
-                                   TextColor="#262626"/>
+                                   TextColor="{StaticResource Key=colorPrimary}"/>
                         </Grid>
 
                     </ViewCell>
@@ -67,34 +67,34 @@
         <StackLayout x:Name="forSelectDate" 
                      Padding="5" 
                      Orientation="Horizontal" 
-                     BackgroundColor="#262626" 
+                     BackgroundColor="{StaticResource Key=colorPrimary}" 
                      IsVisible="False">
             <Label Text="Выбрать дату:" 
                    HorizontalOptions="Start" 
                    VerticalOptions="Center" 
                    FontSize="Medium"
-                   TextColor="#EBB30D"/>
+                   TextColor="{StaticResource Key=colorAccent}"/>
             <DatePicker HorizontalOptions="EndAndExpand" 
                         VerticalOptions="Center"
-                        TextColor="#EBB30D"
+                        TextColor="{StaticResource Key=colorAccent}"
                         DateSelected="DatePicker_DateSelected"/>
         </StackLayout>
 
         <StackLayout x:Name="forChangeNumberOfItems" 
                      Padding="5" 
                      Orientation="Horizontal" 
-                     BackgroundColor="#262626" 
+                     BackgroundColor="{StaticResource Key=colorPrimary}" 
                      IsVisible="False">
             <Label Text="Показать больше дней:" 
                    HorizontalOptions="Start" 
                    VerticalOptions="Center" 
                    FontSize="Medium"
-                   TextColor="#EBB30D"/>
+                   TextColor="{StaticResource Key=colorAccent}"/>
 
             <Picker x:Name="pickerToChangeNumberOfItems"
                     HorizontalOptions="EndAndExpand" 
                     VerticalOptions="Center"
-                    TextColor="#EBB30D"
+                    TextColor="{StaticResource Key=colorAccent}"
                     BackgroundColor="White"
                     WidthRequest="30"
                     SelectedIndexChanged="PickerToChangeNumberOfItems_SelectedIndexChanged">
@@ -109,19 +109,38 @@
         <StackLayout x:Name="updateChecking" 
                      Padding="5" 
                      Orientation="Horizontal" 
-                     BackgroundColor="#262626" 
+                     BackgroundColor="{StaticResource Key=colorPrimary}" 
                      IsVisible="False">
-            <Label Text="Проверка наличия обновлений... " 
+            <Label x:Name="updateText"
+                   Text="Проверка наличия обновлений... " 
                    HorizontalOptions="StartAndExpand" 
                    VerticalOptions="Center" 
                    FontSize="Small"
-                   TextColor="#EBB30D"/>
+                   TextColor="{StaticResource Key=colorAccent}"/>
 
-            <ActivityIndicator 
+            <ActivityIndicator x:Name="updateIndicator"
                 IsRunning="True"
                 HorizontalOptions="End"
                 VerticalOptions="Center"
                 HeightRequest="20"/>
+        </StackLayout>
+
+        <StackLayout x:Name="availableUpdate" 
+                     Padding="5" 
+                     Orientation="Horizontal" 
+                     BackgroundColor="{StaticResource Key=colorPrimary}" 
+                     IsVisible="False">
+            <Label Text="Доступно новое обновление " 
+                   HorizontalOptions="StartAndExpand" 
+                   VerticalOptions="Center" 
+                   FontSize="Small"
+                   TextColor="{StaticResource Key=colorAccent}"/>
+
+            <Button x:Name="updateButton"
+                    Text="Установить"
+                    BackgroundColor="{StaticResource Key=colorAccent}" 
+                    TextColor="{StaticResource Key=colorPrimary}"
+                    Clicked="UpdateButton_Clicked"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
