@@ -485,6 +485,8 @@ namespace Schedule.Views
                         break;
                     }
                 }
+
+                App.justLogged = true;
                 App.Current.MainPage = new MasterDetailPage1();
             }
         }

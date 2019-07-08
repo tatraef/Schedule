@@ -51,11 +51,19 @@ namespace Schedule.Views
             NumberOfItems = 7;
 
             InitializeComponent();
-            ReloadPage();
 
-            if (!App.updateWasLoaded)
+            if (App.justLogged)
             {
+                LoadScheduleAsync();
+            }
+            else if (!App.updateWasChecked)
+            {
+                ReloadPage();
                 CheckUpdatesAsync();
+            }
+            else
+            {
+                ReloadPage();
             }
         }
 
@@ -109,6 +117,9 @@ namespace Schedule.Views
             forChangeNumberOfItems.IsVisible = false;
         }
 
+        //строка для ответа, которую в UpdateButton_Clicked надо будет посылать  на сервер
+        string updateString = ""; 
+
         public async void CheckUpdatesAsync() //проверка обновлений расписания
         {
             updateChecking.IsVisible = true;
@@ -122,10 +133,21 @@ namespace Schedule.Views
                     {
                         string facultyName = (string)FacultyName;
 
-                        if (App.Current.Properties.TryGetValue("updateMain", out object UpdateMain))
+                        if (Application.Current.Properties.ContainsKey("updateMain") &&
+                            Application.Current.Properties.ContainsKey("updateRait") &&
+                            Application.Current.Properties.ContainsKey("updateExam") &&
+                            Application.Current.Properties.ContainsKey("updateTimetable"))
                         {
-                            string updateMain = (string)UpdateMain;
-                            HttpContent content = new StringContent("updateChecking&name=" + facultyName + "&update_main=" + updateMain, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            string updateMain = Application.Current.Properties["updateMain"] as string;
+                            string updateRait = Application.Current.Properties["updateRait"] as string;
+                            string updateExam = Application.Current.Properties["updateExam"] as string;
+                            string updateTimetable = Application.Current.Properties["updateTimetable"] as string;
+
+                            HttpContent content = new StringContent("updateChecking&name=" + facultyName + 
+                                "&update_main=" + updateMain + 
+                                "&update_rait=" + updateRait + 
+                                "&update_exam=" + updateExam +
+                                "&update_timetable=" + updateTimetable, Encoding.UTF8, "application/x-www-form-urlencoded");
                             HttpClient client = new HttpClient
                             {
                                 BaseAddress = new Uri(url)
@@ -134,20 +156,25 @@ namespace Schedule.Views
                             response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
 
                             string res = await response.Content.ReadAsStringAsync();
-                            if (res == "YES")
-                            {
-                                updateChecking.IsVisible = false;
-                                availableUpdate.IsVisible = true;
-                            }
-                            else
+                            if (res == "NO")
                             {
                                 updateText.Text = "Нет доступных обновлений";
                                 updateIndicator.IsVisible = false;
                                 await Task.Delay(4000);
                                 updateChecking.IsVisible = false;
 
-                                App.updateWasLoaded = true;
+                                App.updateWasChecked = true;  
                             }
+                            else
+                            {
+                                updateString = res;
+                                updateChecking.IsVisible = false;
+                                availableUpdate.IsVisible = true;
+                            }
+                        }
+                        else
+                        {
+                            //загрузить тогда
                         }
                         
                     }           
@@ -177,7 +204,7 @@ namespace Schedule.Views
                     {
                         string facultyName = (string)FacultyName;
 
-                        HttpContent content = new StringContent("getScheduleMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
+                        HttpContent content = new StringContent("getSchedule&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
                         HttpClient client = new HttpClient
                         {
                             BaseAddress = new Uri(url)
@@ -186,11 +213,34 @@ namespace Schedule.Views
                         response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
 
                         string res = await response.Content.ReadAsStringAsync();
-                        List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
-                        App.Current.Properties["scheduleMain"] = some[0];
-                        App.Current.Properties["updateMain"] = some[1];
-                        App.facultiesJSON.Clear();
-                        App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+                        Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
+                        if (some.ContainsKey("scheduleMain"))
+                        {
+                            App.facultiesJSON.Clear();
+                            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleMain"]));
+                            App.Current.Properties["scheduleMain"] = some["scheduleMain"];
+                            App.Current.Properties["updateMain"] = some["updateMain"];
+                        }
+                        if (some.ContainsKey("scheduleRait"))
+                        {
+                            App.facultiesJSONRaiting.Clear();
+                            App.facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                            App.Current.Properties["scheduleRait"] = some["scheduleRait"];
+                            App.Current.Properties["updateRait"] = some["updateRait"];
+                        }
+                        if (some.ContainsKey("scheduleExam"))
+                        {
+                            App.facultiesJSONExams.Clear();
+                            App.facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                            App.Current.Properties["scheduleExam"] = some["scheduleExam"];
+                            App.Current.Properties["updateExam"] = some["updateExam"];
+                        }
+                        if (some.ContainsKey("scheduleTimetable"))
+                        {
+                            App.timetable= JsonConvert.DeserializeObject<List<Specialty>>(some["scheduleRait"]);
+                            App.Current.Properties["timetable"] = some["scheduleTimetable"];
+                            App.Current.Properties["updateTimetable"] = some["updateTimetable"];
+                        }
 
                         ReloadPage();
 
@@ -199,7 +249,7 @@ namespace Schedule.Views
                         await Task.Delay(4000);
                         updateChecking.IsVisible = false;
 
-                        App.updateWasLoaded = true;
+                        App.updateWasChecked = true;
                     }
                 }
                 catch (Exception ex)
@@ -207,6 +257,11 @@ namespace Schedule.Views
                     await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
                 }
             }
+        }
+
+        private async void LoadScheduleAsync()
+        {
+            
         }
 
         private void ReloadPage()

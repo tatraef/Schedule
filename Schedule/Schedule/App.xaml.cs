@@ -13,7 +13,10 @@ namespace Schedule
 {
     public partial class App : Application
     {
-        public static bool updateWasLoaded = false; //переменная, чтобы проверять обновление только один раз
+        //переменная, чтобы проверять обновление только один раз
+        public static bool updateWasChecked = false;
+        //переменная, чтобы проверять была ли авторизация только что и подгружать расписание
+        public static bool justLogged = false; 
         public static List<Faculty> facultiesJSON;
         public static List<Faculty> facultiesJSONRaiting;
         public static List<ExamFaculty> facultiesJSONExams;
