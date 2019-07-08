@@ -137,7 +137,7 @@
                    TextColor="{StaticResource Key=colorAccent}"/>
 
             <Button x:Name="updateButton"
-                    Text="Установить"
+                    Text="Загрузить"
                     BackgroundColor="{StaticResource Key=colorAccent}" 
                     TextColor="{StaticResource Key=colorPrimary}"
                     Clicked="UpdateButton_Clicked"/>

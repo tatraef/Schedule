@@ -174,7 +174,7 @@ namespace Schedule.Views
                         }
                         else
                         {
-                            //загрузить тогда
+                            LoadScheduleAsync();
                         }
                         
                     }           
@@ -237,7 +237,7 @@ namespace Schedule.Views
                         }
                         if (some.ContainsKey("scheduleTimetable"))
                         {
-                            App.timetable= JsonConvert.DeserializeObject<List<Specialty>>(some["scheduleRait"]);
+                            App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(some["scheduleTimetable"]);
                             App.Current.Properties["timetable"] = some["scheduleTimetable"];
                             App.Current.Properties["updateTimetable"] = some["updateTimetable"];
                         }
@@ -261,7 +261,58 @@ namespace Schedule.Views
 
         private async void LoadScheduleAsync()
         {
-            
+            availableUpdate.IsVisible = false;
+            updateText.Text = "Загрузка расписания...";
+            updateChecking.IsVisible = true;
+            if (CrossConnectivity.Current.IsConnected == true)
+            {
+                string url = "http://192.168.0.113/schedule/getAnswer.php";
+                try
+                {
+                    if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                    {
+                        string facultyName = (string)FacultyName;
+
+                        HttpContent content = new StringContent("getScheduleWithoutMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
+                        HttpClient client = new HttpClient
+                        {
+                            BaseAddress = new Uri(url)
+                        };
+                        var response = await client.PostAsync(client.BaseAddress, content);
+                        response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                        string res = await response.Content.ReadAsStringAsync();
+                        Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
+
+                        App.facultiesJSONRaiting.Clear();
+                        App.facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                        App.Current.Properties["scheduleRait"] = some["scheduleRait"];
+                        App.Current.Properties["updateRait"] = some["updateRait"];
+
+                        App.facultiesJSONExams.Clear();
+                        App.facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                        App.Current.Properties["scheduleExam"] = some["scheduleExam"];
+                        App.Current.Properties["updateExam"] = some["updateExam"];
+
+                        App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(some["scheduleTimetable"]);
+                        App.Current.Properties["timetable"] = some["scheduleTimetable"];
+                        App.Current.Properties["updateTimetable"] = some["updateTimetable"];
+
+                        ReloadPage();
+
+                        updateText.Text = "Расписание загружено";
+                        updateIndicator.IsVisible = false;
+                        await Task.Delay(4000);
+                        updateChecking.IsVisible = false;
+
+                        App.updateWasChecked = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                }
+            }
         }
 
         private void ReloadPage()
