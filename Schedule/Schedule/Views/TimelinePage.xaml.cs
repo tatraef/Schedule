@@ -295,9 +295,7 @@ namespace Schedule.Views
                         App.Current.Properties["scheduleExam"] = some["scheduleExam"];
                         App.Current.Properties["updateExam"] = some["updateExam"];
 
-                        App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(some["scheduleTimetable"]);
-                        App.Current.Properties["timetable"] = some["scheduleTimetable"];
-                        App.Current.Properties["updateTimetable"] = some["updateTimetable"];
+                        SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]); 
 
                         ReloadPage();
 
@@ -335,7 +333,31 @@ namespace Schedule.Views
                 }
             }
         }
-    }
 
-    
+        private void SaveTimetable(string scheduleTimetable, string updateTimetable)
+        {
+            App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(scheduleTimetable);
+            App.Current.Properties["updateTimetable"] = updateTimetable;
+
+            string code = (string)App.Current.Properties["code"];
+            string course = (string)App.Current.Properties["course"];
+
+            foreach (var item in App.timetable)
+            {
+                if (item.SpecialtyName.Contains(code))
+                {
+                    foreach (var courses in item.Courses)
+                    {
+                        if (courses.CourseNumber == course)
+                        {
+                            string json = JsonConvert.SerializeObject(courses.Days);
+                            App.Current.Properties.Add("timetable", json);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+ 
+    }   
 }

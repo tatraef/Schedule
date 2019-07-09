@@ -411,7 +411,7 @@ namespace Schedule.Views
 
                         App.Current.Properties.Add("isTeacher", false);
 
-                        //Сохранение графика
+                        //Сохранение данных для дальнейшего получения графика
                         int indexOfDigit = 0;
                         for (int i = 0; i < selectedGroupName.Length; i++)//вырезаем код специальности, чтобы по нему искать
                         {
@@ -422,9 +422,11 @@ namespace Schedule.Views
                             }
                         }
                         string code = selectedGroupName.Substring(indexOfDigit, 8);
+                        App.Current.Properties.Add("code", code);
                         string course = selectedGroupId[0].ToString();
+                        App.Current.Properties.Add("course", course);
 
-                        foreach (var item in App.timetable)
+                        /*foreach (var item in App.timetable)
                         {
                             if (item.SpecialtyName.Contains(code))
                             {
@@ -438,7 +440,7 @@ namespace Schedule.Views
                                     }
                                 }
                             }
-                        }
+                        }*/
                     }
                     else
                     {
