@@ -97,9 +97,16 @@ namespace Schedule.Views
         }
 
         //Загрузка преподавателей, для отображения в списке преподавателей
-        List<string> teachers = new List<string>();
-        void LoadTeachers()
+        public async Task<List<String>> LoadTeachersAsync()
         {
+            HttpContent content = new StringContent("getScheduleMain&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
+            string res = await LoadDataFromServer(content);
+            List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
+            App.facultiesJSON.Clear();
+            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+
+            List<string> teachers = new List<string>();
+
             foreach (var f in App.facultiesJSON)
             {
                 if (f.FacultyName == selectedFaculty)
@@ -131,40 +138,9 @@ namespace Schedule.Views
                     break;
                 }
             }
-            //в файлах рейтинга
-            foreach (var f in App.facultiesJSONRaiting)
-            {
-                if (f.FacultyName == selectedFaculty)
-                {
-                    foreach (var g in f.Groups)
-                    {
-                        foreach (var s in g.Couples)
-                        {
-                            //Если в строке преподавателя есть запятая, то это английский, то есть три преподавателя
-                            if (s.CoupleTeacher.Contains(','))
-                            {
-                                //поэтому их нужно разделить
-                                string[] someTeachers = s.CoupleTeacher.Split(',');
-                                foreach (var item in someTeachers)
-                                {
-                                    if (!teachers.Contains(item.Trim()))
-                                    {
-                                        teachers.Add(item.Trim());
-                                    }
-                                }
-                            }
-                            else if (!teachers.Contains(s.CoupleTeacher))
-                            {
-                                teachers.Add(s.CoupleTeacher);
-                            }
-                        }
-
-                    }
-                    break;
-                }
-            }
 
             teachers.Sort();
+            return teachers;
         }
 
 
@@ -229,7 +205,8 @@ namespace Schedule.Views
             Picker pic = (Picker)sender;
             selectedFaculty = pic.SelectedItem.ToString(); //сохранение факультета
 
-            if (!isTeacher) //Если выбран студент
+            //Если выбран студент
+            if (!isTeacher) 
             {
                 List<string> groups = new List<string>();
 
@@ -258,9 +235,15 @@ namespace Schedule.Views
 
                 picker.SelectedIndexChanged += PickerGroup_SelectedIndexChanged;
             }
-            else //Если выбран преподаватель
+            //Если выбран преподаватель
+            else
             {
-                LoadTeachers();
+                List<string> teachers = new List<string>();
+
+                ShowActivityIndicator(); //показать анимацию загрузки
+                //Ожидается выполнение асинхронного метода, так как данные уже нужны
+                teachers = await LoadTeachersAsync();
+                HideActivityIndicator(); //скрыть анимацию загрузки
 
                 headerForPicker = new Label
                 {
