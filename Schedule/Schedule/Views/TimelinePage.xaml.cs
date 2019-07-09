@@ -52,6 +52,7 @@ namespace Schedule.Views
 
             InitializeComponent();
 
+
             if (App.justLogged)
             {
                 LoadScheduleAsync();
@@ -306,6 +307,7 @@ namespace Schedule.Views
                         updateChecking.IsVisible = false;
 
                         App.updateWasChecked = true;
+                        App.justLogged = false;
                     }
                 }
                 catch (Exception ex)
