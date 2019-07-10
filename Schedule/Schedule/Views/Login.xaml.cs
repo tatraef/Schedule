@@ -368,7 +368,7 @@ namespace Schedule.Views
                 {
                     App.Current.Properties.Add("facultyName", selectedFaculty);
 
-                    if (selectedGroupId != "")
+                    if (selectedGroupId != "") //студент
                     {
                         //Сохранение данных в словарь App.Current.Properties
                         App.Current.Properties.Add("groupId", selectedGroupId);
@@ -412,23 +412,10 @@ namespace Schedule.Views
                         string course = selectedGroupId[0].ToString();
                         App.Current.Properties.Add("course", course);
                     }
-                    else
+                    else //преподаватель
                     {
                         App.Current.Properties.Add("isTeacher", true);
                         App.Current.Properties.Add("teacherName", selectedTeacher);
-
-                        //******************************here****************************//
-                        //сохранение графика первой попавшейся группы, для определения номера недели для Преподавателя
-                        foreach (var item in App.timetable)
-                        {
-                            foreach (var courses in item.Courses)
-                            {
-                                string json = JsonConvert.SerializeObject(courses.Days);
-                                App.Current.Properties.Add("myTimetable", json);
-                                break;
-                            }
-                            break;
-                        }
                     }
                 }
                 App.Current.Properties.Add("numOfWeek", "1");

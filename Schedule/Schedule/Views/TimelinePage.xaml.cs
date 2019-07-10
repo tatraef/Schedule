@@ -261,55 +261,112 @@ namespace Schedule.Views
 
         private async void LoadScheduleAsync()
         {
-            availableUpdate.IsVisible = false;
-            updateText.Text = "Загрузка расписания...";
-            updateChecking.IsVisible = true;
-            if (CrossConnectivity.Current.IsConnected == true)
+            if ((bool)App.Current.Properties["isTeacher"])
             {
-                string url = "http://192.168.0.113/schedule/getAnswer.php";
-                try
+                /*availableUpdate.IsVisible = false;
+                updateText.Text = "Загрузка расписания...";
+                updateChecking.IsVisible = true;
+                if (CrossConnectivity.Current.IsConnected == true)
                 {
-                    if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                    string url = "http://192.168.0.113/schedule/getAnswer.php";
+                    try
                     {
-                        string facultyName = (string)FacultyName;
-
-                        HttpContent content = new StringContent("getScheduleWithoutMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
-                        HttpClient client = new HttpClient
+                        if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
                         {
-                            BaseAddress = new Uri(url)
-                        };
-                        var response = await client.PostAsync(client.BaseAddress, content);
-                        response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+                            string facultyName = (string)FacultyName;
 
-                        string res = await response.Content.ReadAsStringAsync();
-                        Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
+                            HttpContent content = new StringContent("getScheduleWithoutMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            HttpClient client = new HttpClient
+                            {
+                                BaseAddress = new Uri(url)
+                            };
+                            var response = await client.PostAsync(client.BaseAddress, content);
+                            response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
 
-                        App.facultiesRait.Clear();
-                        App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
-                        App.Current.Properties["scheduleRait"] = some["scheduleRait"];
-                        App.Current.Properties["updateRait"] = some["updateRait"];
+                            string res = await response.Content.ReadAsStringAsync();
+                            Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
 
-                        App.facultiesExam.Clear();
-                        App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
-                        App.Current.Properties["scheduleExam"] = some["scheduleExam"];
-                        App.Current.Properties["updateExam"] = some["updateExam"];
+                            App.facultiesRait.Clear();
+                            App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                            App.Current.Properties["scheduleRait"] = some["scheduleRait"];
+                            App.Current.Properties["updateRait"] = some["updateRait"];
 
-                        SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]); 
+                            App.facultiesExam.Clear();
+                            App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                            App.Current.Properties["scheduleExam"] = some["scheduleExam"];
+                            App.Current.Properties["updateExam"] = some["updateExam"];
 
-                        ReloadPage();
+                            SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]);
 
-                        updateText.Text = "Расписание загружено";
-                        updateIndicator.IsVisible = false;
-                        await Task.Delay(4000);
-                        updateChecking.IsVisible = false;
+                            ReloadPage();
 
-                        App.updateWasChecked = true;
-                        App.justLogged = false;
+                            updateText.Text = "Расписание загружено";
+                            updateIndicator.IsVisible = false;
+                            await Task.Delay(4000);
+                            updateChecking.IsVisible = false;
+
+                            App.updateWasChecked = true;
+                            App.justLogged = false;
+                        }
                     }
-                }
-                catch (Exception ex)
+                    catch (Exception ex)
+                    {
+                        await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    }
+                }*/
+            }
+            else
+            {
+                availableUpdate.IsVisible = false;
+                updateText.Text = "Загрузка расписания...";
+                updateChecking.IsVisible = true;
+                if (CrossConnectivity.Current.IsConnected == true)
                 {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    string url = "http://192.168.0.113/schedule/getAnswer.php";
+                    try
+                    {
+                        if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                        {
+                            string facultyName = (string)FacultyName;
+
+                            HttpContent content = new StringContent("getScheduleWithoutMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            HttpClient client = new HttpClient
+                            {
+                                BaseAddress = new Uri(url)
+                            };
+                            var response = await client.PostAsync(client.BaseAddress, content);
+                            response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                            string res = await response.Content.ReadAsStringAsync();
+                            Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
+
+                            App.facultiesRait.Clear();
+                            App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                            App.Current.Properties["scheduleRait"] = some["scheduleRait"];
+                            App.Current.Properties["updateRait"] = some["updateRait"];
+
+                            App.facultiesExam.Clear();
+                            App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                            App.Current.Properties["scheduleExam"] = some["scheduleExam"];
+                            App.Current.Properties["updateExam"] = some["updateExam"];
+
+                            SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]);
+
+                            ReloadPage();
+
+                            updateText.Text = "Расписание загружено";
+                            updateIndicator.IsVisible = false;
+                            await Task.Delay(4000);
+                            updateChecking.IsVisible = false;
+
+                            App.updateWasChecked = true;
+                            App.justLogged = false;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    }
                 }
             }
         }
@@ -339,25 +396,44 @@ namespace Schedule.Views
             App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(scheduleTimetable);
             App.Current.Properties["updateTimetable"] = updateTimetable;
 
-            string code = (string)App.Current.Properties["code"];
-            string course = (string)App.Current.Properties["course"];
-
-            foreach (var item in App.timetable)
+            if ((bool)App.Current.Properties["isTeacher"])
             {
-                if (item.SpecialtyName.Contains(code))
+                foreach (var item in App.timetable)
                 {
                     foreach (var courses in item.Courses)
                     {
-                        if (courses.CourseNumber == course)
-                        {
-                            App.myTimetable = courses.Days;
-                            string json = JsonConvert.SerializeObject(courses.Days);
-                            App.Current.Properties.Add("myTimetable", json);
-                            break;
-                        }
+                        App.myTimetable = courses.Days;
+                        string json = JsonConvert.SerializeObject(courses.Days);
+                        App.Current.Properties.Add("myTimetable", json);
+                        break;
                     }
+                    break;
                 }
             }
+            else
+            {
+                string code = (string)App.Current.Properties["code"];
+                string course = (string)App.Current.Properties["course"];
+
+                foreach (var item in App.timetable)
+                {
+                    if (item.SpecialtyName.Contains(code))
+                    {
+                        foreach (var courses in item.Courses)
+                        {
+                            if (courses.CourseNumber == course)
+                            {
+                                App.myTimetable = courses.Days;
+                                string json = JsonConvert.SerializeObject(courses.Days);
+                                App.Current.Properties.Add("myTimetable", json);
+                                break;
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
+                
         }
  
     }   
