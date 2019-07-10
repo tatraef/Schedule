@@ -119,9 +119,10 @@ namespace Schedule.Views
         }
 
         //строка для ответа, которую в UpdateButton_Clicked надо будет посылать  на сервер
-        string updateString = ""; 
+        string updateString = "";
 
-        public async void CheckUpdatesAsync() //проверка обновлений расписания
+        //проверка обновлений расписания
+        public async void CheckUpdatesAsync() 
         {
             updateChecking.IsVisible = true;
 
@@ -349,6 +350,7 @@ namespace Schedule.Views
                     {
                         if (courses.CourseNumber == course)
                         {
+                            App.myTimetable = courses.Days;
                             string json = JsonConvert.SerializeObject(courses.Days);
                             App.Current.Properties.Add("myTimetable", json);
                             break;
