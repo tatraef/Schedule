@@ -14,32 +14,9 @@ namespace Schedule.ViewModels
 
         public TimelineViewModel(byte numberOfItems)
         {
-            #region Определение номера недели
-            List<Day> myTimetable = new List<Day>();
-            string table = "";
-            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
-            {
-                table = (string)tableFrom;
-                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-            }
-
+            //Определение номера недели
             DateTime now = DateTime.Now;
-            int day = now.Day;
-            int month = now.Month;
-            foreach (var item in myTimetable)
-            {
-                if (item.ThisDay == day && item.ThisMonth == month)
-                {
-                    if (item.ThisWeek % 2 == 0)
-                    {
-                        App.Current.Properties["numOfWeek"] = "2";
-                    }
-                    else
-                        App.Current.Properties["numOfWeek"] = "1";
-                    break;
-                }
-            }
-            #endregion
+            DetermineTheNumberOfWeek(now.Day, now.Month);
 
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
@@ -55,34 +32,12 @@ namespace Schedule.ViewModels
                 }
             }
         }
+
         //перегрузка для выбора определенной даты
         public TimelineViewModel(DateTime selectedDate)
         {
-            #region Определение номера недели
-            List<Day> myTimetable = new List<Day>();
-            string table = "";
-            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
-            {
-                table = (string)tableFrom;
-                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-            }
-
-            int day = selectedDate.Day;
-            int month = selectedDate.Month;
-            foreach (var item in myTimetable)
-            {
-                if (item.ThisDay == day && item.ThisMonth == month)
-                {
-                    if (item.ThisWeek % 2 == 0)
-                    {
-                        App.Current.Properties["numOfWeek"] = "2";
-                    }
-                    else
-                        App.Current.Properties["numOfWeek"] = "1";
-                    break;
-                }
-            }
-            #endregion
+            //Определение номера недели
+            DetermineTheNumberOfWeek(selectedDate.Day, selectedDate.Month);
 
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
@@ -157,7 +112,7 @@ namespace Schedule.ViewModels
             if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
             {
                 string thisTeacher = (string)AppTeacherName;
-                foreach (var f in App.facultiesJSON)
+                foreach (var f in App.facultiesMain)
                 {
                     foreach (var g in f.Groups)
                     {
@@ -314,7 +269,7 @@ namespace Schedule.ViewModels
                     if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
                     { subgroup = (string)Subgroup; }
 
-                    foreach (var f in App.facultiesJSON)
+                    foreach (var f in App.facultiesMain)
                     {
                         if (f.FacultyName == facultyName)
                         {
@@ -364,62 +319,54 @@ namespace Schedule.ViewModels
         public void WhatTodayForStudent(List<Couple> couples, DateTime NeedDate)
         {
             //Что сегодня? Обычный/Выходной/Практика/Экзамен/Рейтинг?
-            List<Day> myTimetable;
-            string table = "";
-
             int firstWeekOfSecondSemestr = 0;
-            if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+
+            int day = NeedDate.Day;
+            int month = NeedDate.Month;
+            for (int i = 0; i < App.myTimetable.Count; i++)
             {
-                table = (string)tableFrom;
-                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-
-                int day = NeedDate.Day;
-                int month = NeedDate.Month;
-                for (int i = 0; i < myTimetable.Count; i++)
+                if (App.myTimetable[i].ThisDay == day && App.myTimetable[i].ThisMonth == month)
                 {
-                    if (myTimetable[i].ThisDay == day && myTimetable[i].ThisMonth == month)
+                    if (App.myTimetable[i].Content != null) //пока не проверяю на экзамены
                     {
-                        if (myTimetable[i].Content != null) //пока не проверяю на экзамены
+                        switch (App.myTimetable[i].Content)
                         {
-                            switch (myTimetable[i].Content)
-                            {
-                                case "*": NothingInteresting(couples, ""); break;
-                                case "Д": NothingInteresting(couples, "Д"); break;
-                                case "Э": LoadExamsForStudent(couples, NeedDate); break;
-                                case "Г": NothingInteresting(couples, ""); break;
-                                case "У": NothingInteresting(couples, "П"); break;
-                                case "К": NothingInteresting(couples, ""); break;
-                                case "П": NothingInteresting(couples, "П"); break;
-                                case "Н": NothingInteresting(couples, "Н"); break;
-                                default:
-                                    break;
-                            }
+                            case "*": NothingInteresting(couples, ""); break;
+                            case "Д": NothingInteresting(couples, "Д"); break;
+                            case "Э": LoadExamsForStudent(couples, NeedDate); break;
+                            case "Г": NothingInteresting(couples, ""); break;
+                            case "У": NothingInteresting(couples, "П"); break;
+                            case "К": NothingInteresting(couples, ""); break;
+                            case "П": NothingInteresting(couples, "П"); break;
+                            case "Н": NothingInteresting(couples, "Н"); break;
+                            default:
+                                break;
                         }
-
-                        if (couples.Count > 0)
-                        {
-                            break;
-                        }
-
-                        //если через шесть дней сессия или если сейчас девятая неделя семестра, то это рейтинг
-                        //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать. change
-                        if (i + 6 < myTimetable.Count && (myTimetable[i + 6].Content == "Э" || myTimetable[i].ThisWeek - firstWeekOfSecondSemestr == 9))
-                        {
-                            LoadRaitingForStudent(couples, NeedDate);
-                            if (couples.Count == 0)
-                            {
-                                NothingInteresting(couples, "");
-                            }
-                            break;
-                        }
-                        
                     }
-                    //Определение первой недели второго семестра для определения первого рейтинга второго семестра, 
-                    //ведь он начинаяется на девятой неделе после каникул
-                    if (myTimetable[i].Content == "K")
+
+                    if (couples.Count > 0)
                     {
-                        firstWeekOfSecondSemestr = myTimetable[i].ThisWeek;
+                        break;
                     }
+
+                    //если через шесть дней сессия или если сейчас девятая неделя семестра, то это рейтинг
+                    //Что если за шесть дней до сесии были выходные, тогда определение не правильное? Нужно доработать. change
+                    if (i + 6 < App.myTimetable.Count && (App.myTimetable[i + 6].Content == "Э" || App.myTimetable[i].ThisWeek - firstWeekOfSecondSemestr == 9))
+                    {
+                        LoadRaitingForStudent(couples, NeedDate);
+                        if (couples.Count == 0)
+                        {
+                            NothingInteresting(couples, "");
+                        }
+                        break;
+                    }
+
+                }
+                //Определение первой недели второго семестра для определения первого рейтинга второго семестра, 
+                //ведь он начинаяется на девятой неделе после каникул
+                if (App.myTimetable[i].Content == "K")
+                {
+                    firstWeekOfSecondSemestr = App.myTimetable[i].ThisWeek;
                 }
             }
         }
@@ -464,7 +411,7 @@ namespace Schedule.ViewModels
                 if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
                 { subgroup = (string)Subgroup; }
 
-                foreach (var f in App.facultiesJSONRaiting)
+                foreach (var f in App.facultiesRait)
                 {
                     if (f.FacultyName == facultyName)
                     {
@@ -521,7 +468,7 @@ namespace Schedule.ViewModels
             if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
             {
                 string thisTeacher = (string)AppTeacherName;
-                foreach (var f in App.facultiesJSONRaiting)
+                foreach (var f in App.facultiesRait)
                 {
                     foreach (var g in f.Groups)
                     {
@@ -663,7 +610,7 @@ namespace Schedule.ViewModels
                 if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
                 { subgroup = (string)Subgroup; }
 
-                foreach (var f in App.facultiesJSONExams)
+                foreach (var f in App.facultiesExam)
                 {
                     if (f.FacultyName == facultyName)
                     {
@@ -713,7 +660,7 @@ namespace Schedule.ViewModels
             if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
             {
                 string thisTeacher = (string)AppTeacherName;
-                foreach (var f in App.facultiesJSONExams)
+                foreach (var f in App.facultiesExam)
                 {
                     foreach (var g in f.Groups)
                     {
@@ -784,6 +731,25 @@ namespace Schedule.ViewModels
                     }
                 }
             }*/
+        }
+
+        public void DetermineTheNumberOfWeek(int selectedDay, int selectedMonth)
+        {
+            int day = selectedDay;
+            int month = selectedMonth;
+            foreach (var item in App.myTimetable)
+            {
+                if (item.ThisDay == day && item.ThisMonth == month)
+                {
+                    if (item.ThisWeek % 2 == 0)
+                    {
+                        App.Current.Properties["numOfWeek"] = "2";
+                    }
+                    else
+                        App.Current.Properties["numOfWeek"] = "1";
+                    break;
+                }
+            }
         }
 
 

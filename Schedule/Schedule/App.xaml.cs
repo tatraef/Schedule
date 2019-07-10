@@ -17,10 +17,10 @@ namespace Schedule
         public static bool updateWasChecked = false;
         //переменная, чтобы проверять была ли авторизация только что и подгружать расписание
         public static bool justLogged = false; 
-        public static List<Faculty> facultiesJSON;
-        public static List<Faculty> facultiesJSONRaiting;
-        public static List<ExamFaculty> facultiesJSONExams;
-        public static Dictionary<string, Group> sched;
+
+        public static List<Faculty> facultiesMain;
+        public static List<Faculty> facultiesRait;
+        public static List<ExamFaculty> facultiesExam;
 
         public static List<Specialty> timetable;
         public static List<Day> myTimetable;
@@ -29,8 +29,11 @@ namespace Schedule
 
         public App()
         {
-            SchedulesLoad();
-            TimetableLoad();
+            facultiesMain = new List<Faculty>();
+            facultiesRait = new List<Faculty>();
+            facultiesExam = new List<ExamFaculty>();
+            timetable = new List<Specialty>();
+            myTimetable = new List<Day>();
 
             InitializeComponent();
 
@@ -41,33 +44,22 @@ namespace Schedule
             }
             else
             {
-                MainPage = new MasterDetailPage1();
-                //проверка графика для определения номера недели
-                string table = "";
-                if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
+                //проверка на существование важных даннах
+                if (!Current.Properties.ContainsKey("scheduleMain") ||
+                    !Current.Properties.ContainsKey("scheduleRait") ||
+                    !Current.Properties.ContainsKey("scheduleExam") ||
+                    !Current.Properties.ContainsKey("timetable") ||
+                    !Current.Properties.ContainsKey("myTimetable"))
                 {
-                    table = (string)tableFrom;
-                    myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+                    justLogged = true;
+                    MainPage = new MasterDetailPage1();
                 }
-
-                DateTime now = DateTime.Now;
-                int day = now.Day;
-                int month = now.Month;
-                foreach (var item in myTimetable)
+                else
                 {
-                    if (item.ThisDay == day && item.ThisMonth == month)
-                    {
-                        if (item.ThisWeek % 2 == 0)
-                        {
-                            App.Current.Properties["numOfWeek"] = "2";
-                        }
-                        else
-                            App.Current.Properties["numOfWeek"] = "1";
-                        break;
-                    }
-                }
-
-                
+                    SchedulesLoad();
+                    TimetableLoad();
+                    MainPage = new MasterDetailPage1();
+                } 
             }
         }
 
@@ -86,7 +78,7 @@ namespace Schedule
             // Handle when your app resumes
         }
 
-        public void TimetableLoad() //загрузка файла с графиком
+        /*public void TimetableLoad() //загрузка файла с графиком
         {
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
             timetable = new List<Specialty>();
@@ -137,6 +129,52 @@ namespace Schedule
             {
                 string json = reader.ReadToEnd();
                 facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
+            }
+        }*/
+
+        
+        public void SchedulesLoad() 
+        {
+            if ((bool)Current.Properties["isTeacher"])
+            {
+                //загрузка расписаний каждого факультета
+
+            }
+            else
+            {
+                facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>((string)Current.Properties["scheduleMain"]));
+                facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>((string)Current.Properties["scheduleRait"]));
+                facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>((string)Current.Properties["scheduleExam"]));
+            }
+        }
+
+        //загрузка графика и определение номера недели
+        public void TimetableLoad()
+        {
+            timetable = JsonConvert.DeserializeObject<List<Specialty>>((string)Current.Properties["timetable"]);
+
+            string table = "";
+            if (App.Current.Properties.TryGetValue("myTimetable", out object tableFrom))
+            {
+                table = (string)tableFrom;
+                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
+            }
+
+            DateTime now = DateTime.Now;
+            int day = now.Day;
+            int month = now.Month;
+            foreach (var item in myTimetable)
+            {
+                if (item.ThisDay == day && item.ThisMonth == month)
+                {
+                    if (item.ThisWeek % 2 == 0)
+                    {
+                        App.Current.Properties["numOfWeek"] = "2";
+                    }
+                    else
+                        App.Current.Properties["numOfWeek"] = "1";
+                    break;
+                }
             }
         }
 

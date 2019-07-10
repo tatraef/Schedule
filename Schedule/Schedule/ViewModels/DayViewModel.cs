@@ -45,7 +45,7 @@ namespace Schedule.ViewModels
                     if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
                     {
                         string thisTeacher = (string) AppTeacherName;
-                        foreach (var f in App.facultiesJSON)
+                        foreach (var f in App.facultiesMain)
                         {
                             foreach (var g in f.Groups)
                             {
@@ -113,7 +113,7 @@ namespace Schedule.ViewModels
                         if (App.Current.Properties.TryGetValue("subgroup", out object Subgroup))
                         { subgroup = (string)Subgroup; }
 
-                        foreach (var f in App.facultiesJSON)
+                        foreach (var f in App.facultiesMain)
                         {
                             if (f.FacultyName == facultyName)
                             {

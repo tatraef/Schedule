@@ -217,30 +217,28 @@ namespace Schedule.Views
                         Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
                         if (some.ContainsKey("scheduleMain"))
                         {
-                            App.facultiesJSON.Clear();
-                            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleMain"]));
+                            App.facultiesMain.Clear();
+                            App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleMain"]));
                             App.Current.Properties["scheduleMain"] = some["scheduleMain"];
                             App.Current.Properties["updateMain"] = some["updateMain"];
                         }
                         if (some.ContainsKey("scheduleRait"))
                         {
-                            App.facultiesJSONRaiting.Clear();
-                            App.facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                            App.facultiesRait.Clear();
+                            App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
                             App.Current.Properties["scheduleRait"] = some["scheduleRait"];
                             App.Current.Properties["updateRait"] = some["updateRait"];
                         }
                         if (some.ContainsKey("scheduleExam"))
                         {
-                            App.facultiesJSONExams.Clear();
-                            App.facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                            App.facultiesExam.Clear();
+                            App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
                             App.Current.Properties["scheduleExam"] = some["scheduleExam"];
                             App.Current.Properties["updateExam"] = some["updateExam"];
                         }
                         if (some.ContainsKey("scheduleTimetable"))
                         {
-                            App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(some["scheduleTimetable"]);
-                            App.Current.Properties["timetable"] = some["scheduleTimetable"];
-                            App.Current.Properties["updateTimetable"] = some["updateTimetable"];
+                            SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]);
                         }
 
                         ReloadPage();
@@ -285,13 +283,13 @@ namespace Schedule.Views
                         string res = await response.Content.ReadAsStringAsync();
                         Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
 
-                        App.facultiesJSONRaiting.Clear();
-                        App.facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                        App.facultiesRait.Clear();
+                        App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
                         App.Current.Properties["scheduleRait"] = some["scheduleRait"];
                         App.Current.Properties["updateRait"] = some["updateRait"];
 
-                        App.facultiesJSONExams.Clear();
-                        App.facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                        App.facultiesExam.Clear();
+                        App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
                         App.Current.Properties["scheduleExam"] = some["scheduleExam"];
                         App.Current.Properties["updateExam"] = some["updateExam"];
 
@@ -336,6 +334,7 @@ namespace Schedule.Views
 
         private void SaveTimetable(string scheduleTimetable, string updateTimetable)
         {
+            App.Current.Properties["timetable"] = scheduleTimetable;
             App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(scheduleTimetable);
             App.Current.Properties["updateTimetable"] = updateTimetable;
 
@@ -351,7 +350,7 @@ namespace Schedule.Views
                         if (courses.CourseNumber == course)
                         {
                             string json = JsonConvert.SerializeObject(courses.Days);
-                            App.Current.Properties.Add("timetable", json);
+                            App.Current.Properties.Add("myTimetable", json);
                             break;
                         }
                     }

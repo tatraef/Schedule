@@ -48,12 +48,12 @@ namespace Schedule.Views
             List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
             App.Current.Properties["scheduleMain"] = some[0];
             App.Current.Properties["updateMain"] = some[1];
-            App.facultiesJSON.Clear();
-            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+            App.facultiesMain.Clear();
+            App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
 
             List<string> groups = new List<string>();
 
-            foreach (var f in App.facultiesJSON)
+            foreach (var f in App.facultiesMain)
             {
                 if (f.FacultyName == selectedFaculty)
                 {
@@ -72,12 +72,12 @@ namespace Schedule.Views
             HttpContent content = new StringContent("getScheduleMain&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
             List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
-            App.facultiesJSON.Clear();
-            App.facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+            App.facultiesMain.Clear();
+            App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
 
             List<string> teachers = new List<string>();
 
-            foreach (var f in App.facultiesJSON)
+            foreach (var f in App.facultiesMain)
             {
                 if (f.FacultyName == selectedFaculty)
                 {
@@ -109,7 +109,7 @@ namespace Schedule.Views
                 }
             }
 
-            App.facultiesJSON.Clear(); //отчистка, т.к. далее будут загружаться все факультеты разом
+            App.facultiesMain.Clear(); //отчистка, т.к. далее будут загружаться все факультеты разом
 
             teachers.Sort();
             return teachers;
@@ -120,7 +120,7 @@ namespace Schedule.Views
         void LoadSubgroups()
         {
             subgroups.Clear();
-            foreach (var f in App.facultiesJSON)
+            foreach (var f in App.facultiesMain)
             {
                 if (f.FacultyName == selectedFaculty)
                 {
@@ -374,7 +374,7 @@ namespace Schedule.Views
                         App.Current.Properties.Add("groupId", selectedGroupId);
                         App.Current.Properties.Add("groupName", selectedGroupName);
                         //получение наименования группы (специальность) (нужна для вывода в меню)
-                        foreach (var f in App.facultiesJSON)
+                        foreach (var f in App.facultiesMain)
                         {
                             if (f.FacultyName == selectedFaculty)
                             {
@@ -424,7 +424,7 @@ namespace Schedule.Views
                             foreach (var courses in item.Courses)
                             {
                                 string json = JsonConvert.SerializeObject(courses.Days);
-                                App.Current.Properties.Add("timetable", json);
+                                App.Current.Properties.Add("myTimetable", json);
                                 break;
                             }
                             break;
@@ -434,7 +434,8 @@ namespace Schedule.Views
 
                 //Определение номера недели
                 App.Current.Properties.Add("numOfWeek", "1");
-                string table = "";
+
+                /*string table = "";
                 List<Day> myTimetable = new List<Day>();
                 if (App.Current.Properties.TryGetValue("timetable", out object tableFrom))
                 {
@@ -457,7 +458,7 @@ namespace Schedule.Views
                             App.Current.Properties["numOfWeek"] = "1";
                         break;
                     }
-                }
+                }*/
 
                 App.justLogged = true;
                 App.Current.MainPage = new MasterDetailPage1();
