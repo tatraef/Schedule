@@ -78,61 +78,6 @@ namespace Schedule
             // Handle when your app resumes
         }
 
-        /*public void TimetableLoad() //загрузка файла с графиком
-        {
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
-            timetable = new List<Specialty>();
-            Stream stream2 = assembly.GetManifestResourceStream("Schedule.timetable.json");
-            using (var reader = new System.IO.StreamReader(stream2))
-            {
-                string json = reader.ReadToEnd();
-                timetable = JsonConvert.DeserializeObject<List<Specialty>>(json);
-            }
-        }
-
-        public void SchedulesLoad() //загрузка расписаний каждого факультета
-        {
-            facultiesJSON = new List<Faculty>();
-            facultiesJSONRaiting = new List<Faculty>();
-            facultiesJSONExams = new List<ExamFaculty>();
-
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DayMonday)).Assembly;
-            Stream stream = assembly.GetManifestResourceStream("Schedule.math_b.json");
-            using (var reader = new System.IO.StreamReader(stream))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
-            }
-            Stream stream1 = assembly.GetManifestResourceStream("Schedule.math_m.json");
-            using (var reader = new System.IO.StreamReader(stream1))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSON.Add(JsonConvert.DeserializeObject<Faculty>(json));
-            }
-
-            Stream stream2 = assembly.GetManifestResourceStream("Schedule.math_r.json");
-            using (var reader = new System.IO.StreamReader(stream2))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSONRaiting.Add(JsonConvert.DeserializeObject<Faculty>(json));
-            }
-
-            Stream streamExams = assembly.GetManifestResourceStream("Schedule.math_e.json");
-            using (var reader = new System.IO.StreamReader(streamExams))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
-            }
-
-            Stream streamExamsM = assembly.GetManifestResourceStream("Schedule.math_me.json");
-            using (var reader = new System.IO.StreamReader(streamExamsM))
-            {
-                string json = reader.ReadToEnd();
-                facultiesJSONExams.Add(JsonConvert.DeserializeObject<ExamFaculty>(json));
-            }
-        }*/
-
-        
         public void SchedulesLoad() 
         {
             if ((bool)Current.Properties["isTeacher"])

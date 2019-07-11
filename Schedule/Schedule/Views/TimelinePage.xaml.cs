@@ -76,7 +76,21 @@ namespace Schedule.Views
             {
                 if (e.NewDate.Year == now.Year && e.NewDate.Month < 9)
                 {
-                    ReloadPage();
+                    TimelineViewModel bind = new TimelineViewModel(e.NewDate);
+                    BindingContext = bind;
+
+                    //проверяется студент или преподаватель
+                    if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
+                    {
+                        if ((bool)isTeacher)
+                        {
+                            couplesList.ItemsSource = bind.ItemsForTeacher;
+                        }
+                        else
+                        {
+                            couplesList.ItemsSource = bind.ItemsForStudents;
+                        }
+                    }
                 }
                 else
                 {
@@ -206,6 +220,7 @@ namespace Schedule.Views
                     {
                         string facultyName = (string)FacultyName;
 
+                        #region Запрос Http и его обработка
                         HttpContent content = new StringContent("getSchedule&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
                         HttpClient client = new HttpClient
                         {
@@ -241,6 +256,7 @@ namespace Schedule.Views
                         {
                             SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]);
                         }
+                        #endregion-
 
                         ReloadPage();
 
@@ -320,6 +336,8 @@ namespace Schedule.Views
                 availableUpdate.IsVisible = false;
                 updateText.Text = "Загрузка расписания...";
                 updateChecking.IsVisible = true;
+
+                updateString = "&updateMain&updateRait&updateExam&updateTimetable";
                 if (CrossConnectivity.Current.IsConnected == true)
                 {
                     string url = "http://192.168.0.113/schedule/getAnswer.php";
@@ -329,7 +347,8 @@ namespace Schedule.Views
                         {
                             string facultyName = (string)FacultyName;
 
-                            HttpContent content = new StringContent("getScheduleWithoutMain&name=" + facultyName, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            #region Запрос Http и его обработка
+                            HttpContent content = new StringContent("getSchedule&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
                             HttpClient client = new HttpClient
                             {
                                 BaseAddress = new Uri(url)
@@ -339,18 +358,32 @@ namespace Schedule.Views
 
                             string res = await response.Content.ReadAsStringAsync();
                             Dictionary<string, string> some = JsonConvert.DeserializeObject<Dictionary<string, string>>(res);
-
-                            App.facultiesRait.Clear();
-                            App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
-                            App.Current.Properties["scheduleRait"] = some["scheduleRait"];
-                            App.Current.Properties["updateRait"] = some["updateRait"];
-
-                            App.facultiesExam.Clear();
-                            App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
-                            App.Current.Properties["scheduleExam"] = some["scheduleExam"];
-                            App.Current.Properties["updateExam"] = some["updateExam"];
-
-                            SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]);
+                            if (some.ContainsKey("scheduleMain"))
+                            {
+                                App.facultiesMain.Clear();
+                                App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleMain"]));
+                                App.Current.Properties["scheduleMain"] = some["scheduleMain"];
+                                App.Current.Properties["updateMain"] = some["updateMain"];
+                            }
+                            if (some.ContainsKey("scheduleRait"))
+                            {
+                                App.facultiesRait.Clear();
+                                App.facultiesRait.Add(JsonConvert.DeserializeObject<Faculty>(some["scheduleRait"]));
+                                App.Current.Properties["scheduleRait"] = some["scheduleRait"];
+                                App.Current.Properties["updateRait"] = some["updateRait"];
+                            }
+                            if (some.ContainsKey("scheduleExam"))
+                            {
+                                App.facultiesExam.Clear();
+                                App.facultiesExam.Add(JsonConvert.DeserializeObject<ExamFaculty>(some["scheduleExam"]));
+                                App.Current.Properties["scheduleExam"] = some["scheduleExam"];
+                                App.Current.Properties["updateExam"] = some["updateExam"];
+                            }
+                            if (some.ContainsKey("scheduleTimetable"))
+                            {
+                                SaveTimetable(some["scheduleTimetable"], some["updateTimetable"]);
+                            }
+                            #endregion
 
                             ReloadPage();
 
@@ -430,7 +463,6 @@ namespace Schedule.Views
                             }
                         }
                     }
-                    break;
                 }
             }
                 

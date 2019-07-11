@@ -254,14 +254,9 @@ namespace Schedule.ViewModels
                         numOfWeek = "1";
                 }
 
-                //проверяется факультет
-                if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
                 {
-                    string facultyName = (string)FacultyName;
-                    //проверяются номер группы, имя группы и подгруппа
-                    string groupId = "";
-                    if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
-                    { groupId = (string)GroupId; }
+                    string groupId = (string)GroupId;
                     string groupName = "";
                     if (App.Current.Properties.TryGetValue("groupName", out object GroupName))
                     { groupName = (string)GroupName; }
@@ -271,30 +266,27 @@ namespace Schedule.ViewModels
 
                     foreach (var f in App.facultiesMain)
                     {
-                        if (f.FacultyName == facultyName)
+                        foreach (var g in f.Groups)
                         {
-                            foreach (var g in f.Groups)
+                            if (g.GroupId == groupId && g.GroupName == groupName)
                             {
-                                if (g.GroupId == groupId && g.GroupName == groupName)
+                                foreach (var c in g.Couples)
                                 {
-                                    foreach (var c in g.Couples)
+                                    if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dt)
                                     {
-                                        if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dt)
+                                        //проверка, чтобы не показывать уже завершенные пары
+                                        if (NeedDate.Day == now.Day)
                                         {
-                                            //проверка, чтобы не показывать уже завершенные пары
-                                            if (NeedDate.Day == now.Day)
+                                            string[] s = c.TimeEnd.Split(':');
+                                            int h = Convert.ToInt32(s[0]);
+                                            int m = Convert.ToInt32(s[1]);
+                                            TimeSpan t = new TimeSpan(h, m, 0);
+                                            if (t < now.TimeOfDay)
                                             {
-                                                string[] s = c.TimeEnd.Split(':');
-                                                int h = Convert.ToInt32(s[0]);
-                                                int m = Convert.ToInt32(s[1]);
-                                                TimeSpan t = new TimeSpan(h, m, 0);
-                                                if (t < now.TimeOfDay)
-                                                {
-                                                    continue;
-                                                }
+                                                continue;
                                             }
-                                            couples.Add(c);
                                         }
+                                        couples.Add(c);
                                     }
                                 }
                             }
