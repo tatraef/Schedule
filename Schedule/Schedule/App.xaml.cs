@@ -82,8 +82,9 @@ namespace Schedule
         {
             if ((bool)Current.Properties["isTeacher"])
             {
-                //загрузка расписаний каждого факультета
-
+                facultiesMain.AddRange(JsonConvert.DeserializeObject<List<Faculty>>((string)Current.Properties["scheduleMain"]));
+                facultiesRait.AddRange(JsonConvert.DeserializeObject<List<Faculty>>((string)Current.Properties["scheduleRait"]));
+                facultiesExam.AddRange(JsonConvert.DeserializeObject<List<ExamFaculty>>((string)Current.Properties["scheduleExam"]));
             }
             else
             {
@@ -97,13 +98,7 @@ namespace Schedule
         public void TimetableLoad()
         {
             timetable = JsonConvert.DeserializeObject<List<Specialty>>((string)Current.Properties["timetable"]);
-
-            string table = "";
-            if (App.Current.Properties.TryGetValue("myTimetable", out object tableFrom))
-            {
-                table = (string)tableFrom;
-                myTimetable = JsonConvert.DeserializeObject<List<Day>>(table);
-            }
+            myTimetable = JsonConvert.DeserializeObject<List<Day>>((string)Current.Properties["myTimetable"]);
 
             DateTime now = DateTime.Now;
             int day = now.Day;

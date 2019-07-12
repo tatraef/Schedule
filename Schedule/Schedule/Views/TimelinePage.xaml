@@ -130,7 +130,7 @@
                      Orientation="Horizontal" 
                      BackgroundColor="{StaticResource Key=colorPrimary}" 
                      IsVisible="False">
-            <Label Text="Доступно новое обновление " 
+            <Label Text="Доступно обновление расписания" 
                    HorizontalOptions="StartAndExpand" 
                    VerticalOptions="Center" 
                    FontSize="Small"

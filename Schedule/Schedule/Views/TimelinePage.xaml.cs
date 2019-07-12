@@ -145,24 +145,16 @@ namespace Schedule.Views
                 string url = "http://192.168.0.113/schedule/getAnswer.php";
                 try
                 {
-                    if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                    if ((bool)App.Current.Properties["isTeacher"])
                     {
-                        string facultyName = (string)FacultyName;
-
-                        if (Application.Current.Properties.ContainsKey("updateMain") &&
-                            Application.Current.Properties.ContainsKey("updateRait") &&
-                            Application.Current.Properties.ContainsKey("updateExam") &&
+                        if (Application.Current.Properties.ContainsKey("updateSchedule") &&
                             Application.Current.Properties.ContainsKey("updateTimetable"))
                         {
-                            string updateMain = Application.Current.Properties["updateMain"] as string;
-                            string updateRait = Application.Current.Properties["updateRait"] as string;
-                            string updateExam = Application.Current.Properties["updateExam"] as string;
+                            string updateSchedule = Application.Current.Properties["updateSchedule"] as string;
                             string updateTimetable = Application.Current.Properties["updateTimetable"] as string;
 
-                            HttpContent content = new StringContent("updateChecking&name=" + facultyName + 
-                                "&update_main=" + updateMain + 
-                                "&update_rait=" + updateRait + 
-                                "&update_exam=" + updateExam +
+                            HttpContent content = new StringContent("updateChecking"+
+                                "&update_schedule=" + updateSchedule +
                                 "&update_timetable=" + updateTimetable, Encoding.UTF8, "application/x-www-form-urlencoded");
                             HttpClient client = new HttpClient
                             {
@@ -179,9 +171,9 @@ namespace Schedule.Views
                                 await Task.Delay(4000);
                                 updateChecking.IsVisible = false;
 
-                                App.updateWasChecked = true;  
+                                App.updateWasChecked = true;
                             }
-                            else
+                            else if(res == "YES")
                             {
                                 updateString = res;
                                 updateChecking.IsVisible = false;
@@ -192,8 +184,58 @@ namespace Schedule.Views
                         {
                             LoadScheduleAsync();
                         }
-                        
-                    }           
+                    }
+                    else
+                    {
+                        if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
+                        {
+                            string facultyName = (string)FacultyName;
+
+                            if (Application.Current.Properties.ContainsKey("updateMain") &&
+                                Application.Current.Properties.ContainsKey("updateRait") &&
+                                Application.Current.Properties.ContainsKey("updateExam") &&
+                                Application.Current.Properties.ContainsKey("updateTimetable"))
+                            {
+                                string updateMain = Application.Current.Properties["updateMain"] as string;
+                                string updateRait = Application.Current.Properties["updateRait"] as string;
+                                string updateExam = Application.Current.Properties["updateExam"] as string;
+                                string updateTimetable = Application.Current.Properties["updateTimetable"] as string;
+
+                                HttpContent content = new StringContent("updateChecking&name=" + facultyName +
+                                    "&update_main=" + updateMain +
+                                    "&update_rait=" + updateRait +
+                                    "&update_exam=" + updateExam +
+                                    "&update_timetable=" + updateTimetable, Encoding.UTF8, "application/x-www-form-urlencoded");
+                                HttpClient client = new HttpClient
+                                {
+                                    BaseAddress = new Uri(url)
+                                };
+                                var response = await client.PostAsync(client.BaseAddress, content);
+                                response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                                string res = await response.Content.ReadAsStringAsync();
+                                if (res == "NO")
+                                {
+                                    updateText.Text = "Нет доступных обновлений";
+                                    updateIndicator.IsVisible = false;
+                                    await Task.Delay(4000);
+                                    updateChecking.IsVisible = false;
+
+                                    App.updateWasChecked = true;
+                                }
+                                else
+                                {
+                                    updateString = res;
+                                    updateChecking.IsVisible = false;
+                                    availableUpdate.IsVisible = true;
+                                }
+                            }
+                            else
+                            {
+                                LoadScheduleAsync();
+                            }
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -277,15 +319,17 @@ namespace Schedule.Views
 
         private async void LoadScheduleAsync()
         {
-            if ((bool)App.Current.Properties["isTeacher"])
+            if (CrossConnectivity.Current.IsConnected == true)
             {
                 availableUpdate.IsVisible = false;
                 updateText.Text = "Загрузка расписания...";
                 updateChecking.IsVisible = true;
-                if (CrossConnectivity.Current.IsConnected == true)
+
+                string url = "http://192.168.0.113/schedule/getAnswer.php";
+
+                try
                 {
-                    string url = "http://192.168.0.113/schedule/getAnswer.php";
-                    try
+                    if ((bool)App.Current.Properties["isTeacher"])
                     {
                         HttpContent content = new StringContent("getScheduleForTeacher", Encoding.UTF8, "application/x-www-form-urlencoded");
                         HttpClient client = new HttpClient
@@ -324,24 +368,10 @@ namespace Schedule.Views
                         App.updateWasChecked = true;
                         App.justLogged = false;
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
-                    }
-                }
-            }
-            else
-            {
-                availableUpdate.IsVisible = false;
-                updateText.Text = "Загрузка расписания...";
-                updateChecking.IsVisible = true;
+                        updateString = "&updateMain&updateRait&updateExam&updateTimetable";
 
-                updateString = "&updateMain&updateRait&updateExam&updateTimetable";
-                if (CrossConnectivity.Current.IsConnected == true)
-                {
-                    string url = "http://192.168.0.113/schedule/getAnswer.php";
-                    try
-                    {
                         if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
                         {
                             string facultyName = (string)FacultyName;
@@ -394,12 +424,17 @@ namespace Schedule.Views
                             App.updateWasChecked = true;
                             App.justLogged = false;
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+
                     }
                 }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
             }
         }
 
