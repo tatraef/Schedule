@@ -34,7 +34,7 @@ namespace Schedule.Views
         //Загрузка факультетов с сервера, для отображения в списке факультетов
         public async Task<List<String>> LoadFacultiesAsync()
         {
-            HttpContent content = new StringContent("getFaculties", Encoding.UTF8, "application/x-www-form-urlencoded");
+            HttpContent content = new StringContent("getFaculties=some", Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
             return JsonConvert.DeserializeObject<List<String>>(res);
         }
@@ -42,7 +42,7 @@ namespace Schedule.Views
         //Загрузка групп, для отображения в списке групп
         public async Task<List<String>> LoadGroupsAsync()
         {
-            HttpContent content = new StringContent("getScheduleMain&name="+selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
+            HttpContent content = new StringContent("getScheduleMain=some&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
             //сохранение полученного расписания и даты
             List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
@@ -69,7 +69,7 @@ namespace Schedule.Views
         //Загрузка преподавателей, для отображения в списке преподавателей
         public async Task<List<String>> LoadTeachersAsync()
         {
-            HttpContent content = new StringContent("getScheduleMain&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
+            HttpContent content = new StringContent("getScheduleMain=some&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
             List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
             App.facultiesMain.Clear();
@@ -432,13 +432,11 @@ namespace Schedule.Views
 
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                string url = "http://192.168.0.113/schedule/getAnswer.php";
-
                 try
                 {
                     HttpClient client = new HttpClient
                     {
-                        BaseAddress = new Uri(url)
+                        BaseAddress = new Uri(App.url)
                     };
                     var response = await client.PostAsync(client.BaseAddress, content);
                     response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка

@@ -142,7 +142,6 @@ namespace Schedule.Views
 
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                string url = "http://192.168.0.113/schedule/getAnswer.php";
                 try
                 {
                     if ((bool)App.Current.Properties["isTeacher"])
@@ -153,12 +152,12 @@ namespace Schedule.Views
                             string updateSchedule = Application.Current.Properties["updateSchedule"] as string;
                             string updateTimetable = Application.Current.Properties["updateTimetable"] as string;
 
-                            HttpContent content = new StringContent("updateChecking"+
+                            HttpContent content = new StringContent("updateChecking=some"+
                                 "&update_schedule=" + updateSchedule +
                                 "&update_timetable=" + updateTimetable, Encoding.UTF8, "application/x-www-form-urlencoded");
                             HttpClient client = new HttpClient
                             {
-                                BaseAddress = new Uri(url)
+                                BaseAddress = new Uri(App.url)
                             };
                             var response = await client.PostAsync(client.BaseAddress, content);
                             response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
@@ -178,6 +177,10 @@ namespace Schedule.Views
                                 updateString = res;
                                 updateChecking.IsVisible = false;
                                 availableUpdate.IsVisible = true;
+                            }
+                            else
+                            {
+                                throw new Exception(res);
                             }
                         }
                         else
@@ -201,14 +204,14 @@ namespace Schedule.Views
                                 string updateExam = Application.Current.Properties["updateExam"] as string;
                                 string updateTimetable = Application.Current.Properties["updateTimetable"] as string;
 
-                                HttpContent content = new StringContent("updateChecking&name=" + facultyName +
+                                HttpContent content = new StringContent("updateChecking=some&name=" + facultyName +
                                     "&update_main=" + updateMain +
                                     "&update_rait=" + updateRait +
                                     "&update_exam=" + updateExam +
                                     "&update_timetable=" + updateTimetable, Encoding.UTF8, "application/x-www-form-urlencoded");
                                 HttpClient client = new HttpClient
                                 {
-                                    BaseAddress = new Uri(url)
+                                    BaseAddress = new Uri(App.url)
                                 };
                                 var response = await client.PostAsync(client.BaseAddress, content);
                                 response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
@@ -255,7 +258,6 @@ namespace Schedule.Views
             updateChecking.IsVisible = true;
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                string url = "http://192.168.0.113/schedule/getAnswer.php";
                 try
                 {
                     if ((bool)App.Current.Properties["isTeacher"])
@@ -264,12 +266,12 @@ namespace Schedule.Views
                         string updateTimetable = Application.Current.Properties["updateTimetable"] as string;
 
                         #region Запрос Http и его обработка
-                        HttpContent content = new StringContent("updateScheduleForTeacher" +
+                        HttpContent content = new StringContent("updateScheduleForTeacher=some" +
                                 "&update_schedule=" + updateSchedule +
                                 "&update_timetable=" + updateTimetable, Encoding.UTF8, "application/x-www-form-urlencoded");
                         HttpClient client = new HttpClient
                         {
-                            BaseAddress = new Uri(url)
+                            BaseAddress = new Uri(App.url)
                         };
                         var response = await client.PostAsync(client.BaseAddress, content);
                         response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
@@ -325,10 +327,10 @@ namespace Schedule.Views
                             string facultyName = (string)FacultyName;
 
                             #region Запрос Http и его обработка
-                            HttpContent content = new StringContent("getSchedule&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            HttpContent content = new StringContent("getSchedule=some&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
                             HttpClient client = new HttpClient
                             {
-                                BaseAddress = new Uri(url)
+                                BaseAddress = new Uri(App.url)
                             };
                             var response = await client.PostAsync(client.BaseAddress, content);
                             response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
@@ -392,16 +394,14 @@ namespace Schedule.Views
                 updateText.Text = "Загрузка расписания...";
                 updateChecking.IsVisible = true;
 
-                string url = "http://192.168.0.113/schedule/getAnswer.php";
-
                 try
                 {
                     if ((bool)App.Current.Properties["isTeacher"])
                     {
-                        HttpContent content = new StringContent("getScheduleForTeacher", Encoding.UTF8, "application/x-www-form-urlencoded");
+                        HttpContent content = new StringContent("getScheduleForTeacher=some", Encoding.UTF8, "application/x-www-form-urlencoded");
                         HttpClient client = new HttpClient
                         {
-                            BaseAddress = new Uri(url)
+                            BaseAddress = new Uri(App.url)
                         };
                         var response = await client.PostAsync(client.BaseAddress, content);
                         response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
@@ -437,17 +437,17 @@ namespace Schedule.Views
                     }
                     else
                     {
-                        updateString = "&updateMain&updateRait&updateExam&updateTimetable";
+                        updateString = "&updateMain=some&updateRait=some&updateExam=some&updateTimetable=some";
 
                         if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
                         {
                             string facultyName = (string)FacultyName;
 
                             #region Запрос Http и его обработка
-                            HttpContent content = new StringContent("getSchedule&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
+                            HttpContent content = new StringContent("getSchedule=some&name=" + facultyName + updateString, Encoding.UTF8, "application/x-www-form-urlencoded");
                             HttpClient client = new HttpClient
                             {
-                                BaseAddress = new Uri(url)
+                                BaseAddress = new Uri(App.url)
                             };
                             var response = await client.PostAsync(client.BaseAddress, content);
                             response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка

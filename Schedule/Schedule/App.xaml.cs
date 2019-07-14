@@ -14,6 +14,8 @@ namespace Schedule
     public partial class App : Application
     {
         //переменная, чтобы проверять обновление только один раз
+        public static string url = "http://math.nosu.ru/schedule/getAnswer.php";
+        //переменная, чтобы проверять обновление только один раз
         public static bool updateWasChecked = false;
         //переменная, чтобы проверять была ли авторизация только что и подгружать расписание
         public static bool justLogged = false; 

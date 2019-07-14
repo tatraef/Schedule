@@ -701,28 +701,6 @@ namespace Schedule.ViewModels
                     }
                 }
             }
-
-            /*if (teacherCouplesExams.Count > 0)
-            {
-                //Соединение экзаменов с парами
-                if (teacherCouplesExams != null)
-                {
-                    foreach (var item in sortedTeacherCouples)
-                    {
-                        if (!teacherCouplesExams.ContainsKey(item.Key))
-                        {
-                            teacherCouplesExams.Add(item.Key, item.Value);
-                        }
-                    }
-
-                    SortedDictionary<byte, TeacherCouple> sortedTeacherCouplesExams = new SortedDictionary<byte, TeacherCouple>(teacherCouplesExams);
-                    sortedTeacherCouples.Clear();
-                    foreach (KeyValuePair<byte, TeacherCouple> item in sortedTeacherCouplesExams)
-                    {
-                        sortedTeacherCouples.Add(item.Key, item.Value);
-                    }
-                }
-            }*/
         }
 
         public void DetermineTheNumberOfWeek(int selectedDay, int selectedMonth)
