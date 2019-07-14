@@ -661,15 +661,10 @@ namespace Schedule.ViewModels
                             //Contains, так как в паре английского может быть несколько преподавателей
                             if (g.Couples[j].CoupleTeacher.Contains(thisTeacher))
                             {
-                                if (Convert.ToDateTime(g.Couples[j].Day).Day == NeedDate.Day)
-                                {
-                                    /*byte timeOfExam = Convert.ToByte(g.Couples[j].TimeBegin[0] + (g.Couples[j].TimeBegin[1] != ':' ? g.Couples[j].TimeBegin[1] : '\0').ToString());
-                                    if (!teacherCouplesExams.ContainsKey(timeOfExam))
-                                    {
-                                        teacherCouplesExams.Add(timeOfExam,
-                                        new TeacherCouple(g.Couples[j], g.GroupName + " (" + g.Course + " курс)"));
-                                    }*/
 
+                                if (Convert.ToDateTime(g.Couples[j].Day).Day == NeedDate.Day &&
+                                    Convert.ToDateTime(g.Couples[j].Day).Month == NeedDate.Month)
+                                {
                                     someCouple = new TeacherCouple(g.Couples[j], g.GroupName + " (" + g.Course + " курс)");
                                     bool added = false;
                                     for (int q = 0; q < couples.Count; q++)
