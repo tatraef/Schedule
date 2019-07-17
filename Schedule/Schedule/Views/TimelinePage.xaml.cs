@@ -270,6 +270,7 @@ namespace Schedule.Views
             availableUpdate.IsVisible = false;
             checkUpdateText.Text = "Загрузка обновления...";
             checkUpdateAgainButton.IsVisible = false;
+            checkUpdateIndicator.IsVisible = true;
             checkUpdate.IsVisible = true;
             
             if (CrossConnectivity.Current.IsConnected == true)
@@ -414,8 +415,8 @@ namespace Schedule.Views
         {
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                checkUpdateIndicator.IsVisible = true;
                 checkUpdateAgainButton.IsVisible = false;
+                checkUpdateIndicator.IsVisible = true;
                 checkUpdateText.Text = "Загрузка расписания...";
                 checkUpdate.IsVisible = true;
 
