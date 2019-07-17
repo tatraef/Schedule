@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using Schedule.ViewModels;
 using Plugin.Connectivity;
 using System.Net.Http;
+using System.Threading;
 
 namespace Schedule.Views
 {
@@ -134,11 +135,17 @@ namespace Schedule.Views
 
         //строка для ответа, которую в UpdateButton_Clicked надо будет посылать  на сервер
         string updateString = "";
+        //строка для записи "для кого была нажата кнопка Повторить загрузку": 
+        //для проверки обновления, для загрузки обновления или для загрузки всего(check/load/loadAll)
+        string againButtonClickedFor = "";
 
         //проверка обновлений расписания
         public async void CheckUpdatesAsync() 
         {
-            updateChecking.IsVisible = true;
+            checkUpdate.IsVisible = true;
+            checkUpdateText.Text = "Проверка наличия обновлений... ";
+            checkUpdateIndicator.IsVisible = true;
+            checkUpdateAgainButton.IsVisible = false;
 
             if (CrossConnectivity.Current.IsConnected == true)
             {
@@ -165,17 +172,16 @@ namespace Schedule.Views
                             string res = await response.Content.ReadAsStringAsync();
                             if (res == "NO")
                             {
-                                updateText.Text = "Нет доступных обновлений";
-                                updateIndicator.IsVisible = false;
+                                checkUpdateText.Text = "Нет доступных обновлений";
+                                checkUpdateIndicator.IsVisible = false;
                                 await Task.Delay(4000);
-                                updateChecking.IsVisible = false;
+                                checkUpdate.IsVisible = false;
 
                                 App.updateWasChecked = true;
                             }
                             else if(res == "YES")
                             {
-                                updateString = res;
-                                updateChecking.IsVisible = false;
+                                checkUpdate.IsVisible = false;
                                 availableUpdate.IsVisible = true;
                             }
                             else
@@ -219,17 +225,17 @@ namespace Schedule.Views
                                 string res = await response.Content.ReadAsStringAsync();
                                 if (res == "NO")
                                 {
-                                    updateText.Text = "Нет доступных обновлений";
-                                    updateIndicator.IsVisible = false;
+                                    checkUpdateText.Text = "Нет доступных обновлений";
+                                    checkUpdateIndicator.IsVisible = false;
                                     await Task.Delay(4000);
-                                    updateChecking.IsVisible = false;
+                                    checkUpdate.IsVisible = false;
 
                                     App.updateWasChecked = true;
                                 }
                                 else
                                 {
                                     updateString = res;
-                                    updateChecking.IsVisible = false;
+                                    checkUpdate.IsVisible = false;
                                     availableUpdate.IsVisible = true;
                                 }
                             }
@@ -242,20 +248,30 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                    checkUpdateIndicator.IsVisible = false;
+                    checkUpdateAgainButton.IsVisible = true;
+                    checkUpdateText.Text = "Не удалось получить данные";
+                    againButtonClickedFor = "check";
                 }
             }
             else
             {
-                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
+                await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                checkUpdateIndicator.IsVisible = false;
+                checkUpdateAgainButton.IsVisible = true;
+                checkUpdateText.Text = "Нет интернет-соединения";
+                againButtonClickedFor = "check";
             }  
         }
 
         private async void UpdateButton_Clicked(object sender, EventArgs e)
         {
             availableUpdate.IsVisible = false;
-            updateText.Text = "Загрузка обновления...";
-            updateChecking.IsVisible = true;
+            checkUpdateText.Text = "Загрузка обновления...";
+            checkUpdateAgainButton.IsVisible = false;
+            checkUpdate.IsVisible = true;
+            
             if (CrossConnectivity.Current.IsConnected == true)
             {
                 try
@@ -313,10 +329,10 @@ namespace Schedule.Views
 
                         ReloadPage();
 
-                        updateText.Text = "Обновления загружены";
-                        updateIndicator.IsVisible = false;
+                        checkUpdateText.Text = "Обновления загружены";
+                        checkUpdateIndicator.IsVisible = false;
                         await Task.Delay(4000);
-                        updateChecking.IsVisible = false;
+                        checkUpdate.IsVisible = false;
 
                         App.updateWasChecked = true;
                     }
@@ -366,10 +382,10 @@ namespace Schedule.Views
 
                             ReloadPage();
 
-                            updateText.Text = "Обновления загружены";
-                            updateIndicator.IsVisible = false;
+                            checkUpdateText.Text = "Обновления загружены";
+                            checkUpdateIndicator.IsVisible = false;
                             await Task.Delay(4000);
-                            updateChecking.IsVisible = false;
+                            checkUpdate.IsVisible = false;
 
                             App.updateWasChecked = true;
                         }
@@ -377,12 +393,20 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                    checkUpdateIndicator.IsVisible = false;
+                    checkUpdateAgainButton.IsVisible = true;
+                    checkUpdateText.Text = "Не удалось получить данные";
+                    againButtonClickedFor = "load";
                 }
             }
             else
             {
-                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
+                await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                checkUpdateIndicator.IsVisible = false;
+                checkUpdateAgainButton.IsVisible = true;
+                checkUpdateText.Text = "Нет интернет-соединения";
+                againButtonClickedFor = "load";
             }
         }
 
@@ -390,9 +414,10 @@ namespace Schedule.Views
         {
             if (CrossConnectivity.Current.IsConnected == true)
             {
-                availableUpdate.IsVisible = false;
-                updateText.Text = "Загрузка расписания...";
-                updateChecking.IsVisible = true;
+                checkUpdateIndicator.IsVisible = true;
+                checkUpdateAgainButton.IsVisible = false;
+                checkUpdateText.Text = "Загрузка расписания...";
+                checkUpdate.IsVisible = true;
 
                 try
                 {
@@ -427,10 +452,10 @@ namespace Schedule.Views
 
                         ReloadPage();
 
-                        updateText.Text = "Расписание загружено";
-                        updateIndicator.IsVisible = false;
+                        checkUpdateText.Text = "Расписание загружено";
+                        checkUpdateIndicator.IsVisible = false;
                         await Task.Delay(4000);
-                        updateChecking.IsVisible = false;
+                        checkUpdate.IsVisible = false;
 
                         App.updateWasChecked = true;
                         App.justLogged = false;
@@ -483,10 +508,10 @@ namespace Schedule.Views
 
                             ReloadPage();
 
-                            updateText.Text = "Расписание загружено";
-                            updateIndicator.IsVisible = false;
+                            checkUpdateText.Text = "Расписание загружено";
+                            checkUpdateIndicator.IsVisible = false;
                             await Task.Delay(4000);
-                            updateChecking.IsVisible = false;
+                            checkUpdate.IsVisible = false;
 
                             App.updateWasChecked = true;
                             App.justLogged = false;
@@ -496,12 +521,20 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                    checkUpdateIndicator.IsVisible = false;
+                    checkUpdateAgainButton.IsVisible = true;
+                    checkUpdateText.Text = "Не удалось получить данные";
+                    againButtonClickedFor = "loadAll";
                 }
             }
             else
             {
-                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно получить обновления раписания.", "Понятно");
+                await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                checkUpdateIndicator.IsVisible = false;
+                checkUpdateAgainButton.IsVisible = true;
+                checkUpdateText.Text = "Нет интернет-соединения";
+                againButtonClickedFor = "loadAll";
             }
         }
 
@@ -568,6 +601,26 @@ namespace Schedule.Views
             }
                 
         }
- 
+
+        private void UpdateAgain_Clicked(object sender, EventArgs e)
+        {
+            if (againButtonClickedFor == "check")
+            {
+                CheckUpdatesAsync();
+            }
+            else if (againButtonClickedFor == "load")
+            {
+                UpdateButton_Clicked(sender, e);
+            }
+            else if (againButtonClickedFor == "loadAll")
+            {
+                LoadScheduleAsync();
+            }
+        }
+
+        async Task PutTaskDelay(int mls)
+        {
+            await Task.Delay(mls);
+        }
     }   
 }

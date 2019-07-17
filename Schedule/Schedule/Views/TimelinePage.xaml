@@ -106,23 +106,31 @@
             </Picker>
         </StackLayout>
 
-        <StackLayout x:Name="updateChecking" 
+        <StackLayout x:Name="checkUpdate" 
                      Padding="5" 
                      Orientation="Horizontal" 
                      BackgroundColor="{StaticResource Key=colorPrimary}" 
                      IsVisible="False">
-            <Label x:Name="updateText"
+            <Label x:Name="checkUpdateText"
                    Text="Проверка наличия обновлений... " 
                    HorizontalOptions="StartAndExpand" 
                    VerticalOptions="Center" 
                    FontSize="Small"
                    TextColor="{StaticResource Key=colorAccent}"/>
 
-            <ActivityIndicator x:Name="updateIndicator"
+            <ActivityIndicator x:Name="checkUpdateIndicator"
                 IsRunning="True"
                 HorizontalOptions="End"
                 VerticalOptions="Center"
                 HeightRequest="20"/>
+
+            <Button x:Name="checkUpdateAgainButton"
+                    Text="Повторить"
+                    IsVisible="False"
+                    BackgroundColor="{StaticResource Key=colorAccent}" 
+                    TextColor="{StaticResource Key=colorPrimary}"
+                    Clicked="UpdateAgain_Clicked"/>
+            
         </StackLayout>
 
         <StackLayout x:Name="availableUpdate" 
