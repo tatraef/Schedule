@@ -31,11 +31,7 @@
                 <StackLayout x:Name="stackLoyaoutForSavebutton">
 
                 </StackLayout>
-
-
-                <StackLayout x:Name="stackLoyaoutForLoadAnimation">
-    
-                </StackLayout>
+                
 
                 <ActivityIndicator 
                     x:Name="facultyIndicator" 
@@ -48,6 +44,23 @@
                     Text="Загрузка..." 
                     IsVisible="False"
                     HorizontalOptions="Center"/>
+
+                <StackLayout x:Name="stackLoyaoutForRepeatRequest"
+                             IsVisible="False">
+                    <Label 
+                        x:Name="repeatLabel" 
+                        FontSize="Medium"
+                        Text="Не удалось получить данные" 
+                        HorizontalOptions="Center"/>
+
+                    <Button x:Name="repeatButton"
+                        Text="Повторить"
+                        TextColor="{StaticResource colorPrimary}"
+                        BackgroundColor="{StaticResource colorAccent}"
+                        FontSize="Medium"
+                        Clicked="RepeatButton_Clicked"
+                        Margin="10"/>
+                </StackLayout>
                 
             </StackLayout>
         </ScrollView>

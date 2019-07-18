@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
@@ -163,42 +164,49 @@ namespace Schedule.Views
             ShowActivityIndicator(); //показать анимацию загрузки
             //Ожидается выполнение асинхронного метода, так как данные уже нужны
             faculties = await LoadFacultiesAsync();
-            HideActivityIndicator(); //скрыть анимацию загрузки
 
-            selectedGroupName = ""; //обнуляем переменные хранения значений
-            selectedGroupId = ""; //обнуляем переменные хранения значений
-            selectedTeacher = "";
-            selectedSubgroup = "";
-            Picker workPicker = (Picker)sender;
-            if (workPicker.SelectedIndex == 0) //Если выбран студент
+                HideActivityIndicator(); //скрыть анимацию загрузки
+
+                selectedGroupName = ""; //обнуляем переменные хранения значений
+                selectedGroupId = ""; //обнуляем переменные хранения значений
+                selectedTeacher = "";
+                selectedSubgroup = "";
+                Picker workPicker = (Picker)sender;
+                if (workPicker.SelectedIndex == 0) //Если выбран студент
+                {
+                    isTeacher = false;
+                }
+                else isTeacher = true;
+
+                headerForPicker = new Label
+                {
+                    Text = "Выберите факультет:",
+                    TextColor = Color.FromRgb(38, 38, 38),
+                    Margin = new Thickness(10, 0, 0, 0),
+                    FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                };
+
+                picker = new Picker
+                {
+                    Title = ""
+                };
+
+                foreach (var item in faculties)
+                {
+                    picker.Items.Add(item);
+                }
+
+            if (picker.Items.Count > 0)
             {
-                isTeacher = false;
+                picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
+
+                selectFacultyStackLoyaout.Children.Add(headerForPicker);
+                selectFacultyStackLoyaout.Children.Add(picker);
             }
-            else isTeacher = true;
-
-            headerForPicker = new Label
+            else
             {
-                Text = "Выберите факультет:",
-                TextColor = Color.FromRgb(38, 38, 38),
-                Margin = new Thickness(10, 0, 0, 0),
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
-            };
-
-            picker = new Picker
-            {
-                Title = ""
-            };
-
-            foreach (var item in faculties)
-            {
-                picker.Items.Add(item);
+                ShowStackLoyaoutForRepeatRequest(contentWhenStopped, "Не удалось получить данные");
             }
-
-            picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
-
-            selectFacultyStackLoyaout.Children.Add(headerForPicker);
-            selectFacultyStackLoyaout.Children.Add(picker);
-
         }
 
         //изменение поля с выбором факультета
@@ -425,6 +433,9 @@ namespace Schedule.Views
             }
         }
 
+        //строка для сохранения content после ошибки в запросе, для повторного вызова 
+        HttpContent contentWhenStopped;
+
         //Загрузка данных с сервера
         public async Task<String> LoadDataFromServer(HttpContent content)
         {
@@ -445,11 +456,12 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
-                    await DisplayAlert("Ошибка", "Не удалось получить данные, ошибка: " + ex.Message, "ОK");
+                    //ShowStackLoyaoutForRepeatRequest(content, "Не удалось получить данные");
                 }
             }
             else
             {
+                //ShowStackLoyaoutForRepeatRequest(content, "Нет интернет-соединения");
                 await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно загрузить данные.", "Понятно");
             }
 
@@ -466,6 +478,26 @@ namespace Schedule.Views
         {
             facultyIndicator.IsVisible = false;
             loadingLabel.IsVisible = false;
+        }
+
+        async Task PutTaskDelay(int mls)
+        {
+            await Task.Delay(mls);
+        }
+
+        void ShowStackLoyaoutForRepeatRequest(HttpContent content, string message)
+        {
+            //await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+            HideActivityIndicator();
+            stackLoyaoutForRepeatRequest.IsVisible = true;
+            repeatLabel.Text = message;
+            contentWhenStopped = content;
+        }
+
+        private void RepeatButton_Clicked(object sender, EventArgs e)
+        {
+            stackLoyaoutForRepeatRequest.IsVisible = false;
+            LoadDataFromServer(contentWhenStopped);
         }
     }
 }
