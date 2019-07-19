@@ -19,7 +19,13 @@ namespace Schedule.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Login : ContentPage
 	{
-		public Login ()
+        //переменные для сохранения данных в обработчике, если произошла ошибка
+        object sender;
+        EventArgs e;
+        delegate void AgainButtonClickedFor(object sender, EventArgs e);
+        AgainButtonClickedFor againButtonClickedFor;
+
+        public Login ()
 		{
 			InitializeComponent ();
         }
@@ -33,11 +39,18 @@ namespace Schedule.Views
         bool isTeacher = false;
 
         //Загрузка факультетов с сервера, для отображения в списке факультетов
-        public async Task<List<String>> LoadFacultiesAsync()
+        public async Task<List<string>> LoadFacultiesAsync()
         {
             HttpContent content = new StringContent("getFaculties=some", Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
-            return JsonConvert.DeserializeObject<List<String>>(res);
+            if (res == "")
+            {
+                return new List<string>();
+            }
+            else
+            {
+                return JsonConvert.DeserializeObject<List<string>>(res);
+            }  
         }
 
         //Загрузка групп, для отображения в списке групп
@@ -45,26 +58,33 @@ namespace Schedule.Views
         {
             HttpContent content = new StringContent("getScheduleMain=some&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
-            //сохранение полученного расписания и даты
-            List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
-            App.Current.Properties["scheduleMain"] = some[0];
-            App.Current.Properties["updateMain"] = some[1];
-            App.facultiesMain.Clear();
-            App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
-
-            List<string> groups = new List<string>();
-
-            foreach (var f in App.facultiesMain)
+            if (res == "")
             {
-                if (f.FacultyName == selectedFaculty)
+                return new List<string>();
+            }
+            else
+            {
+                //сохранение полученного расписания и даты
+                List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
+                App.Current.Properties["scheduleMain"] = some[0];
+                App.Current.Properties["updateMain"] = some[1];
+                App.facultiesMain.Clear();
+                App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+
+                List<string> groups = new List<string>();
+
+                foreach (var f in App.facultiesMain)
                 {
-                    foreach (var item in f.Groups)
+                    if (f.FacultyName == selectedFaculty)
                     {
-                        groups.Add(item.GroupId + " | " + item.GroupName);
+                        foreach (var item in f.Groups)
+                        {
+                            groups.Add(item.GroupId + " | " + item.GroupName);
+                        }
                     }
                 }
-            }
-            return groups;
+                return groups;
+            }   
         }
 
         //Загрузка преподавателей, для отображения в списке преподавателей
@@ -72,48 +92,55 @@ namespace Schedule.Views
         {
             HttpContent content = new StringContent("getScheduleMain=some&name=" + selectedFaculty, Encoding.UTF8, "application/x-www-form-urlencoded");
             string res = await LoadDataFromServer(content);
-            List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
-            App.facultiesMain.Clear();
-            App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
-
-            List<string> teachers = new List<string>();
-
-            foreach (var f in App.facultiesMain)
+            if (res == "")
             {
-                if (f.FacultyName == selectedFaculty)
+                return new List<string>();
+            }
+            else
+            {
+                List<string> some = JsonConvert.DeserializeObject<List<string>>(res);
+                App.facultiesMain.Clear();
+                App.facultiesMain.Add(JsonConvert.DeserializeObject<Faculty>(some[0]));
+
+                List<string> teachers = new List<string>();
+
+                foreach (var f in App.facultiesMain)
                 {
-                    foreach (var g in f.Groups)
+                    if (f.FacultyName == selectedFaculty)
                     {
-                        foreach (var s in g.Couples)
+                        foreach (var g in f.Groups)
                         {
-                            //Если в строке преподавателя есть запятая, то это английский, то есть три преподавателя
-                            if (s.CoupleTeacher.Contains(','))
+                            foreach (var s in g.Couples)
                             {
-                                //поэтому их нужно разделить
-                                string[] someTeachers = s.CoupleTeacher.Split(',');
-                                foreach (var item in someTeachers)
+                                //Если в строке преподавателя есть запятая, то это английский, то есть три преподавателя
+                                if (s.CoupleTeacher.Contains(','))
                                 {
-                                    if (!teachers.Contains(item.Trim()))
+                                    //поэтому их нужно разделить
+                                    string[] someTeachers = s.CoupleTeacher.Split(',');
+                                    foreach (var item in someTeachers)
                                     {
-                                        teachers.Add(item.Trim());
+                                        if (!teachers.Contains(item.Trim()))
+                                        {
+                                            teachers.Add(item.Trim());
+                                        }
                                     }
                                 }
+                                else if (!teachers.Contains(s.CoupleTeacher))
+                                {
+                                    teachers.Add(s.CoupleTeacher);
+                                }
                             }
-                            else if (!teachers.Contains(s.CoupleTeacher))
-                            {
-                                teachers.Add(s.CoupleTeacher);
-                            }
+
                         }
-
+                        break;
                     }
-                    break;
                 }
-            }
 
-            App.facultiesMain.Clear(); //отчистка, т.к. далее будут загружаться все факультеты разом
+                App.facultiesMain.Clear(); //отчистка, т.к. далее будут загружаться все факультеты разом
 
-            teachers.Sort();
-            return teachers;
+                teachers.Sort();
+                return teachers;
+            } 
         }
 
         //Загрузка подгрупп, для отображения в списке групп
@@ -160,53 +187,54 @@ namespace Schedule.Views
 
             List<string> faculties = new List<string>();
 
+            //сохранение данных, если вдруг произойдет ошибка,
+            //тогда можно будет сделать повторный запрос с этими данными
+            this.sender = sender;
+            this.e = e;
+            againButtonClickedFor = PickerUserType_SelectedIndexChanged;
             //загрузка факультетов с сервера
-            ShowActivityIndicator(); //показать анимацию загрузки
             //Ожидается выполнение асинхронного метода, так как данные уже нужны
             faculties = await LoadFacultiesAsync();
-
-                HideActivityIndicator(); //скрыть анимацию загрузки
-
-                selectedGroupName = ""; //обнуляем переменные хранения значений
-                selectedGroupId = ""; //обнуляем переменные хранения значений
-                selectedTeacher = "";
-                selectedSubgroup = "";
-                Picker workPicker = (Picker)sender;
-                if (workPicker.SelectedIndex == 0) //Если выбран студент
-                {
-                    isTeacher = false;
-                }
-                else isTeacher = true;
-
-                headerForPicker = new Label
-                {
-                    Text = "Выберите факультет:",
-                    TextColor = Color.FromRgb(38, 38, 38),
-                    Margin = new Thickness(10, 0, 0, 0),
-                    FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
-                };
-
-                picker = new Picker
-                {
-                    Title = ""
-                };
-
-                foreach (var item in faculties)
-                {
-                    picker.Items.Add(item);
-                }
-
-            if (picker.Items.Count > 0)
+            if (faculties.Count == 0)
             {
-                picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
+                return;
+            }
 
-                selectFacultyStackLoyaout.Children.Add(headerForPicker);
-                selectFacultyStackLoyaout.Children.Add(picker);
-            }
-            else
+            HideActivityIndicator(); //скрыть анимацию загрузки
+
+            selectedGroupName = ""; //обнуляем переменные хранения значений
+            selectedGroupId = ""; //обнуляем переменные хранения значений
+            selectedTeacher = "";
+            selectedSubgroup = "";
+            Picker workPicker = (Picker)sender;
+            if (workPicker.SelectedIndex == 0) //Если выбран студент
             {
-                ShowStackLoyaoutForRepeatRequest(contentWhenStopped, "Не удалось получить данные");
+                isTeacher = false;
             }
+            else isTeacher = true;
+
+            headerForPicker = new Label
+            {
+                Text = "Выберите факультет:",
+                TextColor = Color.FromRgb(38, 38, 38),
+                Margin = new Thickness(10, 0, 0, 0),
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+            };
+
+            picker = new Picker
+            {
+                Title = ""
+            };
+
+            foreach (var item in faculties)
+            {
+                picker.Items.Add(item);
+            }
+
+            picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
+
+            selectFacultyStackLoyaout.Children.Add(headerForPicker);
+            selectFacultyStackLoyaout.Children.Add(picker);
         }
 
         //изменение поля с выбором факультета
@@ -215,14 +243,23 @@ namespace Schedule.Views
             Picker pic = (Picker)sender;
             selectedFaculty = pic.SelectedItem.ToString(); //сохранение факультета
 
+            //сохранение данных, если вдруг произойдет ошибка,
+            //тогда можно будет сделать повторный запрос с этими данными
+            this.sender = sender;
+            this.e = e;
+            againButtonClickedFor = PickerFaculty_SelectedIndexChanged;
+
             //Если выбран студент
             if (!isTeacher) 
             {
                 List<string> groups = new List<string>();
 
-                ShowActivityIndicator(); //показать анимацию загрузки
                 //Ожидается выполнение асинхронного метода, так как данные уже нужны
                 groups = await LoadGroupsAsync();
+                if (groups.Count == 0)
+                {
+                    return;
+                }
                 HideActivityIndicator(); //скрыть анимацию загрузки
 
                 headerForPicker = new Label
@@ -250,9 +287,12 @@ namespace Schedule.Views
             {
                 List<string> teachers = new List<string>();
 
-                ShowActivityIndicator(); //показать анимацию загрузки
                 //Ожидается выполнение асинхронного метода, так как данные уже нужны
                 teachers = await LoadTeachersAsync();
+                if (teachers.Count == 0)
+                {
+                    return;
+                }
                 HideActivityIndicator(); //скрыть анимацию загрузки
 
                 headerForPicker = new Label
@@ -433,13 +473,11 @@ namespace Schedule.Views
             }
         }
 
-        //строка для сохранения content после ошибки в запросе, для повторного вызова 
-        HttpContent contentWhenStopped;
-
         //Загрузка данных с сервера
         public async Task<String> LoadDataFromServer(HttpContent content)
         {
             string result = "";
+            ShowActivityIndicator();
 
             if (CrossConnectivity.Current.IsConnected == true)
             {
@@ -456,13 +494,15 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
-                    //ShowStackLoyaoutForRepeatRequest(content, "Не удалось получить данные");
+                    string err = ex.Message;
+                    await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                    ShowStackLoyaoutForRepeatRequest("Не удалось получить данные");
                 }
             }
             else
             {
-                //ShowStackLoyaoutForRepeatRequest(content, "Нет интернет-соединения");
-                await DisplayAlert("Внимание", "Нет интернет-соединения, невозможно загрузить данные.", "Понятно");
+                await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
+                ShowStackLoyaoutForRepeatRequest("Нет интернет-соединения");
             }
 
             return result;
@@ -485,19 +525,17 @@ namespace Schedule.Views
             await Task.Delay(mls);
         }
 
-        void ShowStackLoyaoutForRepeatRequest(HttpContent content, string message)
+        void ShowStackLoyaoutForRepeatRequest(string message)
         {
-            //await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
             HideActivityIndicator();
             stackLoyaoutForRepeatRequest.IsVisible = true;
             repeatLabel.Text = message;
-            contentWhenStopped = content;
         }
 
         private void RepeatButton_Clicked(object sender, EventArgs e)
         {
             stackLoyaoutForRepeatRequest.IsVisible = false;
-            LoadDataFromServer(contentWhenStopped);
+            againButtonClickedFor(this.sender, this.e);
         }
     }
 }

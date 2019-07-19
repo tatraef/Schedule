@@ -248,6 +248,7 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
+                    string err = ex.Message;
                     await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
                     checkUpdateIndicator.IsVisible = false;
                     checkUpdateAgainButton.IsVisible = true;
@@ -394,6 +395,7 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
+                    string err = ex.Message;
                     await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
                     checkUpdateIndicator.IsVisible = false;
                     checkUpdateAgainButton.IsVisible = true;
@@ -522,6 +524,7 @@ namespace Schedule.Views
                 }
                 catch (Exception ex)
                 {
+                    string err = ex.Message;
                     await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
                     checkUpdateIndicator.IsVisible = false;
                     checkUpdateAgainButton.IsVisible = true;
