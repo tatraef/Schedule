@@ -180,11 +180,6 @@ namespace Schedule.Views
         //изменение поля с выбором типа пользователя
         async void PickerUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Отчистка полей, если они, вдруг, заполнены
-            selectFacultyStackLoyaout.Children.Clear();
-            selectGroupStackLoyaout.Children.Clear();
-            selectSubgroupStackLoyaout.Children.Clear();
-
             List<string> faculties = new List<string>();
 
             //сохранение данных, если вдруг произойдет ошибка,
@@ -232,6 +227,11 @@ namespace Schedule.Views
             }
 
             picker.SelectedIndexChanged += PickerFaculty_SelectedIndexChanged;
+
+            //Отчистка полей, если они, вдруг, заполнены
+            selectFacultyStackLoyaout.Children.Clear();
+            selectGroupStackLoyaout.Children.Clear();
+            selectSubgroupStackLoyaout.Children.Clear();
 
             selectFacultyStackLoyaout.Children.Add(headerForPicker);
             selectFacultyStackLoyaout.Children.Add(picker);
