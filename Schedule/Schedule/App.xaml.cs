@@ -98,8 +98,12 @@ namespace Schedule
 
         //загрузка графика и определение номера недели
         public void TimetableLoad()
-        {
-            timetable = JsonConvert.DeserializeObject<List<Specialty>>((string)Current.Properties["timetable"]);
+        {          
+            if ((bool)Current.Properties["isTeacher"])
+            { 
+                //полный график нужен только для преподавателя
+                timetable = JsonConvert.DeserializeObject<List<Specialty>>((string)Current.Properties["timetable"]);
+            }
             myTimetable = JsonConvert.DeserializeObject<List<Day>>((string)Current.Properties["myTimetable"]);
 
             DateTime now = DateTime.Now;
