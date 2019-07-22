@@ -319,7 +319,7 @@ namespace Schedule.ViewModels
             {
                 if (App.myTimetable[i].ThisDay == day && App.myTimetable[i].ThisMonth == month)
                 {
-                    if (App.myTimetable[i].Content != null) //пока не проверяю на экзамены
+                    if (App.myTimetable[i].Content != null)
                     {
                         switch (App.myTimetable[i].Content)
                         {
@@ -356,7 +356,7 @@ namespace Schedule.ViewModels
                 }
                 //Определение первой недели второго семестра для определения первого рейтинга второго семестра, 
                 //ведь он начинаяется на девятой неделе после каникул
-                if (App.myTimetable[i].Content == "K")
+                if (App.myTimetable[i].Content == "К")
                 {
                     firstWeekOfSecondSemestr = App.myTimetable[i].ThisWeek;
                 }

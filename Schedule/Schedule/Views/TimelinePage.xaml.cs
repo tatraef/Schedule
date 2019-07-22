@@ -100,7 +100,7 @@ namespace Schedule.Views
             }
             else
             {
-                if ((e.NewDate.Year == now.Year && e.NewDate.Month > 9) || (e.NewDate.Year == now.Year+1 && e.NewDate.Month < 9))
+                if ((e.NewDate.Year == now.Year && e.NewDate.Month >= 9) || (e.NewDate.Year == now.Year+1 && e.NewDate.Month < 9))
                 {
                     TimelineViewModel bind = new TimelineViewModel(e.NewDate);
                     BindingContext = bind;
