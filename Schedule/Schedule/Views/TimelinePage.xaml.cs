@@ -246,9 +246,9 @@ namespace Schedule.Views
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    string err = ex.Message;
+                    //string err = ex.Message;
                     await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
                     checkUpdateIndicator.IsVisible = false;
                     checkUpdateAgainButton.IsVisible = true;
@@ -522,9 +522,9 @@ namespace Schedule.Views
 
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    string err = ex.Message;
+                    //string err = ex.Message;
                     await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
                     checkUpdateIndicator.IsVisible = false;
                     checkUpdateAgainButton.IsVisible = true;
@@ -575,7 +575,7 @@ namespace Schedule.Views
                     {
                         App.myTimetable = courses.Days;
                         string json = JsonConvert.SerializeObject(courses.Days);
-                        App.Current.Properties.Add("myTimetable", json);
+                        App.Current.Properties["myTimetable"] = json;
                         break;
                     }
                     break;
@@ -596,7 +596,7 @@ namespace Schedule.Views
                             {
                                 App.myTimetable = courses.Days;
                                 string json = JsonConvert.SerializeObject(courses.Days);
-                                App.Current.Properties.Add("myTimetable", json);
+                                App.Current.Properties["myTimetable"] = json;
                                 break;
                             }
                         }
