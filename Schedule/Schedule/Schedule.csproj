@@ -17,9 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\MasterDetailPage1MenuItem.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Update="Views\MasterDetailPage1MenuItem.cs" />
     <Compile Update="Views\Days\DayMonday.xaml.cs">
       <DependentUpon>DayMonday.xaml</DependentUpon>
     </Compile>
