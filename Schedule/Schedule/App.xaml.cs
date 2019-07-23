@@ -50,7 +50,7 @@ namespace Schedule
                 if (!Current.Properties.ContainsKey("scheduleMain") ||
                     !Current.Properties.ContainsKey("scheduleRait") ||
                     !Current.Properties.ContainsKey("scheduleExam") ||
-                    !Current.Properties.ContainsKey("timetable") ||
+                    !Current.Properties.ContainsKey("updateTimetable") ||
                     !Current.Properties.ContainsKey("myTimetable"))
                 {
                     justLogged = true;

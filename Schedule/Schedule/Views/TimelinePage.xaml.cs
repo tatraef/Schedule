@@ -563,12 +563,13 @@ namespace Schedule.Views
 
         private void SaveTimetable(string scheduleTimetable, string updateTimetable)
         {
-            App.Current.Properties["timetable"] = scheduleTimetable;
             App.timetable = JsonConvert.DeserializeObject<List<Specialty>>(scheduleTimetable);
-            App.Current.Properties["updateTimetable"] = updateTimetable;
 
             if ((bool)App.Current.Properties["isTeacher"])
             {
+                //полный график нужен только преподавателю
+                App.Current.Properties["timetable"] = scheduleTimetable;
+
                 foreach (var item in App.timetable)
                 {
                     foreach (var courses in item.Courses)
@@ -603,7 +604,8 @@ namespace Schedule.Views
                     }
                 }
             }
-                
+
+            App.Current.Properties["updateTimetable"] = updateTimetable;
         }
 
         private void UpdateAgain_Clicked(object sender, EventArgs e)
