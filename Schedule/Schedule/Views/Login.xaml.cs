@@ -492,9 +492,9 @@ namespace Schedule.Views
 
                     result = await response.Content.ReadAsStringAsync();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    string err = ex.Message;
+                    //string err = ex.Message;
                     await PutTaskDelay(1000); //задержа, иначе будет сразу показываться кнопка Повторить
                     ShowStackLoyaoutForRepeatRequest("Не удалось получить данные");
                 }
