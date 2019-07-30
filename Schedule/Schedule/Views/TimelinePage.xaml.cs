@@ -52,7 +52,11 @@ namespace Schedule.Views
             NumberOfItems = 7;
 
             InitializeComponent();
+        }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
             if (App.justLogged)
             {
