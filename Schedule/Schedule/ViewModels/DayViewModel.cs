@@ -34,12 +34,12 @@ namespace Schedule.ViewModels
                 if ((bool)isTeacher)
                 {
                     #region Загрузка пар для Преподавателя
-                    if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
+                    /*if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
                     {
                         //проверка на наличие расписания в коллекции Properties
                         TeacherCoupleList = JsonConvert.DeserializeObject<List<TeacherCouple>>(Convert.ToString(schedule));
                         return;
-                    }
+                    }*/
                     TeacherCouples = new Dictionary<byte, TeacherCouple>();
                     //проверяется имя преподавателя
                     if (App.Current.Properties.TryGetValue("teacherName", out object AppTeacherName))
@@ -83,20 +83,20 @@ namespace Schedule.ViewModels
                         SortedDictionary<byte, TeacherCouple> sortedTeacherCouples = new SortedDictionary<byte, TeacherCouple>(TeacherCouples);
                         TeacherCoupleList = sortedTeacherCouples.Values.ToList();
                     }
-                    //Сохранение расписания, для дальнейшего использования
+                    /*//Сохранение расписания, для дальнейшего использования
                     string json = JsonConvert.SerializeObject(TeacherCoupleList);
-                    App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);
+                    App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);*/
                     #endregion
                 }
                 else 
                 {
                     #region Загрузка пар для Студента
-                    if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
+                    /*if (App.Current.Properties.TryGetValue("schedule" + dayOfWeek + numOfWeek, out object schedule))
                     {
                         //проверка на наличие собранного расписания в коллекции Properties
                         Couples = JsonConvert.DeserializeObject<List<Couple>>(Convert.ToString(schedule));
                         return;
-                    }
+                    }*/
                     Couples = new List<Couple>();
                     //проверяется факультет
                     if (App.Current.Properties.TryGetValue("facultyName", out object FacultyName))
@@ -132,9 +132,9 @@ namespace Schedule.ViewModels
                                 }
                             }
                         }
-                        //Сохранение расписания, для дальнейшего использования
+                        /*//Сохранение расписания, для дальнейшего использования
                         string json = JsonConvert.SerializeObject(Couples);
-                        App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);
+                        App.Current.Properties.Add("schedule" + dayOfWeek + numOfWeek, json);*/
                     }
                     #endregion
                 }
