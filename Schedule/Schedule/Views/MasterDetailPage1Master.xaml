@@ -40,7 +40,7 @@
                                 HorizontalOptions="End"
                                 BackgroundColor="White"
                                 Margin="0, 0, -20, 0"
-                                Clicked="Exit_Clicked"/>
+                                Clicked="Exit_Clicked" CornerRadius="5"/>
                     </StackLayout>    
                     
                 </Grid>
