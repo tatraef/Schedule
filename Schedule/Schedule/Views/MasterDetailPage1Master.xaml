@@ -39,6 +39,7 @@
                                 VerticalOptions="Center"
                                 HorizontalOptions="End"
                                 BackgroundColor="White"
+                                Margin="0, 0, -20, 0"
                                 Clicked="Exit_Clicked"/>
                     </StackLayout>    
                     
