@@ -16,7 +16,6 @@ namespace Schedule.ViewModels
         {
             //Определение номера недели
             DateTime now = DateTime.Now;
-            DetermineTheNumberOfWeek(now.Day, now.Month);
 
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
@@ -36,9 +35,6 @@ namespace Schedule.ViewModels
         //перегрузка для выбора определенной даты
         public TimelineViewModel(DateTime selectedDate)
         {
-            //Определение номера недели
-            DetermineTheNumberOfWeek(selectedDate.Day, selectedDate.Month);
-
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
                 if ((bool)isTeacher)
@@ -92,20 +88,12 @@ namespace Schedule.ViewModels
 
             string dt = NeedDate.DayOfWeek.ToString().ToLower();
 
+            DetermineTheNumberOfWeek(NeedDate.Day, NeedDate.Month);
+
             string numOfWeek = "";
             if (App.Current.Properties.TryGetValue("numOfWeek", out object num))
             {
                 numOfWeek = (string)num;
-            }
-
-            //Если прошел переход через неделю, то есть открыл страницу в четверг,
-            //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
-            if (!isItForOne && NeedDate.DayOfWeek < now.DayOfWeek)
-            {
-                if (numOfWeek == "1")
-                    numOfWeek = "2";
-                else
-                    numOfWeek = "1";
             }
 
             //проверяется имя преподавателя
@@ -239,19 +227,12 @@ namespace Schedule.ViewModels
 
                 string dt = NeedDate.DayOfWeek.ToString().ToLower();
 
+                DetermineTheNumberOfWeek(NeedDate.Day, NeedDate.Month);
+
                 string numOfWeek = "";
                 if (App.Current.Properties.TryGetValue("numOfWeek", out object num))
                 {
                     numOfWeek = (string)num;
-                }
-                //Если прошел переход через неделю, то есть открыл страницу в четверг,
-                //а загружаются пары для Вторника уже новой недели, первая неделя сменилась второй
-                if (!isItForOne && NeedDate.DayOfWeek < now.DayOfWeek)
-                {
-                    if (numOfWeek == "1")
-                        numOfWeek = "2";
-                    else
-                        numOfWeek = "1";
                 }
 
                 if (App.Current.Properties.TryGetValue("groupId", out object GroupId))
