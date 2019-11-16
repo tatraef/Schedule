@@ -14,9 +14,6 @@ namespace Schedule.ViewModels
 
         public TimelineViewModel(byte numberOfItems)
         {
-            //Определение номера недели
-            DateTime now = DateTime.Now;
-
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
                 if ((bool)isTeacher)
@@ -41,14 +38,14 @@ namespace Schedule.ViewModels
                 {
                     ItemsForTeacher = new List<TimelineItemForTeacher>
                     {
-                        MakeDayForTeacher(selectedDate, true)
+                        MakeDayForTeacher(selectedDate)
                     };
                 }
                 else
                 {
                     ItemsForStudents = new List<TimelineItemForStudent>
                     {
-                        MakeDayForStudent(selectedDate, true)
+                        MakeDayForStudent(selectedDate)
                     };
                 }
             }
@@ -60,7 +57,7 @@ namespace Schedule.ViewModels
 
             for (int i = 0; i < numberOfItems; i++)
             {
-                lines.Add(MakeDayForStudent(DateTime.Now.AddDays(i), false));
+                lines.Add(MakeDayForStudent(DateTime.Now.AddDays(i)));
             }
 
             return lines;
@@ -72,15 +69,13 @@ namespace Schedule.ViewModels
 
             for (int i = 0; i < numberOfItems; i++)
             {
-                lines.Add(MakeDayForTeacher(DateTime.Now.AddDays(i), false));
+                lines.Add(MakeDayForTeacher(DateTime.Now.AddDays(i)));
             }
 
             return lines;
         }
 
-        //isItForOne - для определения откуда пришел запрос, если с загрузки определенного дня, 
-        //то не нужно проверять на проход через недели
-        public TimelineItemForTeacher MakeDayForTeacher(DateTime NeedDate, bool isItForOne) 
+        public TimelineItemForTeacher MakeDayForTeacher(DateTime NeedDate) 
         {
             DateTime now = DateTime.Now;
             Dictionary<byte, TeacherCouple> teacherCouples = new Dictionary<byte, TeacherCouple>();
@@ -212,7 +207,7 @@ namespace Schedule.ViewModels
             
         }
 
-        public TimelineItemForStudent MakeDayForStudent(DateTime NeedDate, bool isItForOne)
+        public TimelineItemForStudent MakeDayForStudent(DateTime NeedDate)
         {
             List<Couple> couples = new List<Couple>();
 
@@ -491,7 +486,5 @@ namespace Schedule.ViewModels
                 }
             }
         }
-
-
     }
 }
