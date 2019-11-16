@@ -18,7 +18,7 @@ namespace Schedule.Views
             ToolbarItem weeksItem = new ToolbarItem
             {
                 Order = ToolbarItemOrder.Default,
-                Text = "1 НЕДЕЛЯ"
+                Text = DetermineTheNumberOfWeek()
             };
             weeksItem.Clicked += (object sender, System.EventArgs e) =>
             {
@@ -44,6 +44,29 @@ namespace Schedule.Views
    
             ToolbarItems.Add(weeksItem);
             InitializeComponent();
+        }
+
+        public string DetermineTheNumberOfWeek()
+        {
+            int day = DateTime.Now.Day;
+            int month = DateTime.Now.Month;
+            foreach (var item in App.myTimetable)
+            {
+                if (item.ThisDay == day && item.ThisMonth == month)
+                {
+                    if (item.ThisWeek % 2 == 0)
+                    {
+                        App.Current.Properties["numOfWeek"] = "2";
+                        return "2 НЕДЕЛЯ";
+                    }
+                    else
+                    {
+                        App.Current.Properties["numOfWeek"] = "1";
+                        return "1 НЕДЕЛЯ";
+                    }
+                }
+            }
+            return "1 НЕДЕЛЯ";
         }
     }
 }
