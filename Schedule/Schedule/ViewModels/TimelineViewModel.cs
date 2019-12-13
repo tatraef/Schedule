@@ -148,7 +148,7 @@ namespace Schedule.ViewModels
                                                             {
                                                                 if (courses.Days[j].ThisDay == day && courses.Days[j].ThisMonth == month)
                                                                 {
-                                                                    if (courses.Days[j].Content == null && j + 6 < courses.Days.Count && courses.Days[j + 6].Content != "Э" && courses.Days[j].ThisWeek - 24 != 9) //change 24
+                                                                    if (courses.Days[j].Content == null && j + 6 < courses.Days.Count) //change 24
                                                                     {
                                                                         byte coupleNum = Convert.ToByte(c.CoupleNum);
 
@@ -351,9 +351,9 @@ namespace Schedule.ViewModels
             DateTime lastUpdate = DateTime.Parse((string)App.Current.Properties["updateExam"]);
             TimeSpan difference = NeedDate.Subtract(lastUpdate);
             int days = difference.Days;
-            //если более чем 30 дней назад, то значит нового расписания еще нет,
+            //если более чем 100 дней назад, то значит нового расписания еще нет,
             //показать в таймлайне просто "Экзамены"
-            if (Math.Abs(days) > 30)
+            if (Math.Abs(days) > 100)
             {
                 NothingInteresting(couples, "Э");
             }
