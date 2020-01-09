@@ -50,13 +50,6 @@ namespace Schedule.Views
             
             #region INotifyPropertyChanged Implementation
             public event PropertyChangedEventHandler PropertyChanged;
-            void OnPropertyChanged([CallerMemberName] string propertyName = "")
-            {
-                if (PropertyChanged == null)
-                    return;
-
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
             #endregion
         }
 
@@ -73,7 +66,7 @@ namespace Schedule.Views
             }
         }
 
-        private void Exit_Clicked(object sender, SelectedItemChangedEventArgs e)
+        private void ExitClicked(object sender, System.EventArgs e)
         {
             App.Current.Properties.Clear();
 

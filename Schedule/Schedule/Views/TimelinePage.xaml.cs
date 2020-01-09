@@ -28,7 +28,7 @@ namespace Schedule.Views
             #region Добавление элементов в Toolbar
             ToolbarItem changeNumberOfItems = new ToolbarItem
             {
-                Icon = "settings.png"
+                IconImageSource = "settings.png"
             };
             changeNumberOfItems.Clicked += (object sender, System.EventArgs e) =>
             {
@@ -39,7 +39,7 @@ namespace Schedule.Views
 
             ToolbarItem selectDate = new ToolbarItem
             {
-                Icon = "calendar.png"
+                IconImageSource = "calendar.png"
             };
             selectDate.Clicked += (object sender, System.EventArgs e) =>
             {
