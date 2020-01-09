@@ -175,6 +175,7 @@
   <ItemGroup>
     <Content Include="Resources\logoNOSU.png" />
     <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\mail.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logoLogin.png" />

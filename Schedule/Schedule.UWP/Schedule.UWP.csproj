@@ -143,6 +143,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="logoNOSU.png" />
+    <Content Include="mail.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="settings.png" />
   </ItemGroup>
