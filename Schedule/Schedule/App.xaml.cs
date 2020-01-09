@@ -7,6 +7,9 @@ using Schedule.Models;
 using Schedule.Views;
 using Newtonsoft.Json;
 using System.Reflection;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Schedule
@@ -67,8 +70,7 @@ namespace Schedule
 
         protected override void OnStart()
         {
-            // Handle when your app starts
-        }
+            AppCenter.Start("ios=583b87e2-58a6-41be-bd93-4ad2edc67012;android=aab613c6-e8e0-4e29-bced-464ac4737dde;uwp=153f3ec3-d466-4fa3-963b-33d30aeb7d62", typeof(Analytics), typeof(Crashes));        }
 
         protected override void OnSleep()
         {
