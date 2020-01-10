@@ -173,6 +173,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\feedback.png" />
     <Content Include="Resources\logoNOSU.png" />
     <BundleResource Include="Resources\settings.png" />
     <BundleResource Include="Resources\mail.png" />

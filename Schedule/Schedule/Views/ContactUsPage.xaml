@@ -4,12 +4,66 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Schedule.Views.ContactUsPage">
+             x:Class="Schedule.Views.ContactUsPage"
+             BackgroundColor="#333333">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Image 
+                    Source="feedback.png"
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="120"
+                    Margin="0, 50, 0, 0"/>
+                <Label 
+                    Text="Свяжитесь с нами"
+                    FontSize="40"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="20, 0"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label 
+                    Text="Присылайте ваши вопросы и предложения"
+                    FontSize="25"
+                    TextColor="White"
+                    Margin="20, 0"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand" />
+                <StackLayout
+                    VerticalOptions="CenterAndExpand">
+                    <Entry
+                        x:Name="NameEntry"
+                        Placeholder="Ваше имя"
+                        PlaceholderColor="#5e5e5e"
+                        TextColor="#EBB30D"
+                        Margin="20, 20, 20, 0"/>
+                    <Entry
+                        x:Name="SubjectEntry"
+                        Placeholder="Тема письма"
+                        PlaceholderColor="#5e5e5e"
+                        TextColor="#EBB30D"
+                        Margin="20, 0, 20, 0"/>
+                    <Editor
+                        x:Name="MessageEditor"
+                        Placeholder="Сообщение"
+                        PlaceholderColor="#5e5e5e"
+                        TextColor="#EBB30D"
+                        AutoSize="TextChanges"
+                        Margin="20, 0, 20, 0"/>
+                </StackLayout>
+                <Button 
+                    x:Name="feedbackButton"
+                    Text="Отправить"
+                    TextColor="{StaticResource colorPrimary}"
+                    BackgroundColor="{StaticResource colorAccent}"
+                    FontSize="Medium"
+                    Clicked="FeedbackButton_Clicked"
+                    VerticalOptions="EndAndExpand"
+                    Margin="20"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -138,6 +138,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="calendar.png" />
     <Content Include="clock.png" />
+    <Content Include="feedback.png" />
     <Content Include="logoLogin.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
