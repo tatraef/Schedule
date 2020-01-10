@@ -35,7 +35,7 @@ namespace Schedule.Views
             base.OnAppearing();
         }
 
-        class MasterDetailPage1MasterViewModel : INotifyPropertyChanged
+        class MasterDetailPage1MasterViewModel
         {
             public ObservableCollection<MasterDetailPage1MenuItem> MenuItems { get; set; }
             
@@ -48,10 +48,6 @@ namespace Schedule.Views
                     new MasterDetailPage1MenuItem { Id = 2, Title = "Обратная связь", Icon = "mail.png", TargetType = typeof(ContactUsPage)},
                 });
             }
-            
-            #region INotifyPropertyChanged Implementation
-            public event PropertyChangedEventHandler PropertyChanged;
-            #endregion
         }
 
         //Изменяет имя пользователя, прописанное в меню
@@ -71,8 +67,7 @@ namespace Schedule.Views
         {
             App.Current.Properties.Clear();
 
-            App.Current.MainPage = new Login();
-            
+            App.Current.MainPage = new Login(); 
         }
     }
 }
