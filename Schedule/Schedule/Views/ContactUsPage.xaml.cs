@@ -46,11 +46,11 @@ namespace Schedule.Views
             }
             catch (FeatureNotSupportedException fbsEx)
             {
-                // Email is not supported on this device
+                await DisplayAlert("Ошибка", "Не поддерживается на вашем устройстве. {" + fbsEx.Message + "} /n Может у вас просто не установлено ни одно почтвое приложение?", "OK");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Some other exception occurred
+                await DisplayAlert("Ошибка", "По неведомым для нас причинам произошла ошибка... /n Вы можете написать нам на почту sschedule@inbox.ru. ", "OK");
             }
         }
     }
