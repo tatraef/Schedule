@@ -28,7 +28,7 @@ namespace Schedule.Views
             }
             else
             {
-                await SendEmail(SubjectEntry.Text, MessageEditor.Text + "/n/n" + NameEntry.Text, new List<string> { "sschedule@inbox.ru" });
+                await SendEmail(SubjectEntry.Text, MessageEditor.Text + "\n\n" + NameEntry.Text, new List<string> { "sschedule@inbox.ru" });
             }
         }
 
@@ -46,11 +46,11 @@ namespace Schedule.Views
             }
             catch (FeatureNotSupportedException fbsEx)
             {
-                await DisplayAlert("Ошибка", "Не поддерживается на вашем устройстве. {" + fbsEx.Message + "} /n Может у вас просто не установлено ни одно почтвое приложение?", "OK");
+                await DisplayAlert("Ошибка", "Не поддерживается на вашем устройстве. {" + fbsEx.Message + "} \n Может у вас просто не установлено ни одно почтвое приложение?", "OK");
             }
             catch (Exception)
             {
-                await DisplayAlert("Ошибка", "По неведомым для нас причинам произошла ошибка... /n Вы можете написать нам на почту sschedule@inbox.ru. ", "OK");
+                await DisplayAlert("Ошибка", "По неведомым для нас причинам произошла ошибка... \n Вы можете написать нам на почту sschedule@inbox.ru. ", "OK");
             }
         }
     }
