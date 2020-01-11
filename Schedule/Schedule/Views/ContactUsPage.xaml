@@ -14,7 +14,7 @@
                     VerticalOptions="Start"
                     HorizontalOptions="CenterAndExpand"
                     HeightRequest="120"
-                    Margin="0, 50, 0, 0"/>
+                    Margin="0, 20, 0, 0"/>
                 <Label 
                     Text="Свяжитесь с нами"
                     FontSize="40"
