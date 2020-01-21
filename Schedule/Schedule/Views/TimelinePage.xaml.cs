@@ -22,6 +22,7 @@ namespace Schedule.Views
     public partial class TimelinePage : ContentPage
     {
         public byte NumberOfItems { get; set; }
+        public DateTime SelectedDate { get; set; }
 
         public TimelinePage()
         {
@@ -81,7 +82,7 @@ namespace Schedule.Views
             {
                 if (e.NewDate.Year == now.Year && e.NewDate.Month < 9)
                 {
-                    TimelineViewModel bind = new TimelineViewModel(e.NewDate);
+                    TimelineViewModel bind = new TimelineViewModel(NumberOfItems, e.NewDate);
                     BindingContext = bind;
 
                     //проверяется студент или преподаватель
@@ -106,7 +107,7 @@ namespace Schedule.Views
             {
                 if ((e.NewDate.Year == now.Year && e.NewDate.Month >= 9) || (e.NewDate.Year == now.Year+1 && e.NewDate.Month < 9))
                 {
-                    TimelineViewModel bind = new TimelineViewModel(e.NewDate);
+                    TimelineViewModel bind = new TimelineViewModel(NumberOfItems, e.NewDate);
                     BindingContext = bind;
 
                     //проверяется студент или преподаватель
@@ -125,6 +126,7 @@ namespace Schedule.Views
                     DisplayAlert("Ошибка", "Можно просматривать только текущий учебный год.", "ОK");
                 }
             }
+            SelectedDate = e.NewDate;
         }
 
         //Изменение количества отображаемых дней
@@ -548,7 +550,15 @@ namespace Schedule.Views
 
         private void ReloadPage()
         {
-            TimelineViewModel bind = new TimelineViewModel(NumberOfItems);
+            TimelineViewModel bind;
+            if (SelectedDate == null)
+            {
+                bind = new TimelineViewModel(NumberOfItems, DateTime.Now);
+            }
+            else
+            {
+                bind = new TimelineViewModel(NumberOfItems, SelectedDate);
+            }
             BindingContext = bind;
 
             //проверяется студент или преподаватель

@@ -12,64 +12,42 @@ namespace Schedule.ViewModels
         public List<TimelineItemForStudent> ItemsForStudents { get; set; }
         public List<TimelineItemForTeacher> ItemsForTeacher { get; set; }
 
-        public TimelineViewModel(byte numberOfItems)
+        public TimelineViewModel(byte numberOfItems, DateTime selectedDate)
         {
             if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
             {
                 if ((bool)isTeacher)
                 {
                     ItemsForTeacher = new List<TimelineItemForTeacher>();
-                    ItemsForTeacher = GetDaysForTeacher(numberOfItems);
+                    ItemsForTeacher = GetDaysForTeacher(numberOfItems, selectedDate);
                 }
                 else
                 {
                     ItemsForStudents = new List<TimelineItemForStudent>();
-                    ItemsForStudents = GetDaysForStudent(numberOfItems);
+                    ItemsForStudents = GetDaysForStudent(numberOfItems, selectedDate);
                 }
             }
         }
 
-        //перегрузка для выбора определенной даты
-        public TimelineViewModel(DateTime selectedDate)
-        {
-            if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
-            {
-                if ((bool)isTeacher)
-                {
-                    ItemsForTeacher = new List<TimelineItemForTeacher>
-                    {
-                        MakeDayForTeacher(selectedDate)
-                    };
-                }
-                else
-                {
-                    ItemsForStudents = new List<TimelineItemForStudent>
-                    {
-                        MakeDayForStudent(selectedDate)
-                    };
-                }
-            }
-        }
-
-        public List<TimelineItemForStudent> GetDaysForStudent(byte numberOfItems)
+        public List<TimelineItemForStudent> GetDaysForStudent(byte numberOfItems, DateTime neededDate)
         {
             List<TimelineItemForStudent> lines = new List<TimelineItemForStudent>();
 
             for (int i = 0; i < numberOfItems; i++)
             {
-                lines.Add(MakeDayForStudent(DateTime.Now.AddDays(i)));
+                lines.Add(MakeDayForStudent(neededDate.AddDays(i)));
             }
 
             return lines;
         }
 
-        public List<TimelineItemForTeacher> GetDaysForTeacher(byte numberOfItems)
+        public List<TimelineItemForTeacher> GetDaysForTeacher(byte numberOfItems, DateTime neededDate)
         {
             List<TimelineItemForTeacher> lines = new List<TimelineItemForTeacher>();
 
             for (int i = 0; i < numberOfItems; i++)
             {
-                lines.Add(MakeDayForTeacher(DateTime.Now.AddDays(i)));
+                lines.Add(MakeDayForTeacher(neededDate.AddDays(i)));
             }
 
             return lines;
@@ -109,7 +87,7 @@ namespace Schedule.ViewModels
                                     if (c.Day == dt)
                                     {
                                         //проверка, чтобы не показывать уже завершенные пары
-                                        if (NeedDate.Day == now.Day)
+                                        if (NeedDate.Day == now.Day && NeedDate.Month == now.Month)
                                         {
                                             string[] s = c.TimeEnd.Split(':');
                                             int h = Convert.ToInt32(s[0]);
@@ -249,7 +227,7 @@ namespace Schedule.ViewModels
                                     if (c.Week == numOfWeek && c.SubgroupName == subgroup && c.Day == dt)
                                     {
                                         //проверка, чтобы не показывать уже завершенные пары
-                                        if (NeedDate.Day == now.Day)
+                                        if (NeedDate.Day == now.Day && NeedDate.Month == now.Month)
                                         {
                                             string[] s = c.TimeEnd.Split(':');
                                             int h = Convert.ToInt32(s[0]);
