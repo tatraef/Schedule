@@ -551,7 +551,7 @@ namespace Schedule.Views
         private void ReloadPage()
         {
             TimelineViewModel bind;
-            if (SelectedDate == null)
+            if (SelectedDate == DateTime.MinValue)
             {
                 bind = new TimelineViewModel(NumberOfItems, DateTime.Now);
             }
