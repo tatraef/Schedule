@@ -41,13 +41,28 @@ namespace Schedule.Views
             
             public MasterDetailPage1MasterViewModel()
             {
-                MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
+                if (App.Current.Properties.TryGetValue("isTeacher", out object isTeacher))
                 {
-                    new MasterDetailPage1MenuItem { Id = 0, Title = "Таймлайн", Icon = "clock.png", TargetType = typeof(TimelinePage)},
-                    new MasterDetailPage1MenuItem { Id = 1, Title = "Расписание", Icon = "calendar.png", TargetType = typeof(ScheduleTabbedPage)},
-                    new MasterDetailPage1MenuItem { Id = 2, Title = "Обратная связь", Icon = "mail.png", TargetType = typeof(ContactUsPage)},
-                     new MasterDetailPage1MenuItem { Id = 3, Title = "Пожелания", Icon = "table.png", TargetType = typeof(DesirePage)},
-                });
+                    if ((bool)isTeacher)
+                    {
+                        MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
+                        {
+                            new MasterDetailPage1MenuItem { Id = 0, Title = "Таймлайн", Icon = "clock.png", TargetType = typeof(TimelinePage)},
+                            new MasterDetailPage1MenuItem { Id = 1, Title = "Расписание", Icon = "calendar.png", TargetType = typeof(ScheduleTabbedPage)},
+                            new MasterDetailPage1MenuItem { Id = 2, Title = "Обратная связь", Icon = "mail.png", TargetType = typeof(ContactUsPage)},
+                            new MasterDetailPage1MenuItem { Id = 3, Title = "Пожелания", Icon = "table.png", TargetType = typeof(DesirePage)},
+                        });
+                    }
+                    else
+                    {
+                        MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
+                        {
+                            new MasterDetailPage1MenuItem { Id = 0, Title = "Таймлайн", Icon = "clock.png", TargetType = typeof(TimelinePage)},
+                            new MasterDetailPage1MenuItem { Id = 1, Title = "Расписание", Icon = "calendar.png", TargetType = typeof(ScheduleTabbedPage)},
+                            new MasterDetailPage1MenuItem { Id = 2, Title = "Обратная связь", Icon = "mail.png", TargetType = typeof(ContactUsPage)}
+                        });
+                    }
+                }
             }
         }
 

@@ -752,21 +752,37 @@
                     </Grid>
                 </StackLayout>
 
+                <Entry
+                    x:Name="CodeEntry"
+                    Placeholder="Проверочный код"
+                    PlaceholderColor="#5e5e5e"
+                    IsPassword="True"
+                    TextColor="#EBB30D"
+                    Margin="20, 20, 20, 0"/>
+
                 <Editor
-                        x:Name="MessageEditor"
-                        Placeholder="Сообщение"
-                        PlaceholderColor="#5e5e5e"
-                        TextColor="#EBB30D"
-                        AutoSize="TextChanges"
-                        Margin="20, 0, 20, 0"/>
+                    x:Name="MessageEditor"
+                    Placeholder="Сообщение"
+                    PlaceholderColor="#5e5e5e"
+                    TextColor="#EBB30D"
+                    AutoSize="TextChanges"
+                    Margin="20, 0, 20, 0"/>
+
+                <ActivityIndicator 
+                    x:Name="indicator"
+                    IsRunning="True"
+                    HorizontalOptions="Center"
+                    HeightRequest="50"
+                    IsVisible="False"/>
 
                 <Button 
-                    x:Name="feedbackButton"
+                    x:Name="sendButton"
                     Text="Отправить"
                     TextColor="{StaticResource colorPrimary}"
                     BackgroundColor="{StaticResource colorAccent}"
                     FontSize="Medium"
                     VerticalOptions="EndAndExpand"
+                    Clicked="SendButton_Clicked"
                     Margin="20"/>
             </StackLayout>
         </ScrollView>

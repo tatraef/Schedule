@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Schedule.Models;
+using System.Net.Http;
+using Plugin.Connectivity;
 
 namespace Schedule.Views
 {
@@ -109,26 +113,92 @@ namespace Schedule.Views
             }
         }
 
-        public async Task SendEmail(string subject, string body, List<string> recipients)
+        private async void SendButton_Clicked(object sender, EventArgs e)
         {
-            try
+            if (indicator.IsVisible)
+                return;
+
+            if (string.IsNullOrEmpty(CodeEntry.Text))
             {
-                var message = new EmailMessage
+                await DisplayAlert("Ошибка", "Введите проверочный код!", "OK");
+            }
+            else
+            {
+                await SendDesire();
+            }
+        }
+
+        public async Task SendDesire()
+        {
+            Desire desire = new Desire
+            {
+                Monday = new String(Monday),
+                Tuesday = new String(Tuesday),
+                Wednesday = new String(Wednesday),
+                Thursday = new String(Thursday),
+                Friday = new String(Friday),
+                Saturday = new String(Saturday),
+                Message = MessageEditor.Text
+            };
+
+            if (App.Current.Properties.TryGetValue("teacherName", out object tname))
+            {
+                var name = ((string)tname).Split(' ')[0];
+                var json = JsonConvert.SerializeObject(desire);
+
+                var urlContent = "updateDesire=some&name=" + name + "&code=" + CodeEntry.Text.ToString() + "&json=" + json;
+
+                HttpContent content = new StringContent(urlContent, Encoding.UTF8, "application/x-www-form-urlencoded");
+                
+                string result = "";
+                ShowActivityIndicator();
+
+                if (CrossConnectivity.Current.IsConnected == true)
                 {
-                    Subject = subject,
-                    Body = body,
-                    To = recipients,
-                };
-                await Email.ComposeAsync(message);
+                    try
+                    {
+                        HttpClient client = new HttpClient
+                        {
+                            BaseAddress = new Uri(App.url)
+                        };
+                        var response = await client.PostAsync(client.BaseAddress, content);
+                        response.EnsureSuccessStatusCode(); // выброс исключения, если произошла ошибка
+
+                        result = await response.Content.ReadAsStringAsync();
+                        if (result == "SAVED")
+                        {
+                            await DisplayAlert("Готово", "Пожелания успешно сохранены!", "OK");
+                        }
+                        else if(result == "NOT")
+                        {
+                            await DisplayAlert("Ошибка", "Неверный проверочный код", "OK");
+                        }
+                        else
+                        {
+                            await DisplayAlert("Ошибка", "Не удалось отправить данные", "OK");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        await DisplayAlert("Ошибка", "Не удалось отправить данные", "OK");
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Ошибка", "Нет интернет-соединения", "OK");
+                }
+                HideActivityIndicator();
             }
-            catch (FeatureNotSupportedException fbsEx)
-            {
-                await DisplayAlert("Ошибка", "Не поддерживается на вашем устройстве. {" + fbsEx.Message + "} \n Может у вас просто не установлено ни одно почтвое приложение?", "OK");
-            }
-            catch (Exception)
-            {
-                await DisplayAlert("Ошибка", "По неведомым для нас причинам произошла ошибка... \n Вы можете написать нам на почту sschedule@inbox.ru. ", "OK");
-            }
+        }
+
+        void ShowActivityIndicator()
+        {
+            indicator.IsVisible = true;
+        }
+
+        void HideActivityIndicator()
+        {
+            indicator.IsVisible = false;
         }
     }
 }
