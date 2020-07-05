@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Schedule.Views.DesirePage"
+             BackgroundColor="#333333">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label 
+                    Text="Пожелания к расписанию"
+                    FontSize="35"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="20, 0"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label 
+                    Text="Укажите дни и пары, когда вы можете провести занятие"
+                    FontSize="20"
+                    TextColor="White"
+                    Margin="20, 0"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand" />
+                <StackLayout
+                    VerticalOptions="Start"
+                    Margin="0, 25, 0, 0">
+                    <Label 
+                        Text="Понедельник"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#EBB30D"
+                        Margin="20, 0"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Start" />
+                    <Grid
+                        Margin="30, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="1"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="0"
+                            IsChecked="True"
+                            CheckedChanged="MondayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="2"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="1"
+                            IsChecked="True"
+                            CheckedChanged="MondayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Text="3"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="2"
+                            IsChecked="True"
+                            CheckedChanged="MondayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="3"
+                            Grid.Row="0"
+                            Text="4"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="3"
+                            IsChecked="True"
+                            CheckedChanged="MondayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Text="5"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="4"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="4"
+                            IsChecked="True"
+                            CheckedChanged="MondayCheckBox_Changed"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout
+                    VerticalOptions="Start"
+                    Margin="0, 5, 0, 0">
+                    <Label 
+                        Text="Вторник"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#EBB30D"
+                        Margin="20, 0"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Start" />
+                    <Grid
+                        Margin="30, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="1"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="0"
+                            IsChecked="True"
+                            CheckedChanged="TuesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="2"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="1"
+                            IsChecked="True"
+                            CheckedChanged="TuesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Text="3"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="2"
+                            IsChecked="True"
+                            CheckedChanged="TuesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="3"
+                            Grid.Row="0"
+                            Text="4"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="3"
+                            IsChecked="True"
+                            CheckedChanged="TuesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Text="5"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="4"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="4"
+                            IsChecked="True"
+                            CheckedChanged="TuesdayCheckBox_Changed"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout
+                    VerticalOptions="Start"
+                    Margin="0, 5, 0, 0">
+                    <Label 
+                        Text="Среда"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#EBB30D"
+                        Margin="20, 0"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Start" />
+                    <Grid
+                        Margin="30, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="1"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="0"
+                            IsChecked="True"
+                            CheckedChanged="WednesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="2"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="1"
+                            IsChecked="True"
+                            CheckedChanged="WednesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Text="3"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="2"
+                            IsChecked="True"
+                            CheckedChanged="WednesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="3"
+                            Grid.Row="0"
+                            Text="4"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="3"
+                            IsChecked="True"
+                            CheckedChanged="WednesdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Text="5"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="4"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="4"
+                            IsChecked="True"
+                            CheckedChanged="WednesdayCheckBox_Changed"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout
+                    VerticalOptions="Start"
+                    Margin="0, 5, 0, 0">
+                    <Label 
+                        Text="Четверг"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#EBB30D"
+                        Margin="20, 0"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Start" />
+                    <Grid
+                        Margin="30, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="1"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="0"
+                            IsChecked="True"
+                            CheckedChanged="ThursdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="2"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="1"
+                            IsChecked="True"
+                            CheckedChanged="ThursdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Text="3"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="2"
+                            IsChecked="True"
+                            CheckedChanged="ThursdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="3"
+                            Grid.Row="0"
+                            Text="4"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="3"
+                            IsChecked="True"
+                            CheckedChanged="ThursdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Text="5"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="4"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="4"
+                            IsChecked="True"
+                            CheckedChanged="ThursdayCheckBox_Changed"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout
+                    VerticalOptions="Start"
+                    Margin="0, 5, 0, 0">
+                    <Label 
+                        Text="Пятница"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#EBB30D"
+                        Margin="20, 0"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Start" />
+                    <Grid
+                        Margin="30, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="1"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="0"
+                            IsChecked="True"
+                            CheckedChanged="FridayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="2"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="1"
+                            IsChecked="True"
+                            CheckedChanged="FridayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Text="3"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="2"
+                            IsChecked="True"
+                            CheckedChanged="FridayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="3"
+                            Grid.Row="0"
+                            Text="4"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="3"
+                            IsChecked="True"
+                            CheckedChanged="FridayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Text="5"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="4"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="4"
+                            IsChecked="True"
+                            CheckedChanged="FridayCheckBox_Changed"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout
+                    VerticalOptions="Start"
+                    Margin="0, 5, 0, 0">
+                    <Label 
+                        Text="Суббота"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#EBB30D"
+                        Margin="20, 0"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Start" />
+                    <Grid
+                        Margin="30, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Text="1"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="0"
+                            IsChecked="True"
+                            CheckedChanged="SaturdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="2"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="1"
+                            IsChecked="True"
+                            CheckedChanged="SaturdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            Text="3"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="2"
+                            IsChecked="True"
+                            CheckedChanged="SaturdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="3"
+                            Grid.Row="0"
+                            Text="4"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="3"
+                            IsChecked="True"
+                            CheckedChanged="SaturdayCheckBox_Changed"/>
+
+                        <Label 
+                            Grid.Column="4"
+                            Grid.Row="0"
+                            Text="5"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                        <CheckBox
+                            Grid.Column="4"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Color="White"
+                            TabIndex="4"
+                            IsChecked="True"
+                            CheckedChanged="SaturdayCheckBox_Changed"/>
+                    </Grid>
+                </StackLayout>
+
+                <Editor
+                        x:Name="MessageEditor"
+                        Placeholder="Сообщение"
+                        PlaceholderColor="#5e5e5e"
+                        TextColor="#EBB30D"
+                        AutoSize="TextChanges"
+                        Margin="20, 0, 20, 0"/>
+
+                <Button 
+                    x:Name="feedbackButton"
+                    Text="Отправить"
+                    TextColor="{StaticResource colorPrimary}"
+                    BackgroundColor="{StaticResource colorAccent}"
+                    FontSize="Medium"
+                    VerticalOptions="EndAndExpand"
+                    Margin="20"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

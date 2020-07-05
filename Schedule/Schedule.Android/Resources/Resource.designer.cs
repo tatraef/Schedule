@@ -15,7 +15,7 @@ namespace Schedule.Droid
 {
 	
 	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -5118,10 +5118,13 @@ namespace Schedule.Droid
 			public const int splash_screen = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int tooltip_frame_dark = 2131165499;
+			public const int table = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int tooltip_frame_light = 2131165500;
+			public const int tooltip_frame_dark = 2131165500;
+			
+			// aapt resource value: 0x7F07013D
+			public const int tooltip_frame_light = 2131165501;
 			
 			static Drawable()
 			{
