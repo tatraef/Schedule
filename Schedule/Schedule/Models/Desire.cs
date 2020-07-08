@@ -6,12 +6,12 @@ namespace Schedule.Models
 {
     public class Desire
     {
-        public String Monday { get; set; }
-        public String Tuesday { get; set; }
-        public String Wednesday { get; set; }
-        public String Thursday { get; set; }
-        public String Friday { get; set; }
-        public String Saturday { get; set; }
+        public String Понедельник { get; set; }
+        public String Вторник { get; set; }
+        public String Среда { get; set; }
+        public String Четверг { get; set; }
+        public String Пятница { get; set; }
+        public String Суббота { get; set; }
         public String Message { get; set; }
     }
 }

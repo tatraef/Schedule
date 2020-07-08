@@ -132,12 +132,12 @@ namespace Schedule.Views
         {
             Desire desire = new Desire
             {
-                Monday = new String(Monday),
-                Tuesday = new String(Tuesday),
-                Wednesday = new String(Wednesday),
-                Thursday = new String(Thursday),
-                Friday = new String(Friday),
-                Saturday = new String(Saturday),
+                Понедельник = new String(Monday),
+                Вторник = new String(Tuesday),
+                Среда = new String(Wednesday),
+                Четверг = new String(Thursday),
+                Пятница = new String(Friday),
+                Суббота = new String(Saturday),
                 Message = MessageEditor.Text
             };
 
