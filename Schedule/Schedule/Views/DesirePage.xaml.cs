@@ -143,10 +143,10 @@ namespace Schedule.Views
 
             if (App.Current.Properties.TryGetValue("teacherName", out object tname))
             {
-                var name = ((string)tname).Split(' ')[0];
                 var json = JsonConvert.SerializeObject(desire);
+                var faculty = App.Current.Properties["facultyName"];
 
-                var urlContent = "updateDesire=some&name=" + name + "&code=" + CodeEntry.Text.ToString() + "&json=" + json;
+                var urlContent = "updateDesire=some&name=" + tname + "&faculty=" + faculty + "&code=" + CodeEntry.Text.ToString() + "&json=" + json;
 
                 HttpContent content = new StringContent(urlContent, Encoding.UTF8, "application/x-www-form-urlencoded");
                 
