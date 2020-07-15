@@ -66,7 +66,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="0"
-                            IsChecked="True"
+                            IsChecked="{Binding Monday[0]}"
                             CheckedChanged="MondayCheckBox_Changed"/>
 
                         <Label 
@@ -85,7 +85,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="1"
-                            IsChecked="True"
+                            IsChecked="{Binding Monday[1]}"
                             CheckedChanged="MondayCheckBox_Changed"/>
 
                         <Label 
@@ -104,7 +104,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="2"
-                            IsChecked="True"
+                            IsChecked="{Binding Monday[2]}"
                             CheckedChanged="MondayCheckBox_Changed"/>
 
                         <Label 
@@ -123,7 +123,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="3"
-                            IsChecked="True"
+                            IsChecked="{Binding Monday[3]}"
                             CheckedChanged="MondayCheckBox_Changed"/>
 
                         <Label 
@@ -142,7 +142,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="4"
-                            IsChecked="True"
+                            IsChecked="{Binding Monday[4]}"
                             CheckedChanged="MondayCheckBox_Changed"/>
                     </Grid>
                 </StackLayout>
@@ -187,7 +187,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="0"
-                            IsChecked="True"
+                            IsChecked="{Binding Tuesday[0]}"
                             CheckedChanged="TuesdayCheckBox_Changed"/>
 
                         <Label 
@@ -206,7 +206,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="1"
-                            IsChecked="True"
+                            IsChecked="{Binding Tuesday[1]}"
                             CheckedChanged="TuesdayCheckBox_Changed"/>
 
                         <Label 
@@ -225,7 +225,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="2"
-                            IsChecked="True"
+                            IsChecked="{Binding Tuesday[2]}"
                             CheckedChanged="TuesdayCheckBox_Changed"/>
 
                         <Label 
@@ -244,7 +244,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="3"
-                            IsChecked="True"
+                            IsChecked="{Binding Tuesday[3]}"
                             CheckedChanged="TuesdayCheckBox_Changed"/>
 
                         <Label 
@@ -263,7 +263,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="4"
-                            IsChecked="True"
+                            IsChecked="{Binding Tuesday[4]}"
                             CheckedChanged="TuesdayCheckBox_Changed"/>
                     </Grid>
                 </StackLayout>
@@ -308,7 +308,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="0"
-                            IsChecked="True"
+                            IsChecked="{Binding Wednesday[0]}"
                             CheckedChanged="WednesdayCheckBox_Changed"/>
 
                         <Label 
@@ -327,7 +327,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="1"
-                            IsChecked="True"
+                            IsChecked="{Binding Wednesday[1]}"
                             CheckedChanged="WednesdayCheckBox_Changed"/>
 
                         <Label 
@@ -346,7 +346,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="2"
-                            IsChecked="True"
+                            IsChecked="{Binding Wednesday[2]}"
                             CheckedChanged="WednesdayCheckBox_Changed"/>
 
                         <Label 
@@ -365,7 +365,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="3"
-                            IsChecked="True"
+                            IsChecked="{Binding Wednesday[3]}"
                             CheckedChanged="WednesdayCheckBox_Changed"/>
 
                         <Label 
@@ -384,7 +384,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="4"
-                            IsChecked="True"
+                            IsChecked="{Binding Wednesday[4]}"
                             CheckedChanged="WednesdayCheckBox_Changed"/>
                     </Grid>
                 </StackLayout>
@@ -429,7 +429,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="0"
-                            IsChecked="True"
+                            IsChecked="{Binding Thursday[0]}"
                             CheckedChanged="ThursdayCheckBox_Changed"/>
 
                         <Label 
@@ -448,7 +448,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="1"
-                            IsChecked="True"
+                            IsChecked="{Binding Thursday[1]}"
                             CheckedChanged="ThursdayCheckBox_Changed"/>
 
                         <Label 
@@ -467,7 +467,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="2"
-                            IsChecked="True"
+                            IsChecked="{Binding Thursday[2]}"
                             CheckedChanged="ThursdayCheckBox_Changed"/>
 
                         <Label 
@@ -486,7 +486,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="3"
-                            IsChecked="True"
+                            IsChecked="{Binding Thursday[3]}"
                             CheckedChanged="ThursdayCheckBox_Changed"/>
 
                         <Label 
@@ -505,7 +505,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="4"
-                            IsChecked="True"
+                            IsChecked="{Binding Thursday[4]}"
                             CheckedChanged="ThursdayCheckBox_Changed"/>
                     </Grid>
                 </StackLayout>
@@ -550,7 +550,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="0"
-                            IsChecked="True"
+                            IsChecked="{Binding Friday[0]}"
                             CheckedChanged="FridayCheckBox_Changed"/>
 
                         <Label 
@@ -569,7 +569,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="1"
-                            IsChecked="True"
+                            IsChecked="{Binding Friday[1]}"
                             CheckedChanged="FridayCheckBox_Changed"/>
 
                         <Label 
@@ -588,7 +588,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="2"
-                            IsChecked="True"
+                            IsChecked="{Binding Friday[2]}"
                             CheckedChanged="FridayCheckBox_Changed"/>
 
                         <Label 
@@ -607,7 +607,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="3"
-                            IsChecked="True"
+                            IsChecked="{Binding Friday[3]}"
                             CheckedChanged="FridayCheckBox_Changed"/>
 
                         <Label 
@@ -626,7 +626,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="4"
-                            IsChecked="True"
+                            IsChecked="{Binding Friday[4]}"
                             CheckedChanged="FridayCheckBox_Changed"/>
                     </Grid>
                 </StackLayout>
@@ -671,7 +671,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="0"
-                            IsChecked="True"
+                            IsChecked="{Binding Saturday[0]}"
                             CheckedChanged="SaturdayCheckBox_Changed"/>
 
                         <Label 
@@ -690,7 +690,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="1"
-                            IsChecked="True"
+                            IsChecked="{Binding Saturday[1]}"
                             CheckedChanged="SaturdayCheckBox_Changed"/>
 
                         <Label 
@@ -709,7 +709,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="2"
-                            IsChecked="True"
+                            IsChecked="{Binding Saturday[2]}"
                             CheckedChanged="SaturdayCheckBox_Changed"/>
 
                         <Label 
@@ -728,7 +728,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="3"
-                            IsChecked="True"
+                            IsChecked="{Binding Saturday[3]}"
                             CheckedChanged="SaturdayCheckBox_Changed"/>
 
                         <Label 
@@ -747,7 +747,7 @@
                             VerticalOptions="Center"
                             Color="White"
                             TabIndex="4"
-                            IsChecked="True"
+                            IsChecked="{Binding Saturday[4]}"
                             CheckedChanged="SaturdayCheckBox_Changed"/>
                     </Grid>
                 </StackLayout>
@@ -764,6 +764,7 @@
                     x:Name="MessageEditor"
                     Placeholder="Сообщение"
                     PlaceholderColor="#5e5e5e"
+                    Text="{Binding Message}"
                     TextColor="#EBB30D"
                     AutoSize="TextChanges"
                     Margin="20, 0, 20, 0"/>

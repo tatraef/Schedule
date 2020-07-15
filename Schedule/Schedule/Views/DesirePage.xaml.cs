@@ -11,6 +11,7 @@ using Xamarin.Essentials;
 using Schedule.Models;
 using System.Net.Http;
 using Plugin.Connectivity;
+using Schedule.ViewModels;
 
 namespace Schedule.Views
 {
@@ -22,24 +23,27 @@ namespace Schedule.Views
             InitializeComponent();
         }
 
-        private char[] Monday = new char[] { '1', '1', '1', '1', '1' };
-        private char[] Tuesday = new char[] { '1', '1', '1', '1', '1' };
-        private char[] Wednesday = new char[] { '1', '1', '1', '1', '1' };
-        private char[] Thursday = new char[] { '1', '1', '1', '1', '1' };
-        private char[] Friday = new char[] { '1', '1', '1', '1', '1' };
-        private char[] Saturday = new char[] { '1', '1', '1', '1', '1' };
+        private DesireViewModel bind;
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            bind = new DesireViewModel();
+            BindingContext = bind;
+        }
 
         private void MondayCheckBox_Changed(object sender, CheckedChangedEventArgs e)
         {
             if (e.Value)
             {
                 CheckBox checkBox = (CheckBox) sender;
-                Monday[checkBox.TabIndex] = '1';
+                bind.Monday[checkBox.TabIndex] = 1;
             }
             else
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Monday[checkBox.TabIndex] = '0';
+                bind.Monday[checkBox.TabIndex] = 0;
             }
         }
 
@@ -48,12 +52,12 @@ namespace Schedule.Views
             if (e.Value)
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Tuesday[checkBox.TabIndex] = '1';
+                bind.Tuesday[checkBox.TabIndex] = 1;
             }
             else
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Tuesday[checkBox.TabIndex] = '0';
+                bind.Tuesday[checkBox.TabIndex] = 0;
             }
         }
 
@@ -62,12 +66,12 @@ namespace Schedule.Views
             if (e.Value)
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Wednesday[checkBox.TabIndex] = '1';
+                bind.Wednesday[checkBox.TabIndex] = 1;
             }
             else
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Wednesday[checkBox.TabIndex] = '0';
+                bind.Wednesday[checkBox.TabIndex] = 0;
             }
         }
 
@@ -76,12 +80,12 @@ namespace Schedule.Views
             if (e.Value)
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Thursday[checkBox.TabIndex] = '1';
+                bind.Thursday[checkBox.TabIndex] = 1;
             }
             else
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Thursday[checkBox.TabIndex] = '0';
+                bind.Thursday[checkBox.TabIndex] = 0;
             }
         }
 
@@ -90,12 +94,12 @@ namespace Schedule.Views
             if (e.Value)
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Friday[checkBox.TabIndex] = '1';
+                bind.Friday[checkBox.TabIndex] = 1;
             }
             else
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Friday[checkBox.TabIndex] = '0';
+                bind.Friday[checkBox.TabIndex] = 0;
             }
         }
 
@@ -104,12 +108,12 @@ namespace Schedule.Views
             if (e.Value)
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Saturday[checkBox.TabIndex] = '1';
+                bind.Saturday[checkBox.TabIndex] = 1;
             }
             else
             {
                 CheckBox checkBox = (CheckBox)sender;
-                Saturday[checkBox.TabIndex] = '0';
+                bind.Saturday[checkBox.TabIndex] = 0;
             }
         }
 
@@ -132,12 +136,12 @@ namespace Schedule.Views
         {
             Desire desire = new Desire
             {
-                Понедельник = new String(Monday),
-                Вторник = new String(Tuesday),
-                Среда = new String(Wednesday),
-                Четверг = new String(Thursday),
-                Пятница = new String(Friday),
-                Суббота = new String(Saturday),
+                Понедельник = new String(intArrayToChar(bind.Monday)),
+                Вторник = new String(intArrayToChar(bind.Tuesday)),
+                Среда = new String(intArrayToChar(bind.Wednesday)),
+                Четверг = new String(intArrayToChar(bind.Thursday)),
+                Пятница = new String(intArrayToChar(bind.Friday)),
+                Суббота = new String(intArrayToChar(bind.Saturday)),
                 Message = MessageEditor.Text
             };
 
@@ -167,6 +171,7 @@ namespace Schedule.Views
                         result = await response.Content.ReadAsStringAsync();
                         if (result == "SAVED")
                         {
+                            App.Current.Properties["desire"] = json;
                             await DisplayAlert("Готово", "Пожелания успешно сохранены!", "OK");
                         }
                         else if(result == "NOT")
@@ -189,6 +194,17 @@ namespace Schedule.Views
                 }
                 HideActivityIndicator();
             }
+        }
+
+        private char[] intArrayToChar(int[] arr)
+        {
+            char[] some = new char[arr.Length];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                some[i] = Convert.ToChar(arr[i].ToString());
+            }
+
+            return some;
         }
 
         void ShowActivityIndicator()
