@@ -31,6 +31,11 @@ namespace Schedule.Views
 
             bind = new DesireViewModel();
             BindingContext = bind;
+
+            if (App.Current.Properties.TryGetValue("desireCode", out object code))
+            {
+                CodeEntry.Text = code.ToString();
+            }
         }
 
         private void MondayCheckBox_Changed(object sender, CheckedChangedEventArgs e)
@@ -172,6 +177,7 @@ namespace Schedule.Views
                         if (result == "SAVED")
                         {
                             App.Current.Properties["desire"] = json;
+                            App.Current.Properties["desireCode"] = CodeEntry.Text.ToString();
                             await DisplayAlert("Готово", "Пожелания успешно сохранены!", "OK");
                         }
                         else if(result == "NOT")
